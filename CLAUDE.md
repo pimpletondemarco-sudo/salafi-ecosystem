@@ -28,6 +28,11 @@ scholars' explanations.
 - Every scholarly point: cite book title, Shamela book_id/page (and printed page), or the exact
   scholar-website URL.
 - If a source cannot be verified, the content is DROPPED, not guessed.
+- On anything a customer sees (pages, answer keys, guides, listings), cite the REAL book, never
+  "Shamela book N": title, scholar, publisher, edition, and PRINTED page. Known editions:
+  - *Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen, Dar al-Thurayya, 4th ed. 1424 AH / 2004
+  - *Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed. 1418 AH / 1997
+  Shamela IDs and page links stay in the internal source files so the checker can re-verify.
 - English renderings of Arabic are marked as "meaning" (not a literal translation of the Quran).
 - Quran text on pages: the King Fahd Complex (Madinah) mushaf. English meanings of ayat: The Noble
   Quran (Hilali-Khan) only. Never print ayat from the scholars' book transcriptions.
