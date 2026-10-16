@@ -44,8 +44,8 @@ def page(css, body):
 A = page('''
 .page { background: linear-gradient(#fbe3b8 0%, #f7c98b 55%, #e9a96a 100%); color: #173a3a; }
 .ar { position:absolute; top:70px; left:0; right:0; text-align:center; font-size:64px; color:#0f5b5b; }
-.t { position:absolute; top:160px; left:0; right:0; text-align:center; font-size:76px; color:#0f5b5b; }
-.sub { position:absolute; top:330px; left:0; right:0; text-align:center; font-size:24px; font-weight:800; color:#7a3b12; }
+.t { position:absolute; top:172px; left:0; right:0; text-align:center; font-size:58px; color:#0f5b5b; }
+.sub { position:absolute; top:352px; left:0; right:0; text-align:center; font-size:24px; font-weight:800; color:#7a3b12; }
 .badge { width:150px; height:150px; right:52px; top:420px; background:#0f5b5b; color:#fbe3b8; font-size:17px; line-height:1.2; border:5px dashed #fbe3b8; transform:rotate(8deg); }
 .inc { bottom:100px; font-size:20px; color:#173a3a; }
 .brand { bottom:52px; font-size:26px; color:#0f5b5b; }
@@ -60,7 +60,7 @@ A = page('''
   <g fill="#2f8f6a" stroke="#173a3a" stroke-width="4" stroke-linejoin="round">
     <path d="M408 525 C360 460 270 445 200 470 C270 470 340 490 400 540Z"/>
     <path d="M408 525 C456 460 546 445 616 470 C546 470 476 490 416 540Z"/>
-    <path d="M408 520 C380 470 390 410 430 375 C415 430 418 480 414 525Z"/>
+    <path d="M408 520 C384 478 392 432 428 402 C415 445 418 485 414 525Z"/>
     <path d="M405 530 C340 520 270 545 230 595 C290 565 350 555 405 545Z"/>
     <path d="M411 530 C476 520 546 545 586 595 C526 565 466 555 411 545Z"/>
   </g>
@@ -70,7 +70,7 @@ A = page('''
   {sapling(640, 688, 0.95, "#0f5b5b", "#7ed3a4", "#3fae7a")}
 </svg>
 <div class="ar">الأُصُولُ الثَّلَاثَةُ</div>
-<div class="t">The Three<br>Foundations</div>
+<div class="t">The Three<br>Fundamental<br>Principles</div>
 <div class="sub">Thalathat al-Usul for Kids · Ages 6–10</div>
 <div class="badge">Sourced<br>from the<br>Scholars</div>
 <div class="inc">Workbook · Coloring · Answer Key · Teaching Guide</div>
@@ -84,8 +84,8 @@ B = page('''
 .page { background: #e6f5ec; color: #1d2b22; }
 .inner { position:absolute; inset:86px; background:#fffdf6; border:4px solid #1d2b22; border-radius:28px; }
 .ar { position:absolute; top:130px; left:0; right:0; text-align:center; font-size:58px; color:#2b7a55; }
-.t { position:absolute; top:210px; left:0; right:0; text-align:center; font-size:70px; color:#1d2b22; }
-.sub { position:absolute; top:375px; left:0; right:0; text-align:center; font-size:22px; font-weight:800; color:#2b7a55; }
+.t { position:absolute; top:218px; left:0; right:0; text-align:center; font-size:54px; color:#1d2b22; }
+.sub { position:absolute; top:392px; left:0; right:0; text-align:center; font-size:22px; font-weight:800; color:#2b7a55; }
 .badge { width:136px; height:136px; left:120px; top:640px; background:#f4c95d; color:#1d2b22; font-size:16px; line-height:1.2; border:4px solid #1d2b22; }
 .inc { bottom:170px; font-size:19px; }
 .brand { bottom:118px; font-size:26px; color:#2b7a55; }
@@ -101,7 +101,7 @@ B = page('''
   </g>
 </svg>
 <div class="ar">الأُصُولُ الثَّلَاثَةُ</div>
-<div class="t">The Three<br>Foundations</div>
+<div class="t">The Three<br>Fundamental<br>Principles</div>
 <div class="sub">A Thalathat al-Usul Workbook for Ages 6–10</div>
 <div class="badge">Every lesson<br>sourced &amp;<br>cited</div>
 <div class="inc">Worksheets · Coloring · Tracing · Answer Key · Parent Guide</div>
@@ -115,8 +115,8 @@ lanterns = "".join(f'''<g transform="translate({x} 0)"><path d="M0 0 V{h}" strok
 C = page('''
 .page { background: radial-gradient(circle at 50% 30%, #1d3b6e, #0b1d3a 70%); color: #fdf3d6; }
 .ar { position:absolute; top:230px; left:0; right:0; text-align:center; font-size:62px; color:#f4c95d; }
-.t { position:absolute; top:315px; left:0; right:0; text-align:center; font-size:76px; color:#fdf3d6; }
-.sub { position:absolute; top:485px; left:0; right:0; text-align:center; font-size:22px; font-weight:800; color:#f4c95d; }
+.t { position:absolute; top:322px; left:0; right:0; text-align:center; font-size:58px; color:#fdf3d6; }
+.sub { position:absolute; top:505px; left:0; right:0; text-align:center; font-size:22px; font-weight:800; color:#f4c95d; }
 .badge { width:140px; height:140px; right:70px; top:560px; background:#f4c95d; color:#0b1d3a; font-size:16px; line-height:1.2; border:4px double #0b1d3a; }
 .inc { bottom:120px; font-size:19px; color:#fdf3d6; }
 .brand { bottom:52px; font-size:26px; color:#f4c95d; }
@@ -135,7 +135,7 @@ C = page('''
   {sapling(684, 905, 1.0, "#f4c95d", "#7ed3a4", "#3fae7a", "#fdf3d6")}
 </svg>
 <div class="ar">الأُصُولُ الثَّلَاثَةُ</div>
-<div class="t">The Three<br>Foundations</div>
+<div class="t">The Three<br>Fundamental<br>Principles</div>
 <div class="sub">Thalathat al-Usul for Kids · Ages 6–10</div>
 <div class="badge">From the<br>Books of the<br>Scholars</div>
 <div class="inc">Workbook · Coloring · Answer Key · Teaching Guide</div>

@@ -44,9 +44,16 @@ scholars' explanations.
   position of Shaykh Ibn Baz, Shaykh al-Uthaymeen, and Shaykh al-Fawzan.
   Allowed: plants, trees, dates, fruit, masjids, the Kaaba, landscapes, stars/moon, geometric
   patterns, Arabic calligraphy, objects (books, lanterns, prayer mats).
+- Mockups and listing photos: only templates with no people, hands, or animals (flat-lays, desks,
+  clipboards, frames).
 - No music references, no celebrations of bid'ah (e.g. mawlid), no non-Islamic holidays.
 - Modest, clean, child-friendly style. Arabic text fully voweled (with harakat) for children.
 - Print format: US Letter AND A4 versions, high-resolution PDF.
+
+## Product 1
+
+English name: **The Three Fundamental Principles** (subtitle "Thalathat al-Usul for Kids"), Arabic
+الأُصُولُ الثَّلَاثَةُ. Use this exact name on covers, pages and listings (it is the name buyers search).
 
 ## What every workbook includes
 
