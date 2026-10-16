@@ -12,5 +12,6 @@ Read CLAUDE.md first, especially the design rules.
 - Ages 6–10: large fonts, fully voweled Arabic, short English sentences, lots of white space.
 - Activities: tracing, matching, fill-in-the-blank, circle the answer, cut-and-paste, memorization
   checklists, coloring.
+- Also build the answer key and the teaching guide described in CLAUDE.md ("What every workbook includes"), from VERIFIED items only.
 - Produce both US Letter and A4 PDFs in products/<id>/output/.
 - Also produce 5 Etsy listing images (cover, sample pages, "what's inside") via Canva.

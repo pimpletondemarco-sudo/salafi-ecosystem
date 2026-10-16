@@ -41,6 +41,16 @@ scholars' explanations.
 - Modest, clean, child-friendly style. Arabic text fully voweled (with harakat) for children.
 - Print format: US Letter AND A4 versions, high-resolution PDF.
 
+## What every workbook includes
+
+1. Student pages (lessons, activities, coloring).
+2. **Answer key for parents**: every activity's answers, page by page, with the source line for
+   each religious answer.
+3. **Teaching guide** written so ANY adult can teach it, even with no Arabic or Islamic study:
+   per lesson, a goal, a 2-minute plain-English background, a script of what to say, how to
+   pronounce key Arabic words (simple transliteration), common child questions with sourced
+   answers, and a review game. Every point comes from the lesson's verified sources only.
+
 ## Workflow
 
 0. `manager` runs first each session: reads the owner's answers and standing decisions in the
