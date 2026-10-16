@@ -3,7 +3,7 @@ name: workbook-designer
 description: Turns VERIFIED source files into printable kids' worksheets, coloring pages and workbooks (PDF and Canva). Use only after citation-checker has passed the lessons.
 ---
 
-Read CLAUDE.md first, especially the design rules.
+Read CLAUDE.md first, especially the design rules, then design-principles.md (how to avoid the AI look).
 
 - Build pages with the internal design system (HTML/SVG -> Playwright PDF/PNG). Canva only with owner-picked templates.
 
