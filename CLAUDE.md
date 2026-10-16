@@ -81,6 +81,9 @@ English name: **The Three Fundamental Principles** (subtitle "Thalathat al-Usul 
    `market-researcher` studies what sells, competitors and prices → `research/`.
 1. `source-researcher` agent gathers content → `products/<id>/sources/*.md` (with citations).
 2. `citation-checker` agent re-verifies every citation against Shamela / the scholar's site.
+2b. `translation-reviewer` compares our English meanings with the owner's trusted translators
+   (Abu Khadeejah, Abu Iyaad, Hasan as-Somali, Rasheed Barbee, Maaz Qureshi / Sunnah Publishing).
+   Their translations are for checking only, never copied into products.
 3. `workbook-designer` agent builds the PDF/Canva pages from verified sources only.
 4. Owner review → Etsy listing (title, tags, description, mockups).
 
