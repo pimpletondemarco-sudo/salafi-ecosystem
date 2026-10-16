@@ -9,17 +9,22 @@ from pathlib import Path
 
 HERE = Path(__file__).parent
 FONTS = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700'
-         '&family=Baloo+2:wght@700;800&family=Nunito:wght@600;700;800&display=swap">')
+         '&family=Noto+Naskh+Arabic:wght@600;700&family=Baloo+2:wght@700;800&family=Nunito:wght@600;700;800&display=swap">')
 
 WORDS = [("رَبِّي", "My Lord"), ("دِينِي", "My Religion"), ("نَبِيِّي", "My Prophet")]
 MATCH_RIGHT = ["My Religion", "My Prophet", "My Lord"]  # shuffled; answers in the answer key
+
+def word_svg(ar, kind):
+    # SVG text so the tracing copies can use a dotted outline (CSS text-stroke cannot be dotted).
+    return (f'<svg class="w {kind}" viewBox="0 0 200 112" width="100%" height="112">'
+            f'<text x="100" y="80" text-anchor="middle" direction="rtl">{ar}</text></svg>')
 
 def build(size):
     w, h, page = (816, 1056, "8.5in 11in") if size == "letter" else (794, 1123, "210mm 297mm")
     trace_rows = "".join(f'''
       <div class="trow">
         <div class="en">{en}</div>
-        <div class="ar model">{ar}</div><div class="ar ghost">{ar}</div><div class="ar ghost">{ar}</div>
+        {word_svg(ar, "model")}{word_svg(ar, "ghost")}{word_svg(ar, "ghost")}
       </div>''' for ar, en in WORDS)
     match_rows = "".join(f'''
       <div class="mrow"><div class="ar mw">{ar}</div><span class="dot"></span><span class="gap"></span>
@@ -40,14 +45,15 @@ def build(size):
   h2 {{ font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 24px; margin: 0 0 10px; display: flex; align-items: center; gap: 12px; }}
   h2 b {{ width: 36px; height: 36px; border-radius: 50%; background: #456f3a; color: #fff; display: grid; place-items: center; font-size: 20px; }}
   h2 small {{ font-family: "Nunito", sans-serif; font-weight: 700; font-size: 16px; color: #6b5b51; }}
-  .trow {{ display: grid; grid-template-columns: 130px 1fr 1fr 1fr; align-items: end; height: 92px;
-          background: linear-gradient(transparent 88px, #c9bea6 88px, #c9bea6 90px, transparent 90px); }}
-  .trow .en {{ font-weight: 800; font-size: 16px; color: #6b5b51; padding-bottom: 30px; }}
-  .trow .ar {{ font-size: 50px; line-height: 80px; padding-bottom: 6px; text-align: center; }}
-  .model {{ color: #2a1d17; }}
-  .ghost {{ color: transparent; -webkit-text-stroke: 1.4px #a89d88; }}
+  .trow {{ display: grid; grid-template-columns: 110px 1fr 1fr 1fr; align-items: end; height: 116px;
+          background: linear-gradient(transparent 112px, #c9bea6 112px, #c9bea6 114px, transparent 114px); }}
+  .trow .en {{ font-weight: 800; font-size: 16px; color: #6b5b51; padding-bottom: 40px; }}
+  .w {{ display: block; overflow: visible; }}
+  .w text {{ font-family: "Noto Naskh Arabic", serif; font-weight: 700; font-size: 62px; }}
+  .model text {{ fill: #2a1d17; }}
+  .ghost text {{ fill: none; stroke: #5f5646; stroke-width: 1.7px; stroke-dasharray: 1.6 2.2; stroke-linecap: round; stroke-linejoin: round; }}
   .mrow {{ display: grid; grid-template-columns: 150px 14px 1fr 14px 170px; align-items: center; height: 64px; }}
-  .mw {{ font-size: 40px; text-align: right; padding-right: 18px; }}
+  .mw {{ font-family: "Noto Naskh Arabic", serif; font-size: 38px; line-height: 1.4; text-align: right; padding-right: 18px; }}
   .me {{ font-weight: 800; font-size: 20px; padding-left: 18px; }}
   .dot {{ width: 14px; height: 14px; border-radius: 50%; background: #456f3a; }}
   .fill {{ font-size: 20px; font-weight: 700; line-height: 1.6; }}
