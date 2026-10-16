@@ -57,6 +57,12 @@ https://claude.ai/artifact/6WtLBQMe6KkiQefsA8yzXo — after every work session, 
 agents, pipeline, income and activity files (upload new JSON asset, then update the dataset's
 `url`, `name`, `updated`).
 
+## Salafi Ecosystem HQ (animated office)
+
+https://claude.ai/artifact/BCd54vTVJYCLqBpP1zTp1D — robots move and work according to each
+agent's `status` in its store. Every agent sets its own status to "working" at the start of a task
+and back to "ready"/"idle" when done, and adds one `log` entry. Robots are faceless by design.
+
 ## Tools
 
 - Shamela connector (claude.ai custom connector) — primary research tool.
