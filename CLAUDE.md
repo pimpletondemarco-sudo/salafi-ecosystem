@@ -68,6 +68,10 @@ English name: **The Three Fundamental Principles** (subtitle "Thalathat al-Usul 
    per lesson, a goal, a 2-minute plain-English background, a script of what to say, how to
    pronounce key Arabic words (simple transliteration), common child questions with sourced
    answers, and a review game. Every point comes from the lesson's verified sources only.
+   Each lesson in the guide includes a **"From the Scholars" commentary section**: the scholar's
+   Arabic words (verified quote), a plain-English meaning marked "meaning", and the real book,
+   scholar, publisher, edition and printed page. Use the approved scholars' explanations
+   (e.g. Ibn Baz, al-Uthaymeen, al-Fawzan on Thalathat al-Usul).
 
 ## Workflow
 
