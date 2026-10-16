@@ -20,7 +20,7 @@ Researched by: source-researcher · 2026-10-16 · Status: CHECKED (see VERIFICAT
 ## Simple meanings (ages 6–10)
 1. **Knowledge** — knowing Allah, His Prophet ﷺ and the religion of Islam, with proofs.
    - Ibn Baz: «وهذا العلم هو معرفة الله ومعرفة نبيه ومعرفة دين الإسلام بالأدلة» and «قال الله وقال الرسول لا بالرأي ولا بقول فلان»
-   - Simple meaning: "Knowledge means knowing Allah, His Prophet and Islam with proofs: 'Allah said' and 'the Messenger said', not opinions."
+   - Simple meaning: "Knowledge means knowing Allah, His Prophet and Islam with proofs: 'Allah said' and 'the Messenger said', not by opinion, nor by the saying of so-and-so."
    - Citation: book 11255, page 16 (printed p. 22) https://shamela.ws/book/11255/16
 2. **Acting on it** — doing what we learned.
    - Al-Uthaymeen: «والعمل في الحقيقة هو ثمرة العلم»
@@ -28,7 +28,7 @@ Researched by: source-researcher · 2026-10-16 · Status: CHECKED (see VERIFICAT
    - Citation: book 11257, page 15 (printed p. 22)
 3. **Calling others to it** — inviting others to what we learned, with knowledge.
    - Al-Uthaymeen: «ولا بد لهذه الدعوة من علم بشريعة الله عز وجل حتى تكون الدعوة عن علم وبصيرة»
-   - Simple meaning: "Calling others must be with knowledge."
+   - Simple meaning: "Calling others must be with knowledge and clear insight."
    - Evidence quoted there: Surah Yusuf 12:108 and an-Nahl 16:125.
    - Citation: book 11257, page 16 (printed p. 22)
 4. **Patience** — being patient when we are hurt or troubled because of it.

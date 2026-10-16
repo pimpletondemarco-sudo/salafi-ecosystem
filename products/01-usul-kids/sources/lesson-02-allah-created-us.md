@@ -5,7 +5,7 @@ Scope: the FIRST of the three matters (المسألة الأولى). Matters 2 a
 
 ## Base text (matn), as quoted by Shaykh Ibn Baz
 - «اعْلمْ ـ رَحِمَكَ اللهُ ـ أَنَّه يَجِبُ عَلَى كُلِّ مُسْلِمٍ وَمُسْلِمَةٍ تَعَلُّمُ هذه المسائل الثلاث والْعَمَلُ بهنُّ "الأُولَى": أَنَّ اللهَ خَلَقَنَا وَرَزَقَنَا ولم يتركنا هملاً»
-- Simple meaning: "Every Muslim, male and female, must learn three things and act on them. The first: Allah created us, gives us our provision, and did not leave us without purpose."
+- Simple meaning: "Every Muslim, male and female, must learn three matters and act on them. The first: Allah created us, gives us our provision, and did not leave us without purpose."
 - Citation: Ibn Baz, *Sharh Thalathat al-Usul*, book 11255, page 26 (printed p. 29) https://shamela.ws/book/11255/26
 
 ## Why Allah created us
@@ -18,7 +18,7 @@ Scope: the FIRST of the three matters (المسألة الأولى). Matters 2 a
 - Al-Uthaymeen: «ودليل ذلك أعني أن الله خلقنا سمعي وعقلي»
 - Reason proof he quotes: {أَمْ خُلِقُوا مِنْ غَيْرِ شَيْءٍ أَمْ هُمُ الْخَالِقُونَ} — Surat at-Tur 52:35
 - His explanation (excerpt): «فإن الإنسان لم يخلق نفسه ... ولم يخلقه أبوه ولا أمه ولا أحد من الخلق، ولم يكن ليأتي صدفة»
-- Simple meaning: "You did not make yourself. Your parents did not make you. You did not come by accident. Allah created you."
+- Simple meaning: "You did not make yourself. Your parents did not make you. You did not come by accident." (Our summary of the excerpt; the conclusion that Allah alone is the Creator is stated later on the same page: «فتعين بهذا أن يكون الخالق هو الله وحده».)
 - Citation: Al-Uthaymeen, *Sharh Thalathat al-Usul*, book 11257, page 25 (printed p. 29) https://shamela.ws/book/11257/25
 
 ## Allah provides for us (رزقنا)

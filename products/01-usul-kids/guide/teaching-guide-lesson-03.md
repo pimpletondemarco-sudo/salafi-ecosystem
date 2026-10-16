@@ -4,30 +4,30 @@
 *Sample draft for owner review. Every scholar quote is a verified quote; English lines are meanings, not word-for-word translations.*
 
 ## Goal of the lesson
-By the end, your child can say the three foundations every Muslim must know (knowing their Lord, their religion and their Prophet ﷺ) and colour the date-palm page.
+By the end, your child can say the three fundamental principles every Muslim must know (knowing their Lord, their religion and their Prophet ﷺ) and colour the date-palm page.
 
 ## Background for the parent (2 minutes)
 Shaykh al-Islam Muhammad ibn Abdul-Wahhab wrote *Thalathat al-Usul* to teach these foundations. Shaykh Ibn Baz and Shaykh al-Uthaymeen both explained it. In this lesson your child learns the three foundations themselves; later lessons explain each one.
 
 ## From the Scholars (commentary)
 
-**1. The three foundations: the words of the original text, as quoted by Shaykh Ibn Baz**
+**1. The three principles: the words of the original text, as quoted by Shaykh Ibn Baz**
 
-> يتفرع
+> فَإِذَا قِيلَ لَكَ: مَا الأُصُولُ الثَّلاثَةُ التِي يَجِبُ عَلَى الإِنْسَانِ مَعْرِفَتُهَا؟ فَقُلْ: مَعْرِفَةُ الْعَبْدِ ربه ودينه ونبيه محمد صلى الله عليه وسلم.
 
-Meaning: "If you are asked: what are the three foundations every person must know? Say: knowing your Lord, your religion, and your Prophet Muhammad ﷺ."
+Meaning: "If you are asked: what are the three principles every person must know? Say: that the servant knows his Lord, his religion and his Prophet Muhammad ﷺ."
 Source: *Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz (Dar al-Masir, 1st ed., 1418 AH), p. 38
 
 **2. Why these three? Shaykh Ibn Baz**
 
-> يتفرغ
+> هذه الأصول الثلاثة تجمع الدين كله من ربك؟ وما دينك؟ ومن نبيك؟ وهي التي يسأل عنها العبد في قبره.
 
-Meaning: "These three foundations gather the whole religion: Who is your Lord? What is your religion? Who is your Prophet? These are what a person is asked about in the grave."
+Meaning: "These three principles gather the whole religion: Who is your Lord? What is your religion? Who is your Prophet? These are what a person is asked about in the grave."
 Source: *Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz (Dar al-Masir, 1st ed., 1418 AH), p. 38
 
 **3. What "usul" means: Shaykh Muhammad ibn Salih al-Uthaymeen**
 
-> فَإِذَا قِيلَ لَكَ: مَا الأُصُولُ الثَّلاثَةُ التِي يَجِبُ عَلَى الإِنْسَانِ مَعْرِفَتُهَا؟ فَقُلْ: مَعْرِفَةُ الْعَبْدِ ربه ودينه ونبيه محمد صلى الله عليه وسلم.
+> الأصول جمع أصل، وهو ما يبنى عليه غيره، ومن ذلك أصل الجدار وهو أساسه، وأصل الشجرة الذي يتفرع منه الأغصان
 
 Meaning: "'Usul' means foundations: what other things are built on, like the foundation of a wall, or the root of a tree that the branches grow from."
 Source: *Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen (Dar al-Thurayya, 4th ed., 1424 AH), p. 42
@@ -48,7 +48,7 @@ Meaning: "See you not how Allâh sets forth a parable? A goodly word as a goodly
 ## Say the Arabic words
 | Arabic | Say it | Meaning |
 |---|---|---|
-| الأُصُولُ الثَّلَاثَةُ | al-u-SOOL ath-tha-LAA-tha | the three foundations |
+| الأُصُولُ الثَّلَاثَةُ | al-u-SOOL ath-tha-LAA-tha | the three (fundamental) principles |
 | رَبِّي | RAB-bee | my Lord |
 | دِينِي | DEE-nee | my religion |
 | نَبِيِّي | na-BEE-yee | my Prophet ﷺ |

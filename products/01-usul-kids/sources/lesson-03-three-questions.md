@@ -4,12 +4,12 @@ Researched by: source-researcher · 2026-10-16 · Status: CHECKED (see VERIFICAT
 
 ## Base text (matn), as quoted by Shaykh Ibn Baz
 - «فَإِذَا قِيلَ لَكَ: مَا الأُصُولُ الثَّلاثَةُ التِي يَجِبُ عَلَى الإِنْسَانِ مَعْرِفَتُهَا؟ فَقُلْ: مَعْرِفَةُ الْعَبْدِ ربه ودينه ونبيه محمد صلى الله عليه وسلم.»
-- Simple meaning: "If you are asked: what are the three foundations every person must know? Say: knowing your Lord, your religion, and your Prophet Muhammad ﷺ."
+- Simple meaning: "If you are asked: what are the three principles every person must know? Say: that the servant knows his Lord, his religion and his Prophet Muhammad ﷺ."
 - Citation: Ibn Baz, *Sharh Thalathat al-Usul*, book 11255, page 36 (printed p. 38) https://shamela.ws/book/11255/36
 
 ## Why these three
 - Ibn Baz, footnote 1: «هذه الأصول الثلاثة تجمع الدين كله من ربك؟ وما دينك؟ ومن نبيك؟ وهي التي يسأل عنها العبد في قبره.»
-- Simple meaning: "These three foundations hold the whole religion: Who is your Lord? What is your religion? Who is your Prophet? These are the questions a person is asked in the grave."
+- Simple meaning: "These three principles gather the whole religion: Who is your Lord? What is your religion? Who is your Prophet? These are the questions a person is asked in the grave."
 - Citation: book 11255, page 36 (printed p. 38)
 - Age note for owner review: mentioning the grave is part of the source; keep it brief and gentle for ages 6–10.
 
