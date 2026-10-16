@@ -29,6 +29,8 @@ scholars' explanations.
   scholar-website URL.
 - If a source cannot be verified, the content is DROPPED, not guessed.
 - English renderings of Arabic are marked as "meaning" (not a literal translation of the Quran).
+- Quran text on pages: the King Fahd Complex (Madinah) mushaf. English meanings of ayat: The Noble
+  Quran (Hilali-Khan) only. Never print ayat from the scholars' book transcriptions.
 - Final religious content is approved by the owner / a trusted student of knowledge before sale.
 
 ## Design rules
@@ -77,5 +79,8 @@ and back to "ready"/"idle" when done, and adds one `log` entry. Robots are facel
 ## Tools
 
 - Shamela connector (claude.ai custom connector) — primary research tool.
+- quran.ai connector (quran.com data) — the ONLY source for printed ayat: Arabic edition
+  `ar-qpc-hafs` (King Fahd Complex text) and English edition `en-al-hilali-khan`. Call
+  fetch_grounding_rules first. Never type ayat from memory or from book transcriptions.
 - Canva connector — layouts, covers, Etsy mockups.
 - PDF skill — final printable PDFs.

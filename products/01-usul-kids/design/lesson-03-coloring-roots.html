@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Amiri+Quran&family=Baloo+2:wght@600;800&family=Nunito:wght@600;700&display=swap">
+<style>
+  @page { size: 8.5in 11in; margin: 0; }
+  html, body { margin: 0; background: #fff; }
+  .page { width: 816px; height: 1056px; position: relative; box-sizing: border-box; padding: 40px 48px; font-family: "Nunito", sans-serif; color: #111; }
+  .frame { position: absolute; inset: 22px; border: 3px solid #111; border-radius: 18px; }
+  .frame::after { content: ""; position: absolute; inset: 8px; border: 1.5px dashed #111; border-radius: 12px; }
+  header { position: relative; text-align: center; margin-top: 18px; }
+  .ar-title { font-family: "Amiri", serif; font-weight: 700; font-size: 44px; line-height: 1.1; direction: rtl; }
+  .en-title { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 34px; letter-spacing: .5px; margin-top: 2px;
+              -webkit-text-stroke: 1.5px #111; color: #fff; paint-order: stroke fill; }
+  .sub { font-size: 15px; margin-top: 4px; }
+  svg { position: absolute; left: 48px; top: 172px; }
+  .label-ar { font-family: "Amiri", serif; font-weight: 700; font-size: 34px; }
+  .label-en { font-family: "Baloo 2", sans-serif; font-weight: 600; font-size: 19px; }
+  footer { position: absolute; left: 60px; right: 60px; bottom: 50px; font-size: 13px; line-height: 1.45; text-align: center; }
+  footer b { font-weight: 700; }
+  footer .ayah { font-family: "Amiri Quran", "Amiri", serif; font-size: 20px; line-height: 2.3; margin: 2px 0 6px; }
+  footer .meaning { font-size: 12px; font-style: italic; }
+  .brand { position: absolute; right: 62px; bottom: 34px; font-family: "Baloo 2", sans-serif; font-size: 12px; letter-spacing: .5px; }
+  .name { position: absolute; left: 62px; top: 52px; font-size: 14px; }
+  .name span { display: inline-block; width: 170px; border-bottom: 1.5px solid #111; margin-left: 6px; }
+</style></head>
+<body><div class="page">
+  <div class="frame"></div>
+  <div class="name">Name:<span></span></div>
+  <header>
+    <div class="ar-title">الأُصُولُ الثَّلَاثَةُ</div>
+    <div class="en-title">The Three Foundations</div>
+    <div class="sub">Color the tree. Its roots are what every Muslim must know.</div>
+  </header>
+
+  <svg width="720" height="660" viewBox="0 0 720 700" fill="none" stroke="#111" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <!-- sky details: sun and two clouds -->
+    <circle cx="610" cy="100" r="30"/>
+    <path d="M610 58v-8M610 142v8M652 100h8M568 100h-8M640 70l6-6M580 130l-6 6M640 130l6 6M580 70l-6-6"/>
+    <path d="M70 90c0-16 22-22 30-10 6-18 36-18 40 2 18-2 22 22 4 24H78c-12 0-16-14-8-16z"/>
+    <!-- fronds -->
+    <path d="M360 210c-40-60-120-80-200-60 60 0 120 20 170 70"/>
+    <path d="M360 210c-60-20-150 0-210 50 70-30 140-35 200-20"/>
+    <path d="M360 210c40-60 120-80 200-60-60 0-120 20-170 70"/>
+    <path d="M360 210c60-20 150 0 210 50-70-30-140-35-200-20"/>
+    <path d="M360 205c-20-60-10-120 30-160-20 50-20 110-15 160"/>
+    <path d="M360 205c-50-50-110-70-170-60 60 10 110 35 160 75"/>
+    <path d="M360 205c50-50 110-70 170-60-60 10-110 35-160 75"/>
+    <!-- frond leaflet ticks -->
+    <path d="M200 160l-6 14M240 160l-6 15M280 170l-6 15M520 160l6 14M480 160l6 15M440 170l6 15M190 245l2 14M230 232l2 14M270 226l2 14M530 245l-2 14M490 232l-2 14M450 226l-2 14"/>
+    <!-- date clusters -->
+    <g stroke-width="2.5">
+      <path d="M335 228c-10 20-20 34-34 44"/>
+      <circle cx="300" cy="278" r="9"/><circle cx="316" cy="272" r="9"/><circle cx="306" cy="294" r="9"/><circle cx="323" cy="289" r="9"/><circle cx="291" cy="296" r="8"/>
+      <path d="M385 228c10 20 20 34 34 44"/>
+      <circle cx="420" cy="278" r="9"/><circle cx="404" cy="272" r="9"/><circle cx="414" cy="294" r="9"/><circle cx="397" cy="289" r="9"/><circle cx="429" cy="296" r="8"/>
+    </g>
+    <!-- trunk -->
+    <path d="M340 220c-4 80-8 160-14 250M380 220c4 80 8 160 14 250"/>
+    <path d="M338 250h44M337 280h46M336 310h48M334 340h52M333 370h54M331 400h58M330 430h60M328 460h64" stroke-width="2.2"/>
+    <!-- ground -->
+    <path d="M20 470c120-8 230-10 340-10s220 2 340 10"/>
+    <path d="M60 490c40-4 80-4 120 0M520 490c40-4 80-4 120 0" stroke-width="2"/>
+    <!-- three roots -->
+    <path d="M340 470c-30 40-90 70-180 100" stroke-width="7"/>
+    <path d="M360 470v120" stroke-width="7"/>
+    <path d="M380 470c30 40 90 70 180 100" stroke-width="7"/>
+    <path d="M300 520l-20 30M410 520l20 30M360 540l-14 22" stroke-width="2.5"/>
+    <!-- root label bubbles -->
+    <rect x="30" y="560" width="200" height="110" rx="22" fill="#fff"/>
+    <rect x="260" y="590" width="200" height="104" rx="22" fill="#fff"/>
+    <rect x="490" y="560" width="200" height="110" rx="22" fill="#fff"/>
+    <g fill="#111" stroke="none" text-anchor="middle">
+      <text class="label-ar" x="130" y="610" direction="rtl">رَبِّي</text>
+      <text class="label-en" x="130" y="648">My Lord</text>
+      <text class="label-ar" x="360" y="638" direction="rtl">دِينِي</text>
+      <text class="label-en" x="360" y="676">My Religion</text>
+      <text class="label-ar" x="590" y="610" direction="rtl">نَبِيِّي ﷺ</text>
+      <text class="label-en" x="590" y="648">My Prophet <tspan class="label-ar" style="font-size:22px">ﷺ</tspan></text>
+    </g>
+  </svg>
+
+  <footer>
+    <b>Shaykh al-Uthaymeen explains:</b> "Usul" means foundations, what other things are built on, like the root of a tree that the branches grow from.<br>
+    Sharh Thalathat al-Usul, Shamela book 11257, p. 43 (printed p. 42). He cites:
+    <div class="ayah" dir="rtl">أَلَمۡ تَرَ كَيۡفَ ضَرَبَ ٱللَّهُ مَثَلٗا كَلِمَةٗ طَيِّبَةٗ كَشَجَرَةٖ طَيِّبَةٍ أَصۡلُهَا ثَابِتٞ وَفَرۡعُهَا فِي ٱلسَّمَآءِ ٢٤</div>
+    <div class="meaning">Meaning: "See you not how Allâh sets forth a parable? A goodly word as a goodly tree, whose root is firmly fixed, and its branches (reach) to the sky (i.e. very high)." (Ibrahim 14:24, The Noble Qur'an, Hilali-Khan)</div>
+  </footer>
+  <div class="brand">SunnahSaplings</div>
+</div></body></html>
