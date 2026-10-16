@@ -1,11 +1,11 @@
 # Lesson 2: Allah Created Us, Provides for Us, and Did Not Leave Us Without Purpose
 
-Researched by: source-researcher · 2026-10-16 · Status: DRAFT, needs citation-checker
+Researched by: source-researcher · 2026-10-16 · Status: CHECKED (see VERIFICATION.md), fixes applied; provision hadith on hold
 Scope: the FIRST of the three matters (المسألة الأولى). Matters 2 and 3 are planned for later lessons.
 
 ## Base text (matn), as quoted by Shaykh Ibn Baz
 - «اعْلمْ ـ رَحِمَكَ اللهُ ـ أَنَّه يَجِبُ عَلَى كُلِّ مُسْلِمٍ وَمُسْلِمَةٍ تَعَلُّمُ هذه المسائل الثلاث والْعَمَلُ بهنُّ "الأُولَى": أَنَّ اللهَ خَلَقَنَا وَرَزَقَنَا ولم يتركنا هملاً»
-- Simple meaning: "Every Muslim boy and girl must learn three things and act on them. The first: Allah created us, gives us our provision, and did not leave us without purpose."
+- Simple meaning: "Every Muslim, male and female, must learn three things and act on them. The first: Allah created us, gives us our provision, and did not leave us without purpose."
 - Citation: Ibn Baz, *Sharh Thalathat al-Usul*, book 11255, page 26 (printed p. 29) https://shamela.ws/book/11255/26
 
 ## Why Allah created us

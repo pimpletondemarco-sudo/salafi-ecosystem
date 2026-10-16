@@ -1,11 +1,11 @@
 # Lesson 1: The Four Things We Must Learn (المسائل الأربع)
 
-Researched by: source-researcher · 2026-10-16 · Status: DRAFT, needs citation-checker
+Researched by: source-researcher · 2026-10-16 · Status: CHECKED (see VERIFICATION.md), fixes applied
 
 ## Why children learn this
 - Arabic source text (Ibn Baz, footnote 2):
   «هذه المسائل يجب أن يتعلمها المؤمن والمؤمنة صغارا وكبارا.»
-- Simple meaning: "Every believing boy and girl, young and old, must learn these things."
+- Simple meaning: "Every believer, male and female, young and old, must learn these matters."
 - Citation: Shaykh Ibn Baz, *Sharh Thalathat al-Usul*, Shamela book 11255, page 15 (printed p. 21) — https://shamela.ws/book/11255/15
 
 ## Base text (matn), as quoted in the explanations
@@ -31,7 +31,7 @@ Researched by: source-researcher · 2026-10-16 · Status: DRAFT, needs citation-
    - Simple meaning: "Calling others must be with knowledge."
    - Evidence quoted there: Surah Yusuf 12:108 and an-Nahl 16:125.
    - Citation: book 11257, page 16 (printed p. 22)
-4. **Patience** — being patient with difficulty while doing this.
+4. **Patience** — being patient when we are hurt or troubled because of it.
    - Al-Uthaymeen, the three kinds of patience:
      «١-صبر على طاعة الله. ٢-صبر عن محارم الله. ٣-صبر على أقدار الله»
    - Simple meaning: "Patience in obeying Allah, patience in staying away from what He forbade, and patience with what Allah decrees."

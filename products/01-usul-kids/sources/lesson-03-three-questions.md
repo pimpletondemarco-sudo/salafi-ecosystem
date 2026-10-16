@@ -1,6 +1,6 @@
 # Lesson 3: The Three Questions — Who is your Lord? What is your religion? Who is your Prophet?
 
-Researched by: source-researcher · 2026-10-16 · Status: DRAFT, needs citation-checker
+Researched by: source-researcher · 2026-10-16 · Status: CHECKED (see VERIFICATION.md); designer must print «يتفرع» not the source typo «يتفرغ»
 
 ## Base text (matn), as quoted by Shaykh Ibn Baz
 - «فَإِذَا قِيلَ لَكَ: مَا الأُصُولُ الثَّلاثَةُ التِي يَجِبُ عَلَى الإِنْسَانِ مَعْرِفَتُهَا؟ فَقُلْ: مَعْرِفَةُ الْعَبْدِ ربه ودينه ونبيه محمد صلى الله عليه وسلم.»
