@@ -42,6 +42,10 @@ scholars' explanations.
 
 ## Workflow
 
+0. `manager` runs first each session: reads the owner's answers and standing decisions in the
+   Manager Inbox (https://claude.ai/artifact/VNuDQRmwG98fFFieuzoF5G), assigns work, and asks the
+   owner when unsure. It may approve layouts; religious content always goes to the owner.
+   `market-researcher` studies what sells, competitors and prices → `research/`.
 1. `source-researcher` agent gathers content → `products/<id>/sources/*.md` (with citations).
 2. `citation-checker` agent re-verifies every citation against Shamela / the scholar's site.
 3. `workbook-designer` agent builds the PDF/Canva pages from verified sources only.
