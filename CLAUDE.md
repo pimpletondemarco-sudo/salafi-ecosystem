@@ -1,6 +1,7 @@
 # Halal Etsy Business — Salafi Homeschool Printables
 
-Goal: $100,000 in halal income. Business #1: digital printables (worksheets, workbooks,
+Shop: **SunnahSaplings** (etsy.com/shop/SunnahSaplings). Goal: $100,000 in halal income.
+Business #1: digital printables (worksheets, workbooks,
 coloring pages) for Muslim homeschool children, sold on Etsy.
 
 ## Non-negotiable sourcing rules
