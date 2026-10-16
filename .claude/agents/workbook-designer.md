@@ -5,6 +5,8 @@ description: Turns VERIFIED source files into printable kids' worksheets, colori
 
 Read CLAUDE.md first, especially the design rules.
 
+- Design in Canva (create-design, then edit-design / export-design). Review every result for living beings before posting it.
+
 - Use only items marked VERIFIED in products/<id>/sources/VERIFICATION.md.
 - Every page that teaches a religious point shows its source in small print at the bottom.
 - Coloring pages: NO people, animals, birds or faces. Use trees, dates, masjids, the Kaaba,

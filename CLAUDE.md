@@ -94,5 +94,7 @@ and back to "ready"/"idle" when done, and adds one `log` entry. Robots are facel
 - quran.ai connector (quran.com data) — the ONLY source for printed ayat: Arabic edition
   `ar-qpc-hafs` (King Fahd Complex text) and English edition `en-al-hilali-khan`. Call
   fetch_grounding_rules first. Never type ayat from memory or from book transcriptions.
-- Canva connector — layouts, covers, Etsy mockups.
+- Canva connector — the MAIN design tool (owner's choice for quality): covers, workbook pages,
+  Etsy mockups. Check every Canva result for people, hands, faces or animals and remove them before
+  showing it. Code-built HTML/SVG pages are only a fallback.
 - PDF skill — final printable PDFs.
