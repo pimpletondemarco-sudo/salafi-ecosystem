@@ -10,7 +10,7 @@ All Islamic content must come from the Quran, the authentic Sunnah, and these ap
 | Scholar | Approved source |
 |---|---|
 | Shaykh Abdul-Aziz Ibn Baz | binbaz.org.sa, or his books on Shamela |
-| Shaykh Salih al-Fawzan | alfawzan.af.org.sa, or his books on Shamela |
+| Shaykh Salih al-Fawzan | his books on Shamela (e.g. book 8600); alfawzan.af.org.sa has an expired certificate as of 2026-10-16 |
 | Shaykh Muhammad ibn Salih al-Uthaymeen | binothaimeen.net, or his books on Shamela |
 | Shaykh Abdul-Muhsin al-Abbad al-Badr | his books on Shamela (official site to be confirmed) |
 | Shaykh Abdur-Razzaq al-Badr | al-badr.net, or his books on Shamela |
