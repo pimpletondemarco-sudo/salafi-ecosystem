@@ -1,0 +1,214 @@
+<title>Manager Inbox</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Literata:opsz,wght@7..72,400;7..72,600&family=Nunito+Sans:wght@400;600;700&display=swap">
+<style>
+/* Layout: one calm column; "Needs you" queue first, then your standing decisions, then history. */
+:root {
+  --bg: #f3f5f2;
+  --panel: #ffffff;
+  --ink: #18231d;
+  --muted: #5b6a61;
+  --line: #d9e0db;
+  --accent: #1f6b4a;
+  --accent-ink: #ffffff;
+  --accent-soft: #e2efe8;
+  --warn: #8a5a00;
+  --warn-soft: #fbf0d9;
+  --bad: #a3312a;
+  --font-display: "Literata", Georgia, "Times New Roman", serif;
+  --font-body: "Nunito Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --bg: #101613; --panel: #18201b; --ink: #e6ede8; --muted: #9db0a4; --line: #2b3830;
+  --accent: #5fbf8f; --accent-ink: #0d1a13; --accent-soft: #1d3328; --warn: #e8b85a; --warn-soft: #33290f; --bad: #f08a82; color-scheme: dark; } }
+:root[data-theme="dark"] {
+  --bg: #101613; --panel: #18201b; --ink: #e6ede8; --muted: #9db0a4; --line: #2b3830;
+  --accent: #5fbf8f; --accent-ink: #0d1a13; --accent-soft: #1d3328; --warn: #e8b85a; --warn-soft: #33290f; --bad: #f08a82; color-scheme: dark; }
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 760px; margin-inline: auto; padding-block: 28px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 32px; }
+header h1 { font-family: var(--font-display); font-weight: 600; font-size: 1.9rem; margin: 0; text-wrap: balance; }
+header p { margin: 6px 0 0; color: var(--muted); max-width: 62ch; }
+.count { display: inline-flex; align-items: center; gap: 6px; margin-top: 12px; font-weight: 700; font-size: .85rem; color: var(--warn); background: var(--warn-soft); padding: 3px 10px; border-radius: 999px; }
+.count.clear { color: var(--accent); background: var(--accent-soft); }
+h2 { font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; margin: 0 0 4px; }
+.note { color: var(--muted); font-size: .88rem; margin: 0 0 14px; }
+.list { display: grid; gap: 12px; }
+.item { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 10px; min-width: 0; }
+.meta { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; font-size: .8rem; color: var(--muted); }
+.tag { font-weight: 700; letter-spacing: .03em; text-transform: uppercase; font-size: .7rem; padding: 2px 8px; border-radius: 4px; background: var(--accent-soft); color: var(--accent); }
+.tag.approval { background: var(--warn-soft); color: var(--warn); }
+.item h3 { margin: 0; font-size: 1.02rem; font-weight: 700; }
+.detail { margin: 0; white-space: pre-wrap; overflow-wrap: anywhere; }
+.opts { display: flex; flex-wrap: wrap; gap: 8px; }
+button { font: inherit; font-weight: 600; font-size: .9rem; border-radius: 8px; padding: 8px 14px; cursor: pointer; border: 1px solid var(--line); background: var(--panel); color: var(--ink); }
+button:hover { border-color: var(--accent); }
+button:focus-visible, textarea:focus-visible, input:focus-visible, select:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+button.primary { background: var(--accent); color: var(--accent-ink); border-color: var(--accent); }
+button.reject { color: var(--bad); }
+button[disabled] { opacity: .5; cursor: default; }
+textarea, input, select { font: inherit; width: 100%; box-sizing: border-box; border: 1px solid var(--line); border-radius: 8px; padding: 8px 10px; background: var(--bg); color: var(--ink); }
+textarea { min-height: 64px; resize: vertical; }
+.row { display: flex; gap: 8px; flex-wrap: wrap; align-items: center; }
+.answer { font-size: .9rem; background: var(--accent-soft); border-radius: 8px; padding: 8px 10px; overflow-wrap: anywhere; }
+.answer b { color: var(--accent); }
+.empty { color: var(--muted); background: var(--panel); border: 1px dashed var(--line); border-radius: 10px; padding: 18px; text-align: center; }
+.dec { display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; padding: 10px 0; border-bottom: 1px solid var(--line); }
+.dec:last-child { border-bottom: 0; }
+.dec .cat { font-size: .72rem; font-weight: 700; text-transform: uppercase; letter-spacing: .04em; color: var(--muted); padding-top: 2px; min-width: 7.5rem; }
+.dec .txt { overflow-wrap: anywhere; }
+.card { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 4px 16px; }
+form.add { display: grid; gap: 8px; grid-template-columns: minmax(0, 10rem) minmax(0, 1fr) auto; margin-top: 12px; }
+@media (max-width: 560px) { form.add { grid-template-columns: 1fr; } .dec { grid-template-columns: 1fr; } }
+.status { font-size: .85rem; color: var(--muted); min-height: 1.2em; }
+.status.err { color: var(--bad); }
+details summary { cursor: pointer; font-family: var(--font-display); font-weight: 600; font-size: 1.2rem; }
+details[open] summary { margin-bottom: 12px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Manager Inbox</h1>
+    <p>Your manager agent posts questions and drafts here. Answer or approve them and the manager uses your answers, plus your standing decisions below, to direct the other agents.</p>
+    <span class="count" id="count">Loading…</span>
+  </header>
+
+  <section aria-labelledby="needs-h">
+    <h2 id="needs-h">Needs you</h2>
+    <p class="note">Questions and items waiting for your answer or approval.</p>
+    <div class="list" id="open-list"><div class="empty">Nothing is waiting for you. New questions from the manager will show up here.</div></div>
+  </section>
+
+  <section aria-labelledby="dec-h">
+    <h2 id="dec-h">Your standing decisions</h2>
+    <p class="note">The manager follows these without asking again. Add a rule any time.</p>
+    <div class="card" id="dec-list"><div class="dec"><span class="cat">—</span><span class="txt">Your decisions will appear here.</span></div></div>
+    <form class="add" id="dec-form">
+      <select id="dec-cat" aria-label="Category">
+        <option>Sources</option><option>Design</option><option>Products</option><option>Etsy</option><option>Marketing</option><option>Approvals</option><option>Other</option>
+      </select>
+      <input id="dec-text" aria-label="New decision" placeholder="e.g. Use US Letter size first" maxlength="400">
+      <button class="primary" type="submit" id="dec-add">Add</button>
+    </form>
+    <div class="status" id="dec-status"></div>
+  </section>
+
+  <section>
+    <details id="history">
+      <summary>Answered</summary>
+      <div class="list" id="done-list"><div class="empty">Answered items will be kept here.</div></div>
+    </details>
+  </section>
+</div>
+
+<script>
+(function () {
+  const $ = (id) => document.getElementById(id);
+  const el = (tag, cls, text) => { const e = document.createElement(tag); if (cls) e.className = cls; if (text != null) e.textContent = text; return e; };
+  const fmt = (iso) => { try { return new Date(iso).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' }); } catch (e) { return ''; } };
+  let db = null, canWrite = false;
+
+  function renderItems(docs) {
+    const open = docs.filter(d => d.data().status !== 'answered');
+    const done = docs.filter(d => d.data().status === 'answered');
+    const count = $('count');
+    count.textContent = open.length ? open.length + ' waiting for you' : 'All caught up';
+    count.classList.toggle('clear', open.length === 0);
+
+    const ol = $('open-list'); ol.textContent = '';
+    if (!open.length) ol.appendChild(el('div', 'empty', 'Nothing is waiting for you. New questions from the manager will show up here.'));
+    open.forEach(d => ol.appendChild(itemCard(d, false)));
+
+    const dl = $('done-list'); dl.textContent = '';
+    if (!done.length) dl.appendChild(el('div', 'empty', 'Answered items will be kept here.'));
+    done.forEach(d => dl.appendChild(itemCard(d, true)));
+  }
+
+  function itemCard(doc, answered) {
+    const v = doc.data();
+    const card = el('article', 'item');
+    const meta = el('div', 'meta');
+    const isApproval = v.kind === 'approval';
+    meta.appendChild(el('span', 'tag' + (isApproval ? ' approval' : ''), isApproval ? 'Approval' : 'Question'));
+    if (v.from) meta.appendChild(el('span', null, 'From ' + v.from));
+    if (v.created) meta.appendChild(el('span', null, fmt(v.created)));
+    card.appendChild(meta);
+    card.appendChild(el('h3', null, v.title || 'Untitled'));
+    if (v.detail) card.appendChild(el('p', 'detail', v.detail));
+
+    if (answered) {
+      const a = el('div', 'answer');
+      a.appendChild(el('b', null, (isApproval ? (v.answer === 'Approved' ? 'Approved' : 'Not approved') : 'Your answer') + ': '));
+      a.appendChild(document.createTextNode((isApproval ? (v.comment || '') : (v.answer || '')) + (v.answered_at ? ' · ' + fmt(v.answered_at) : '')));
+      card.appendChild(a);
+      return card;
+    }
+
+    const note = el('textarea'); note.id = 'note-' + doc.id;
+    note.placeholder = isApproval ? 'Optional: what should change?' : 'Type your answer, or pick an option';
+    const status = el('div', 'status');
+    const send = async (answer, comment) => {
+      if (!canWrite) { status.textContent = 'Only the owner can answer here.'; status.className = 'status err'; return; }
+      card.querySelectorAll('button').forEach(b => b.disabled = true);
+      status.className = 'status'; status.textContent = 'Saving…';
+      try {
+        await db.collection('inbox').doc(doc.id).update({ status: 'answered', answer, comment: comment || '', answered_at: new Date().toISOString() });
+      } catch (e) {
+        status.className = 'status err'; status.textContent = 'Could not save. Check your connection and try again.';
+        card.querySelectorAll('button').forEach(b => b.disabled = false);
+      }
+    };
+
+    const opts = el('div', 'opts');
+    if (isApproval) {
+      const ok = el('button', 'primary', 'Approve'); ok.type = 'button';
+      ok.addEventListener('click', () => send('Approved', note.value.trim()));
+      const no = el('button', 'reject', 'Send back'); no.type = 'button';
+      no.addEventListener('click', () => { if (!note.value.trim()) { status.className = 'status err'; status.textContent = 'Say what should change before sending it back.'; note.focus(); return; } send('Changes requested', note.value.trim()); });
+      opts.append(ok, no);
+      card.append(note, opts, status);
+    } else {
+      (Array.isArray(v.options) ? v.options : []).forEach(o => {
+        const b = el('button', null, String(o)); b.type = 'button';
+        b.addEventListener('click', () => send(String(o) + (note.value.trim() ? ' — ' + note.value.trim() : '')));
+        opts.appendChild(b);
+      });
+      const submit = el('button', 'primary', 'Send answer'); submit.type = 'button';
+      submit.addEventListener('click', () => { const t = note.value.trim(); if (!t) { status.className = 'status err'; status.textContent = 'Type an answer or pick an option.'; note.focus(); return; } send(t); });
+      if (opts.childNodes.length) card.appendChild(opts);
+      card.append(note, el('div', 'row'), status);
+      card.lastChild.previousSibling.appendChild(submit);
+    }
+    return card;
+  }
+
+  function renderDecisions(docs) {
+    const list = $('dec-list'); list.textContent = '';
+    if (!docs.length) { const r = el('div', 'dec'); r.append(el('span', 'cat', '—'), el('span', 'txt', 'No decisions yet. Add your first rule below.')); list.appendChild(r); return; }
+    docs.forEach(d => { const v = d.data(); const r = el('div', 'dec'); r.append(el('span', 'cat', v.category || 'Other'), el('span', 'txt', v.decision || '')); list.appendChild(r); });
+  }
+
+  $('dec-form').addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const s = $('dec-status'); const text = $('dec-text').value.trim();
+    if (!text) { s.className = 'status err'; s.textContent = 'Write the decision first.'; return; }
+    if (!db || !canWrite) { s.className = 'status err'; s.textContent = 'Only the owner can add decisions.'; return; }
+    $('dec-add').disabled = true; s.className = 'status'; s.textContent = 'Saving…';
+    try {
+      await db.collection('decisions').add({ category: $('dec-cat').value, decision: text, decided: new Date().toISOString(), by: 'Owner' });
+      $('dec-text').value = ''; s.textContent = 'Added.';
+    } catch (err) { s.className = 'status err'; s.textContent = 'Could not save. Check your connection and try again.'; }
+    $('dec-add').disabled = false;
+  });
+
+  async function start() {
+    db = await claude.use('db');
+    const user = await claude.use('user');
+    if (!db) { $('count').textContent = 'Sign in to claude.ai to see your inbox'; return; }
+    canWrite = user ? (user.can('data.write') !== false) : false;
+    db.collection('inbox').orderBy('created', 'desc').onSnapshot(s => renderItems(s.docs), () => { $('count').textContent = 'Could not load the inbox'; });
+    db.collection('decisions').orderBy('decided', 'asc').onSnapshot(s => renderDecisions(s.docs));
+  }
+  if (window.claude && typeof claude.use === 'function') start(); else $('count').textContent = 'Open this page on claude.ai to use it';
+})();
+</script>
