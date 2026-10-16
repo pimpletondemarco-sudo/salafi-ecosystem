@@ -47,6 +47,10 @@ scholars' explanations.
 - Mockups and listing photos: only templates with no people, hands, or animals (flat-lays, desks,
   clipboards, frames).
 - No music references, no celebrations of bid'ah (e.g. mawlid), no non-Islamic holidays.
+- NO AI-generated-looking art (owner rejected Canva AI covers). Use designer-made Canva templates
+  the owner picks, or licensed hand-drawn clipart with a commercial-use licence.
+- Ayat are NEVER typed by hand into any design tool: copy them programmatically from the quran.ai
+  connector output, and check every character after placing them.
 - Modest, clean, child-friendly style. Arabic text fully voweled (with harakat) for children.
 - Print format: US Letter AND A4 versions, high-resolution PDF.
 
