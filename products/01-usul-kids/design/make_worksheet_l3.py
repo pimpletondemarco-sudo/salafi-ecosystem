@@ -28,7 +28,9 @@ FONTS = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=
          '&family=Noto+Sans+Arabic:wght@500;600&family=Baloo+2:wght@700;800&family=Nunito:wght@600;700;800&display=swap">')
 
 WORDS = [("رَبِّي", "My Lord"), ("دِينِي", "My Religion"), ("نَبِيِّي", "My Prophet")]
-MATCH_RIGHT = ["My Religion", "My Prophet", "My Lord"]  # shuffled; answers in the answer key
+# shuffled; 4th option "Foundations" matches none (owner, 2026-10-17). It is the meaning of "usul"
+# from al-Uthaymeen, Sharh Thalathat al-Usul (Dar al-Thurayya) p. 42, verified in Lesson 3 sources.
+MATCH_RIGHT = ["My Religion", "Foundations", "My Prophet", "My Lord"]
 INK, MUTED, GREEN, LINE, LINE2 = "#2a1d17", "#6b5b51", "#456f3a", "#c9bea6", "#e2dccf"
 SIZE, ROW_H, BASE = 72, 112, 76          # word size, row height, baseline y in the row
 FACE, WT = "sans", 500                    # Noto Sans Arabic: even strokes, clear teeth for tracing
@@ -84,9 +86,9 @@ def build(size):
     w, h, page = (816, 1056, "8.5in 11in") if size == "letter" else (794, 1123, "210mm 297mm")
     inner = w - 96
     trace_rows = "".join(trace_row(ar, en, inner) for ar, en in WORDS)
-    match_rows = "".join(f'''
-      <div class="mrow"><div class="mw">{ar}</div><span class="dot"></span><span></span>
-        <span class="dot"></span><div class="me">{en}</div></div>''' for (ar, _), en in zip(WORDS, MATCH_RIGHT))
+    left = "".join(f'<div class="mi"><div class="mw">{ar}</div><span class="dot"></span></div>' for ar, _ in WORDS)
+    right = "".join(f'<div class="mi"><span class="dot"></span><div class="me">{en}</div></div>' for en in MATCH_RIGHT)
+    match_rows = f'<div class="match"><div class="mcol">{left}</div><div class="mcol r">{right}</div></div>'
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8">{FONTS}<style>
   @page {{ size: {page}; margin: 0; }}
   html, body {{ margin: 0; background: #fff; }}
@@ -106,10 +108,14 @@ def build(size):
   h2 small i {{ font-style: normal; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: {GREEN}; margin: 0 2px; }}
   .trow {{ display: block; }}
   .trow .en {{ font-family: "Nunito", sans-serif; font-weight: 800; font-size: 15px; fill: {MUTED}; }}
-  .mrow {{ display: grid; grid-template-columns: 170px 14px 1fr 14px 170px; align-items: center; height: 60px; }}
+  .match {{ display: flex; justify-content: space-between; height: 220px; }}
+  .mcol {{ width: 190px; display: flex; flex-direction: column; justify-content: space-around; }}
+  .mcol.r {{ width: 200px; }}
+  .mi {{ display: flex; align-items: center; }}
+  .mcol:not(.r) .mi {{ justify-content: flex-end; }}
   .mw {{ font-family: "Noto Sans Arabic", sans-serif; font-weight: 600; font-size: 46px; line-height: 1; direction: rtl; text-align: right; padding-right: 18px; }}
-  .me {{ font-weight: 800; font-size: 20px; padding-left: 18px; }}
-  .dot {{ width: 14px; height: 14px; border-radius: 50%; background: {GREEN}; }}
+  .me {{ font-weight: 800; font-size: 20px; padding-left: 16px; }}
+  .dot {{ width: 14px; height: 14px; border-radius: 50%; background: {GREEN}; flex: none; }}
   .fill {{ font-size: 20px; font-weight: 700; line-height: 1.5; }}
   .fill .blank {{ display: inline-block; width: 90px; border-bottom: 2px solid {INK}; }}
   .answer {{ display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-top: 8px; }}
@@ -132,7 +138,7 @@ def build(size):
   <div class="name"><div>Name:<span></span></div><div>Date:<span style="width:130px"></span></div></div>
   <main>
     <section><h2><b>1</b>Trace the words <small>Start at the <i></i> and go right to left. Then write it alone in the box.</small></h2>{trace_rows}</section>
-    <section><h2><b>2</b>Match <small>Draw a line from each word to its meaning.</small></h2>{match_rows}</section>
+    <section><h2><b>2</b>Match <small>Draw a line from each word to its meaning. One meaning is left over.</small></h2>{match_rows}</section>
     <section><h2><b>3</b>Fill in the missing word</h2>
       <div class="fill">Shaykh Ibn Baz said: these three principles gather the whole <span class="blank"></span>.</div>
       <div class="answer">
