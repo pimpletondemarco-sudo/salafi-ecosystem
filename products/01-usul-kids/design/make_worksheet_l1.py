@@ -1,4 +1,4 @@
-"""Lesson 1 worksheet "The Four Things We Must Learn" (المسائل الأربع): 3 versions (A, B, C) for the owner.
+"""Lesson 1 worksheet "The Four Matters We Must Learn" (المسائل الأربع): 3 versions (A, B, C) for the owner.
 
 Style and rules: worksheet_lib.py (owner's Lesson 3 feedback). Content only from
 sources/lesson-01-four-matters.md (verified, fixes applied):
@@ -13,20 +13,20 @@ from worksheet_lib import write
 
 AR = ["الْعِلْمُ", "الْعَمَلُ", "الدَّعْوَةُ", "الصَّبْرُ"]
 BASE = {
-    "lesson": 1, "title": "The Four Things We Must Learn",
+    "lesson": 1, "title": "The Four Matters We Must Learn",
     "trace": list(zip(AR, ["Knowledge", "Action", "Calling", "Patience"])),
     "trace_size": 60, "row_h": 86, "base": 58,
-    "match_left": AR, "match_right": ["Patience", "Knowledge", "Calling others to it", "Acting on it"],
+    "match_left": AR, "match_right": ["Patience", "Knowledge", "Calling others to it", "Acting upon it"],
     "match_h": 196, "match_ar_size": 38, "match_rw": 230,
     "bank": {"words": ["الصَّبْرُ", "الْعِلْمُ", "الدَّعْوَةُ", "الْعَمَلُ"],
-             "meanings": ["Knowledge", "Acting on it", "Calling others to it", "Patience"]},
+             "meanings": ["Knowledge", "Acting upon it", "Calling others to it", "Patience"]},
 }
 FRUIT = {"kind": "fill", "said": "Shaykh al-Uthaymeen said:", "before": "Action is the fruit of",
          "choices": ["water", "knowledge", "sleep"]}
 FRUIT_SRC = ("Meaning of Shaykh al-Uthaymeen's words: \"Action is the fruit of knowledge.\"\n"
              "      <i>Sharh Thalathat al-Usul</i>, Shaykh Muhammad ibn Salih al-Uthaymeen, Dar al-Thurayya, 4th ed., p. 22.")
 WHO = {"kind": "circle", "said": "Shaykh Ibn Baz said:",
-       "question": "Who must learn these four things?", "choices": ["Every believer, young and old", "Only grown-ups"]}
+       "question": "Who must learn these four matters?", "choices": ["Every believer, young and old", "Only grown-ups"]}
 WHO_SRC = ("Meaning of Shaykh Ibn Baz's words: \"Every believer, male and female, young and old, must learn these matters.\"\n"
            "      <i>Sharh Thalathat al-Usul</i>, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed., p. 21.")
 

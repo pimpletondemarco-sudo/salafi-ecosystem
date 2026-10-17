@@ -7,23 +7,23 @@ Page files: design/lesson-02-worksheet-allah-created-us-v{A,B,C}(-a4).html
 ## 1. Trace the words (all versions)
 No single answer. Check that the child traced each word and its marks (harakat):
 - خَلَقَنَا (khalaqanā): He created us
-- رَزَقَنَا (razaqanā): He provides for us
+- رَزَقَنَا (razaqanā): He provided for us
 
 ## 2. Match (versions A and C)
 - خَلَقَنَا → He created us
-- رَزَقَنَا → He provides for us
-- لَمْ يَتْرُكْنَا هَمَلًا (lam yatruknā hamalā) → He did not leave us without purpose
+- رَزَقَنَا → He provided for us
+- لَمْ يَتْرُكْنَا هَمَلًا (lam yatruknā hamalā) → He did not leave us without a purpose
 
 ## 2. Write the word (version B)
 - He created us → خَلَقَنَا
-- He provides for us → رَزَقَنَا
-- He did not leave us without purpose → لَمْ يَتْرُكْنَا هَمَلًا
+- He provided for us → رَزَقَنَا
+- He did not leave us without a purpose → لَمْ يَتْرُكْنَا هَمَلًا
 
 Source line: the words of the book (Thalathat al-Usul) as quoted by Shaykh Abdul-Aziz Ibn Baz,
 *Sharh Thalathat al-Usul*, Dar al-Masir, 1st ed., p. 29.
 
 ## 3. Circle the right answer (versions A and B)
-Answer: **To worship Him**. "For nothing" is wrong: the Shaykh says Allah did not create us for nothing.
+Answer: **To worship Him**. "For nothing" is wrong: the Shaykh says Allah did not create His creation for nothing.
 Source line: Shaykh Abdul-Aziz Ibn Baz, *Sharh Thalathat al-Usul*, Dar al-Masir, 1st ed., p. 29.
 Arabic: «الله خلق الخلق ليعبدوه فلم يخلقهم هملاً، ولا سداً، ولا عبثاً»
 

@@ -20,7 +20,7 @@ Researched by: source-researcher · 2026-10-16 · Status: CHECKED (see VERIFICAT
 ## Simple meanings (ages 6–10)
 1. **Knowledge** — knowing Allah, His Prophet ﷺ and the religion of Islam, with proofs.
    - Ibn Baz: «وهذا العلم هو معرفة الله ومعرفة نبيه ومعرفة دين الإسلام بالأدلة» and «قال الله وقال الرسول لا بالرأي ولا بقول فلان»
-   - Simple meaning: "Knowledge means knowing Allah, His Prophet and Islam with proofs: 'Allah said' and 'the Messenger said', not by opinion, nor by the saying of so-and-so."
+   - Simple meaning: "Knowledge means knowing Allah, knowing His Prophet ﷺ and knowing the religion of Islam, with the proofs: 'Allah said' and 'the Messenger said', not by opinion and not by what so-and-so said." (agreed terms, TRANSLATION-REVIEW-2)
    - Citation: book 11255, page 16 (printed p. 22) https://shamela.ws/book/11255/16
 2. **Acting on it** — doing what we learned.
    - Al-Uthaymeen: «والعمل في الحقيقة هو ثمرة العلم»

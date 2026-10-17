@@ -16,20 +16,20 @@ from worksheet_lib import write
 
 BASE = {
     "lesson": 2, "title": "Allah Created Us",
-    "trace": [("خَلَقَنَا", "He created us"), ("رَزَقَنَا", "He provides for us")],
+    "trace": [("خَلَقَنَا", "He created us"), ("رَزَقَنَا", "He provided for us")],
     "trace_size": 68, "row_h": 108, "base": 74, "label_w": 128,
     "match_left": ["خَلَقَنَا", "رَزَقَنَا", "لَمْ يَتْرُكْنَا هَمَلًا"],
-    "match_right": ["He did not leave us without purpose", "He created us", "He provides for us"],
+    "match_right": ["He did not leave us without a purpose", "He created us", "He provided for us"],
     "match_h": 186, "match_lw": 290, "match_rw": 250, "match_ar_size": 42,
     "bank": {"words": ["رَزَقَنَا", "لَمْ يَتْرُكْنَا هَمَلًا", "خَلَقَنَا"],
-             "meanings": ["He created us", "He provides for us", "He did not leave us without purpose"],
+             "meanings": ["He created us", "He provided for us", "He did not leave us without a purpose"],
              },
     "bank_box_h": 70,
 }
 WHY = {"kind": "circle", "said": "Shaykh Ibn Baz said:", "question": "Why did Allah create us?",
        "choices": ["To worship Him", "For nothing"]}
-WHY_SRC = ("Meaning of the book's words \"Allah created us, provides for us, and did not leave us without purpose,\"\n"
-           "      and of Shaykh Ibn Baz's words \"Allah created us to worship Him. He did not create us for nothing.\"\n"
+WHY_SRC = ("Meaning of the book's words \"Allah created us, provided for us, and did not leave us without a purpose,\"\n"
+           "      and of Shaykh Ibn Baz's words \"Allah created His creation to worship Him. He did not create them without a purpose or for nothing.\"\n"
            "      <i>Sharh Thalathat al-Usul</i>, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed., p. 29.")
 FOOD = {"kind": "fill", "said": "Shaykh al-Uthaymeen said:", "before": "We cannot live without food and",
         "choices": ["drink", "toys", "shoes"]}

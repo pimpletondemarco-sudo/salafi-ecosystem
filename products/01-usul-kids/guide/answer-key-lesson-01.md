@@ -1,4 +1,4 @@
-# Answer Key: Lesson 1, "The Four Things We Must Learn" worksheet
+# Answer Key: Lesson 1, "The Four Matters We Must Learn" worksheet
 
 Status: DRAFT, waiting for owner review of religious content. Covers versions A, B and C; keep only the
 section for the version the owner accepts.
@@ -7,19 +7,19 @@ Page files: design/lesson-01-worksheet-four-things-v{A,B,C}(-a4).html
 ## 1. Trace the words (all versions)
 No single answer. Check that the child traced each word and its marks (harakat):
 - الْعِلْمُ (al-'ilm): Knowledge
-- الْعَمَلُ (al-'amal): Action (acting on it)
+- الْعَمَلُ (al-'amal): Action (acting upon it)
 - الدَّعْوَةُ (ad-da'wah): Calling others to it
 - الصَّبْرُ (as-sabr): Patience
 
 ## 2. Match (versions A and C)
 - الْعِلْمُ → Knowledge
-- الْعَمَلُ → Acting on it
+- الْعَمَلُ → Acting upon it
 - الدَّعْوَةُ → Calling others to it
 - الصَّبْرُ → Patience
 
 ## 2. Write the word (version B)
 - Knowledge → الْعِلْمُ
-- Acting on it → الْعَمَلُ
+- Acting upon it → الْعَمَلُ
 - Calling others to it → الدَّعْوَةُ
 - Patience → الصَّبْرُ
 

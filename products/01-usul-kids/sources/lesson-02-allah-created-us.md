@@ -5,12 +5,12 @@ Scope: the FIRST of the three matters (المسألة الأولى). Matters 2 a
 
 ## Base text (matn), as quoted by Shaykh Ibn Baz
 - «اعْلمْ ـ رَحِمَكَ اللهُ ـ أَنَّه يَجِبُ عَلَى كُلِّ مُسْلِمٍ وَمُسْلِمَةٍ تَعَلُّمُ هذه المسائل الثلاث والْعَمَلُ بهنُّ "الأُولَى": أَنَّ اللهَ خَلَقَنَا وَرَزَقَنَا ولم يتركنا هملاً»
-- Simple meaning: "Every Muslim, male and female, must learn three matters and act on them. The first: Allah created us, gives us our provision, and did not leave us without purpose."
+- Simple meaning: "Every Muslim, male and female, must learn these three matters and act upon them. The first: Allah created us, provided for us, and did not leave us without a purpose." (wording agreed with Abu Khadeejah and Hasan as-Somali, TRANSLATION-REVIEW-2)
 - Citation: Ibn Baz, *Sharh Thalathat al-Usul*, book 11255, page 26 (printed p. 29) https://shamela.ws/book/11255/26
 
 ## Why Allah created us
 - Ibn Baz: «الله خلق الخلق ليعبدوه فلم يخلقهم هملاً، ولا سداً، ولا عبثاً.»
-- Simple meaning: "Allah created us to worship Him. He did not create us for nothing."
+- Simple meaning: "Allah created His creation to worship Him. He did not create them without a purpose or for nothing." (closer to the Arabic «الخلق» and its three words; TRANSLATION-REVIEW-2)
 - Evidence he quotes: {وَمَا خَلَقْتُ الْجِنَّ وَالْأِنْسَ إِلَّا لِيَعْبُدُونِ} — Surat adh-Dhariyat 51:56 (his footnote 1)
 - Citation: book 11255, page 26 (printed p. 29)
 
@@ -24,7 +24,7 @@ Scope: the FIRST of the three matters (المسألة الأولى). Matters 2 a
 ## Allah provides for us (رزقنا)
 - Evidence he quotes: {إِنَّ اللَّهَ هُوَ الرَّزَّاقُ ذُو الْقُوَّةِ الْمَتِينُ} — Surat adh-Dhariyat 51:58
 - His reason proof: «فلأننا لا نعيش إلا على طعام وشراب، والطعام والشراب خلقه الله عز وجل»
-- Simple meaning: "We can't live without food and drink, and Allah is the One who created our food and drink."
+- Simple meaning: "We cannot live without food and drink, and Allah is the One who created our food and drink."
 - He also quotes {أَفَرَأَيْتُمْ مَا تَحْرُثُونَ أَأَنْتُمْ تَزْرَعُونَهُ أَمْ نَحْنُ الزَّارِعُونَ} (al-Waqi'ah 56:63–64) — great for a seed/plant activity.
 - Citation: book 11257, page 26 (printed p. 30) https://shamela.ws/book/11257/26
 - Hadith on that page (the angel writing provision) cited by him to al-Bukhari and Muslim, Book of Qadar —
