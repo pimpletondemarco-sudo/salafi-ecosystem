@@ -14,8 +14,8 @@ Design research followed (research/design/):
 - worksheet-layout-2026-10-17: colour kept 0.3in inside the paper edge (home printers can't print
   to the edge); shorter header; footer says where the answers are.
 - matching-2026-10-17: Arabic enlarged to 48px, rows spaced further apart.
-- fill-in-2026-10-17: answer gets its own writing line (3in x 0.7in); choices in outlined boxes
-  after "Circle one:".
+- fill-in-2026-10-17: a large writing line for the answer; choices in outlined boxes. Owner
+  (2026-10-17): two steps only, circle the word then write it in the blank (no separate line).
 Pending owner choices: a 4th matching option, and hiding the tracing meanings (answers to the match).
 """
 from pathlib import Path
@@ -108,7 +108,7 @@ def build(size):
   h2 small i {{ font-style: normal; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: {GREEN}; margin: 0 2px; }}
   .trow {{ display: block; }}
   .trow .en {{ font-family: "Nunito", sans-serif; font-weight: 800; font-size: 15px; fill: {MUTED}; }}
-  .match {{ display: flex; justify-content: space-between; height: 190px; }}
+  .match {{ display: flex; justify-content: space-between; height: 176px; }}
   .mcol {{ width: 190px; display: flex; flex-direction: column; justify-content: space-around; }}
   .mcol.r {{ width: 200px; }}
   .mi {{ display: flex; align-items: center; }}
@@ -116,14 +116,11 @@ def build(size):
   .mw {{ font-family: "Noto Sans Arabic", sans-serif; font-weight: 600; font-size: 46px; line-height: 1; direction: rtl; text-align: right; padding-right: 18px; }}
   .me {{ font-weight: 800; font-size: 20px; padding-left: 16px; }}
   .dot {{ width: 14px; height: 14px; border-radius: 50%; background: {GREEN}; flex: none; }}
-  .fill {{ font-size: 20px; font-weight: 700; line-height: 1.5; }}
-  .fill .blank {{ display: inline-block; width: 90px; border-bottom: 2px solid {INK}; }}
-  .answer {{ display: flex; align-items: flex-end; justify-content: space-between; gap: 24px; margin-top: 8px; }}
-  .choices {{ white-space: nowrap; flex: none; display: flex; align-items: center; gap: 10px; font-weight: 800; font-size: 15px; color: {MUTED}; padding-bottom: 6px; }}
+  .said {{ font-size: 16px; font-weight: 700; color: {MUTED}; margin-bottom: 4px; }}
+  .fill {{ font-size: 22px; font-weight: 700; line-height: 1.2; white-space: nowrap; }}
+  .fill .blank {{ display: inline-block; width: 230px; height: 28px; border-bottom: 2px solid {INK}; vertical-align: baseline; margin-left: 4px; }}
+  .choices {{ white-space: nowrap; display: flex; align-items: center; gap: 14px; margin-top: 14px; }}
   .choices span {{ font-family: "Baloo 2", sans-serif; font-weight: 700; font-size: 22px; color: {INK}; border: 1.5px solid #c9bea6; border-radius: 10px; padding: 3px 12px 1px; }}
-  .wline {{ white-space: nowrap; flex: 1; min-width: 0; font-weight: 800; font-size: 15px; color: {MUTED}; display: flex; align-items: flex-end; gap: 10px; }}
-  .wline div {{ flex: 1; max-width: 288px; height: 67px; box-sizing: border-box; border-bottom: 2px solid {INK};
-               background: linear-gradient(transparent 32px, {LINE2} 32px, {LINE2} 33.5px, transparent 33.5px); }}
   footer {{ padding: 11px 19px 12px; font-size: 12.5px; line-height: 1.45; color: #4a3a30;
            display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }}
   footer b {{ color: {INK}; }}
@@ -139,16 +136,14 @@ def build(size):
   <main>
     <section><h2><b>1</b>Trace the words <small>Start at the <i></i> and go right to left. Then write it alone in the box.</small></h2>{trace_rows}</section>
     <section><h2><b>2</b>Match <small>Draw a line from each word to its meaning.</small></h2>{match_rows}</section>
-    <section><h2><b>3</b>Fill in the missing word</h2>
-      <div class="fill">Shaykh Ibn Baz said: these three principles gather the whole <span class="blank"></span>.</div>
-      <div class="answer">
-        <div class="choices">Circle one: <span>house</span><span>religion</span><span>garden</span></div>
-        <div class="wline">Write it:<div></div></div>
-      </div>
+    <section><h2><b>3</b>Fill in the missing word <small>Circle the right word, then write it on the line.</small></h2>
+      <div class="said">Shaykh Ibn Baz said:</div>
+      <div class="fill">These three principles gather the whole <span class="blank"></span>.</div>
+      <div class="choices"><span>house</span><span>religion</span><span>garden</span></div>
     </section>
   </main>
   <footer class="band">
-    <div><b>Source for parents:</b> "These three principles gather the whole religion" (meaning).
+    <div><b>Source for parents:</b> Meaning of Shaykh Ibn Baz's words: "These three principles gather the whole religion."
       <i>Sharh Thalathat al-Usul</i>, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed., 1418 AH, p. 38.</div>
     <div class="brand"><div>Sunnah<i>Saplings</i></div>Answers: Answer Key, Lesson 3</div>
   </footer>

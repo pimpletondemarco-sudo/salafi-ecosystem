@@ -15,7 +15,7 @@ No single answer. Check that the child traced each word and its marks (harakat):
 - نَبِيِّي → My Prophet
 
 ## 3. Fill in the missing word
-Answer: **religion**. "These three principles gather the whole religion."
+Answer: the child circles **religion** and writes it on the line: "These three principles gather the whole religion."
 
 Source line: Shaykh Abdul-Aziz Ibn Baz, *Sharh Thalathat al-Usul*, Dar al-Masir, 1st ed. 1418 AH / 1997, p. 38.
 Arabic: «هذه الأصول الثلاثة تجمع الدين كله»
