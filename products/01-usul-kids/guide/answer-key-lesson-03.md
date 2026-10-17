@@ -13,11 +13,6 @@ No single answer. Check that the child traced each word and its marks (harakat):
 - رَبِّي → My Lord
 - دِينِي → My Religion
 - نَبِيِّي → My Prophet
-- Left over: **Foundations**. It is the meaning of "usul" (الأُصُول), the name of the book, not one of
-  the three words. Shaykh al-Uthaymeen explains "usul" as foundations: what other things are built on,
-  like the root of a tree that the branches grow from.
-  Source line: Shaykh Muhammad ibn Salih al-Uthaymeen, *Sharh Thalathat al-Usul*, Dar al-Thurayya,
-  4th ed. 1424 AH / 2004, p. 42. (Internal: Shamela book 11257, page 43.)
 
 ## 3. Fill in the missing word
 Answer: **religion**. "These three principles gather the whole religion."

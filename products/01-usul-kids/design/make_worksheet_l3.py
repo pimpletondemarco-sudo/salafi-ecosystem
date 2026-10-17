@@ -28,9 +28,9 @@ FONTS = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=
          '&family=Noto+Sans+Arabic:wght@500;600&family=Baloo+2:wght@700;800&family=Nunito:wght@600;700;800&display=swap">')
 
 WORDS = [("رَبِّي", "My Lord"), ("دِينِي", "My Religion"), ("نَبِيِّي", "My Prophet")]
-# shuffled; 4th option "Foundations" matches none (owner, 2026-10-17). It is the meaning of "usul"
-# from al-Uthaymeen, Sharh Thalathat al-Usul (Dar al-Thurayya) p. 42, verified in Lesson 3 sources.
-MATCH_RIGHT = ["My Religion", "Foundations", "My Prophet", "My Lord"]
+# shuffled; answers in the answer key. A 4th left-over option was tried and removed by the owner
+# (2026-10-17: it looked like a mistake on the page).
+MATCH_RIGHT = ["My Religion", "My Prophet", "My Lord"]
 INK, MUTED, GREEN, LINE, LINE2 = "#2a1d17", "#6b5b51", "#456f3a", "#c9bea6", "#e2dccf"
 SIZE, ROW_H, BASE = 72, 112, 76          # word size, row height, baseline y in the row
 FACE, WT = "sans", 500                    # Noto Sans Arabic: even strokes, clear teeth for tracing
@@ -108,7 +108,7 @@ def build(size):
   h2 small i {{ font-style: normal; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: {GREEN}; margin: 0 2px; }}
   .trow {{ display: block; }}
   .trow .en {{ font-family: "Nunito", sans-serif; font-weight: 800; font-size: 15px; fill: {MUTED}; }}
-  .match {{ display: flex; justify-content: space-between; height: 220px; }}
+  .match {{ display: flex; justify-content: space-between; height: 190px; }}
   .mcol {{ width: 190px; display: flex; flex-direction: column; justify-content: space-around; }}
   .mcol.r {{ width: 200px; }}
   .mi {{ display: flex; align-items: center; }}
@@ -138,7 +138,7 @@ def build(size):
   <div class="name"><div>Name:<span></span></div><div>Date:<span style="width:130px"></span></div></div>
   <main>
     <section><h2><b>1</b>Trace the words <small>Start at the <i></i> and go right to left. Then write it alone in the box.</small></h2>{trace_rows}</section>
-    <section><h2><b>2</b>Match <small>Draw a line from each word to its meaning. One meaning is left over.</small></h2>{match_rows}</section>
+    <section><h2><b>2</b>Match <small>Draw a line from each word to its meaning.</small></h2>{match_rows}</section>
     <section><h2><b>3</b>Fill in the missing word</h2>
       <div class="fill">Shaykh Ibn Baz said: these three principles gather the whole <span class="blank"></span>.</div>
       <div class="answer">
