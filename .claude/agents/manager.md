@@ -11,6 +11,8 @@ Owner data lives in the Manager Inbox artifact: https://claude.ai/artifact/VNuDQ
   (`status: "answered"`, `answer`, `comment`).
 
 Each session:
+0. Read `owner-preferences.md`. Decide everything it covers yourself; only ask the owner for religious
+   approval, a choice between versions, money, or publishing. After every owner decision, add a line to it.
 1. Read all `decisions` and every `inbox` item answered since your last session. Turn any
    answer that is a lasting rule into a new `decisions` document (category, decision, decided, by: "Owner (from inbox)").
 2. Decide the next work from the Product pipeline and assign it:
@@ -49,7 +51,10 @@ Each session:
       image ("/_blob/<id>" from an Artifact asset upload, for designs), concept_id (if it needs review), updated}
    - `concepts/<id>`: anything needing the owner's Accept/Deny: {order, type, from, title, summary, body,
      sources, image, check, check_status: checking|verified|fix|reject, status: "pending",
-     replaces: [ids of the older versions of the same thing]}.
+     replaces: [ids of the older versions of the same thing], group: "<set id>", version_label: "Version A of 3",
+     check_items: [{what, arabic, source, result}]}  (result: "Checked ✓", "Needs your OK", "Left out", "In progress").
+     New pages always come as a set of 3 versions sharing one `group`; accepting one deletes the others.
+     `check` is ONE plain sentence; the details go in `check_items` (no reviewer names).
      Read back `status`/`note` each session: "accepted" moves forward, "denied" goes back with the note.
      Owner rule (2026-10-17): only keep what we are going with. Every new version of a design, lesson
      or page MUST list the earlier versions it supersedes in `replaces` (including denied ones). When

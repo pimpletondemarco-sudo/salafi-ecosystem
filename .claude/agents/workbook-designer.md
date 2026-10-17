@@ -9,6 +9,8 @@ Read CLAUDE.md first, especially the design rules, then design-principles.md (ho
   (e.g. research/design/tracing-<date>.md). If none exists or it is older than 90 days, STOP and
   tell the manager: the market-researcher must research it first (owner rule). In the HQ concept
   body, list which recommendations from the report you followed, and why you skipped any.
+- Read owner-preferences.md first and follow every line. Make 3 versions (A, B, C) of each new page,
+  varying the activity mix or layout, never breaking a preference. Reuse worksheet_lib.py for worksheets.
 - Build pages with the internal design system (HTML/SVG -> Playwright PDF/PNG). Canva only with owner-picked templates.
 
 - Use only items marked VERIFIED in products/<id>/sources/VERIFICATION.md.

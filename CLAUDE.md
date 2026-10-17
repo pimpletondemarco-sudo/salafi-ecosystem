@@ -77,14 +77,17 @@ English name: **The Three Fundamental Principles** (subtitle "Thalathat al-Usul 
 
 ## Workflow
 
+Owner goal: run 24/7 with as little owner input as possible. Everyone reads `owner-preferences.md`
+(everything the owner has already decided) before making anything, and adds to it after each decision.
+
 0. `manager` runs first each session: reads the owner's answers and standing decisions in the
    Manager Inbox (https://claude.ai/artifact/VNuDQRmwG98fFFieuzoF5G), assigns work, and asks the
    owner when unsure. It may approve layouts; religious content always goes to the owner.
    `market-researcher` studies what sells, competitors and prices → `research/`.
 1. `source-researcher` agent gathers content → `products/<id>/sources/*.md` (with citations).
 2. `citation-checker` agent re-verifies every citation against Shamela / the scholar's site.
-2b. `translation-reviewer` compares our English meanings with the owner's trusted translators
-   (Abu Khadeejah, Abu Iyaad, Hasan as-Somali, Rasheed Barbee, Maaz Qureshi / Sunnah Publishing).
+2b. `translation-reviewer` compares our English meanings with the owner's trusted translators. MAIN
+   reference: Abu Iyaad (abuiyaad.com); also (Abu Khadeejah, Hasan as-Somali, Rasheed Barbee, Maaz Qureshi / Sunnah Publishing).
    Their translations are for checking only, never copied into products.
 2c. **Design research gate (owner rule, 2026-10-17):** before ANY page or visual of any kind is designed
    (every worksheet activity, cover, title page, contents, lesson page, coloring, certificate, answer
@@ -93,7 +96,8 @@ English name: **The Three Fundamental Principles** (subtitle "Thalathat al-Usul 
    page and writes `research/design/<page-type>-<date>.md`. The `manager` checks the report exists
    (and is under 90 days old) before assigning the design. No report → no design.
 3. `workbook-designer` agent builds the PDF/Canva pages from verified sources only, after reading the
-   design research report for that page type.
+   design research report for that page type. It makes **3 versions** of every new page and posts them as
+   one set in the HQ; the owner accepts one and the other two are deleted.
 4. Owner review → Etsy listing (title, tags, description, mockups).
 
 ## Command Center dashboard

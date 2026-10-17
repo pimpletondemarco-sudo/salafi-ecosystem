@@ -119,6 +119,16 @@ canvas { display: block; width: 100%; height: auto; cursor: pointer; }
 .modal button { font: inherit; font-weight: 600; font-size: 15px; padding: 6px 14px; border-radius: 4px; cursor: pointer; border: 0; background: var(--panel-2); color: var(--ink); }
 .modal button:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
 .modal button.go { border-color: var(--accent); color: var(--accent); }
+.ctable { width: 100%; border-collapse: collapse; font-size: 15px; }
+.ctable th { text-align: left; font-size: 13px; color: var(--muted); font-weight: 600; padding: 6px 8px; }
+.ctable td { padding: 8px; vertical-align: top; background: var(--bg); border-top: 4px solid var(--panel); overflow-wrap: anywhere; }
+.ctable td.ar { font-family: "Amiri", "Traditional Arabic", serif; font-size: 18px; direction: rtl; text-align: right; }
+.ctable td.ok { color: var(--ok); font-weight: 600; white-space: nowrap; }
+.ctable td.no { color: var(--bad); font-weight: 600; white-space: nowrap; }
+.concept button.chk { justify-self: start; background: var(--bg); color: var(--ok); }
+.concept button.chk.warn { color: var(--warn, #9a6a00); }
+.concept button.chk.bad { color: var(--bad); }
+@media (max-width: 600px) { .ctable thead { display: none; } .ctable tr { display: grid; } .ctable td { border-top: 0; } .ctable tr + tr td:first-child { border-top: 8px solid var(--panel); } }
 .tabs { display: flex; gap: 6px; flex-wrap: wrap; margin-bottom: 10px; }
 .tabs button { font: inherit; font-size: 14px; padding: 4px 10px; border-radius: 4px; border: 0; background: var(--panel-2); color: var(--muted); cursor: pointer; }
 .tabs button[aria-pressed="true"] { color: #fff; background: var(--accent); }
@@ -530,6 +540,33 @@ canvas { display: block; width: 100%; height: auto; cursor: pointer; }
     body.appendChild(g);
     $('modal').hidden = false; $('modal-close').focus();
   }
+  // Plain-English citation check: what was checked, where it comes from, and the result.
+  function openCheck(v) {
+    lastFocus = document.activeElement;
+    $('modal-meta').textContent = 'Citation check';
+    $('modal-title').textContent = v.title || 'Untitled';
+    const body = $('modal-body'); body.textContent = '';
+    const g = el('div'); g.style.display = 'grid'; g.style.gap = '10px';
+    if (v.check) g.appendChild(el('p', null, v.check));
+    const items = Array.isArray(v.check_items) ? v.check_items : [];
+    if (items.length) {
+      const t = el('table', 'ctable'); const th = el('thead'); const hr = el('tr');
+      ['On the page', 'Arabic', 'Where it comes from', 'Result'].forEach(h => hr.appendChild(el('th', null, h)));
+      th.appendChild(hr); t.appendChild(th); const tb = el('tbody');
+      items.forEach(it => {
+        const tr = el('tr');
+        tr.appendChild(el('td', null, it.what || ''));
+        tr.appendChild(el('td', 'ar', it.arabic || ''));
+        tr.appendChild(el('td', null, it.source || ''));
+        const ok = /^(checked|ok|matches|verified)/i.test(it.result || '');
+        tr.appendChild(el('td', ok ? 'ok' : 'no', it.result || ''));
+        tb.appendChild(tr);
+      });
+      t.appendChild(tb); g.appendChild(t);
+    }
+    body.appendChild(g);
+    $('modal').hidden = false; $('modal-close').focus();
+  }
   function closeWork() { $('modal').hidden = true; if (lastFocus && lastFocus.focus) lastFocus.focus(); }
   $('modal-close').addEventListener('click', closeWork);
   $('modal').addEventListener('click', (e) => { if (e.target === $('modal')) closeWork(); });
@@ -605,6 +642,7 @@ canvas { display: block; width: 100%; height: auto; cursor: pointer; }
       const card = el('article', 'concept ' + st);
       const top = el('div', 'top'); top.append(el('span', null, v.type || 'Concept'));
       if (v.from) top.append(el('span', null, '· ' + v.from));
+      if (v.version_label) top.append(el('span', null, '· ' + v.version_label));
       card.appendChild(top);
       card.appendChild(el('h3', null, v.title || 'Untitled'));
       if (v.summary) card.appendChild(el('p', 'sum', v.summary));
@@ -612,8 +650,15 @@ canvas { display: block; width: 100%; height: auto; cursor: pointer; }
       if (v.body) card.appendChild(textBlock('Read the full concept', v.body));
       if (v.sources) card.appendChild(textBlock('Sources', v.sources));
       const reps = Array.isArray(v.replaces) ? v.replaces.filter(r => conceptDocs.some(d => d.id === r)) : [];
+      const sibs = v.group ? conceptDocs.filter(d => d.id !== doc.id && d.data().group === v.group).length : 0;
+      if (sibs && st === 'pending') card.appendChild(el('div', 'replaces', 'One of ' + (sibs + 1) + ' versions. Accepting this one removes the other ' + sibs + '.'));
       if (reps.length && st === 'pending') card.appendChild(el('div', 'replaces', 'Accepting this deletes the ' + reps.length + ' older version' + (reps.length > 1 ? 's' : '') + ' it replaces.'));
-      if (v.check) { const c = el('div', 'check'); const s = String(v.check_status || '').toLowerCase(); c.className = 'check ' + (s === 'verified' ? 's-done' : s === 'fix' || s === 'checking' ? 's-waiting' : s === 'reject' ? 's-blocked' : ''); c.textContent = 'Citation check: ' + v.check; card.appendChild(c); }
+      if (v.check || Array.isArray(v.check_items)) {
+        const s = String(v.check_status || '').toLowerCase();
+        const mark = s === 'verified' ? ' ✓' : s === 'reject' ? ' ✗' : s === 'fix' || s === 'checking' ? ' …' : '';
+        const cb = el('button', 'chk' + (s === 'reject' ? ' bad' : s === 'fix' || s === 'checking' ? ' warn' : ''), 'Citation check' + mark); cb.type = 'button';
+        cb.addEventListener('click', () => openCheck(v)); card.appendChild(cb);
+      }
       if (st !== 'pending') {
         card.appendChild(el('div', 'verdict', (st === 'accepted' ? 'You accepted this' : 'You denied this') + (v.note ? ': ' + v.note : '') + (v.decided_at ? ' · ' + fmtDate(v.decided_at) : '')));
         const undo = el('button', null, 'Move back to waiting'); undo.type = 'button';
@@ -666,7 +711,10 @@ canvas { display: block; width: 100%; height: auto; cursor: pointer; }
       await dbRef.collection('concepts').doc(id).update({ status, note, decided_at: status === 'pending' ? '' : new Date().toISOString() });
       // Accepting a new version deletes the older versions it replaces (and their design files).
       const me = conceptDocs.find(d => d.id === id);
-      const reps = status === 'accepted' && me && Array.isArray(me.data().replaces) ? me.data().replaces : [];
+      const md = me ? me.data() : {};
+      let reps = status === 'accepted' && Array.isArray(md.replaces) ? md.replaces.slice() : [];
+      // Accepting one version of a set (group) deletes the other versions in that set.
+      if (status === 'accepted' && md.group) conceptDocs.forEach(d => { if (d.id !== id && d.data().group === md.group) reps.push(d.id); });
       for (const r of reps) if (r !== id && conceptDocs.some(d => d.id === r)) await removeConcept(r);
     } catch (e) {
       msg.className = 'msg err'; msg.textContent = 'Could not save. Only the owner can decide; check your connection and try again.';

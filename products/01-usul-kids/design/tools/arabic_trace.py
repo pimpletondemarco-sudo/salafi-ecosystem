@@ -221,7 +221,7 @@ def _smooth(poly, k=3):
         out[i] = a[i - k:i + k + 1].mean(axis=0)
     return out.tolist()
 
-def centerlines(text, size, weight=700, scale=8, spur=0.06, gap=0.12, kashida=1, face="naskh"):
+def centerlines(text, size, weight=700, scale=8, spur=0.06, gap=0.12, kashida=1, face="naskh", hole=0.05, close=None):
     if kashida:
         text = stretch(text, kashida)
     """Returns dict(width, lines=[[(x,y),...]], starts=[(x,y)], dots=[(cx,cy,r)], marks=[d])."""
@@ -240,10 +240,16 @@ def centerlines(text, size, weight=700, scale=8, spur=0.06, gap=0.12, kashida=1,
         img = ImageChops.logical_xor(img, layer)
     from skimage.morphology import remove_small_holes, binary_closing, disk
     mask = np.array(img.convert("L")) > 0
-    # close hairline gaps and fill tiny counters (e.g. where a tooth meets the baseline), which
+    # fill tiny counters (e.g. where a tooth meets the baseline), which
     # would otherwise become small loops in the centre line and make a tooth look like ف
-    mask = binary_closing(mask, disk(max(1, int(0.02 * size * scale))))
-    mask = remove_small_holes(mask, max_size=int((0.18 * size * scale) ** 2))
+    # close hairline gaps (keeps short teeth like ن clean), except in words with ح/خ/ج, where it
+    # would seal the real narrow gap under the letter's top stroke
+    if close is None:
+        close = not any(ch in text for ch in "حخج")
+    if close:
+        mask = binary_closing(mask, disk(max(1, int(0.02 * size * scale))))
+    # only hairline gaps: real letter loops (و م ة ع ف ق) must stay open
+    mask = remove_small_holes(mask, max_size=int((hole * size * scale) ** 2))
     sk = skeletonize(np.ascontiguousarray(mask))
     # prune short spurs (end -> junction) a few times
     for _ in range(3):

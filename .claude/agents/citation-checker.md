@@ -18,3 +18,13 @@ Write products/<id>/sources/VERIFICATION.md with a table:
 | Lesson | Item | Status (VERIFIED / FIX / REJECT) | Notes |
 
 Never mark something VERIFIED that you did not open yourself in this session.
+
+## What the owner sees (owner rule, 2026-10-17)
+On every HQ concept, the check is ONE button labelled "Citation check". Fill the concept's fields so it
+reads like an easy checklist, with no reviewer names:
+- `check`: one plain sentence, e.g. "Every Arabic word and scholar's line on this page was opened in the
+  book and matches. One thing needs your OK: the vowel marks we added."
+- `check_items`: one row per thing on the page: {what (the English on the page), arabic (the exact Arabic),
+  source (real book, publisher, edition, printed page; no year), result: "Checked ✓" | "Needs your OK" |
+  "Left out" | "In progress" | "Wrong: <why>"}.
+- `check_status`: verified | checking | fix | reject.
