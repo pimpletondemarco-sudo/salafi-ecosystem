@@ -29,9 +29,9 @@ Source: *Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz (Dar al-Masir, 1st 
 
 **3. The ayah Shaykh Ibn Baz cites: Surat adh-Dhariyat 51:56**
 
-> {{AR:51:56}}
+> وَمَا خَلَقۡتُ ٱلۡجِنَّ وَٱلۡإِنسَ إِلَّا لِيَعۡبُدُونِ ٥٦
 
-Meaning: "{{EN:51:56}}" (*The Noble Qur'an*, Hilali-Khan). Arabic text: King Fahd Complex (Madinah) mushaf.
+Meaning: "And I (Allâh) created not the jinn and mankind except that they should worship Me (Alone)." (*The Noble Qur'an*, Hilali-Khan). Arabic text: King Fahd Complex (Madinah) mushaf.
 
 **4. How do we know Allah created us? Shaykh Muhammad ibn Salih al-Uthaymeen**
 
@@ -42,9 +42,9 @@ Source: *Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen (Dar a
 
 **5. The reason proof he points to: Surat at-Tur 52:35**
 
-> {{AR:52:35}}
+> أَمۡ خُلِقُواْ مِنۡ غَيۡرِ شَيۡءٍ أَمۡ هُمُ ٱلۡخَٰلِقُونَ ٣٥
 
-Meaning: "{{EN:52:35}}" (*The Noble Qur'an*, Hilali-Khan). Arabic text: King Fahd Complex (Madinah) mushaf.
+Meaning: "Were they created by nothing? Or were they themselves the creators?" (*The Noble Qur'an*, Hilali-Khan). Arabic text: King Fahd Complex (Madinah) mushaf.
 
 **6. Not by himself, not by his parents, not by chance: Shaykh al-Uthaymeen**
 
@@ -62,15 +62,15 @@ Source: *Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen (Dar a
 
 **8. The ayah he cites for provision: Surat adh-Dhariyat 51:58**
 
-> {{AR:51:58}}
+> إِنَّ ٱللَّهَ هُوَ ٱلرَّزَّاقُ ذُو ٱلۡقُوَّةِ ٱلۡمَتِينُ ٥٨
 
-Meaning: "{{EN:51:58}}" (*The Noble Qur'an*, Hilali-Khan). Arabic text: King Fahd Complex (Madinah) mushaf.
+Meaning: "Verily, Allâh is the All-Provider, Owner of Power, the Most Strong." (*The Noble Qur'an*, Hilali-Khan). Arabic text: King Fahd Complex (Madinah) mushaf.
 
 **9. The seed we sow: Surat al-Waqi'ah 56:63–64, also cited by Shaykh al-Uthaymeen on p. 30**
 
-> {{AR:56:63}} {{AR:56:64}}
+> أَفَرَءَيۡتُم مَّا تَحۡرُثُونَ ٦٣ ءَأَنتُمۡ تَزۡرَعُونَهُۥٓ أَمۡ نَحۡنُ ٱلزَّٰرِعُونَ ٦٤
 
-Meaning: "{{EN:56:63}} {{EN:56:64}}" (*The Noble Qur'an*, Hilali-Khan). Arabic text: King Fahd Complex (Madinah) mushaf.
+Meaning: "Then tell Me about the seed that you sow in the ground. Is it you that make it grow, or are We the Grower?" (*The Noble Qur'an*, Hilali-Khan). Arabic text: King Fahd Complex (Madinah) mushaf.
 
 ## Say it like this (script)
 1. "Who made you? Did you make yourself? No! Did Mummy and Daddy make you? No! Shaykh al-Uthaymeen said a person did not create himself, his parents did not create him, and he did not come by chance. Allah alone created us."
@@ -84,7 +84,7 @@ Meaning: "{{EN:56:63}} {{EN:56:64}}" (*The Noble Qur'an*, Hilali-Khan). Arabic t
 | خَلَقَنَا | kha-la-QA-naa | He created us |
 | رَزَقَنَا | ra-za-QA-naa | He provided for us |
 | لَمْ يَتْرُكْنَا هَمَلًا | lam YAT-ruk-naa HA-ma-laa | He did not leave us without a purpose |
-| {{WORD:ٱلرَّزَّاقُ}} | ar-raz-ZAAQ | the All-Provider (from 51:58) |
+| ٱلرَّزَّاقُ | ar-raz-ZAAQ | the All-Provider (from 51:58) |
 
 ## If your child asks…
 - **"Did Mummy and Daddy make me?"** No. Shaykh al-Uthaymeen said a person's father and mother did not create him, nor did anyone from the creation; the Creator is Allah alone (*Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen (Dar al-Thurayya, 4th ed.), p. 29).

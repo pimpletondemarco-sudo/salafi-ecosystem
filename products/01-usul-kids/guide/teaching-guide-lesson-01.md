@@ -77,9 +77,9 @@ Source: *Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen (Dar a
 
 **9. The proof Shaykh al-Uthaymeen quotes: Surat al-'Asr 103:1–3**
 
-> {{AR:103:1}} {{AR:103:2}} {{AR:103:3}}
+> وَٱلۡعَصۡرِ ١ إِنَّ ٱلۡإِنسَٰنَ لَفِي خُسۡرٍ ٢ إِلَّا ٱلَّذِينَ ءَامَنُواْ وَعَمِلُواْ ٱلصَّٰلِحَٰتِ وَتَوَاصَوۡاْ بِٱلۡحَقِّ وَتَوَاصَوۡاْ بِٱلصَّبۡرِ ٣
 
-Meaning: "{{EN:103:1}} {{EN:103:2}} {{EN:103:3}}" (*The Noble Qur'an*, Hilali-Khan; the full meaning with all its brackets is at quran.com/103:3). Arabic text: King Fahd Complex (Madinah) mushaf.
+Meaning: "By Al-'Asr (the time). Verily, man is in loss, Except those who believe (in Islâmic Monotheism) and do righteous good deeds, and recommend one another to the truth [...], and recommend one another to patience (...)." (*The Noble Qur'an*, Hilali-Khan; the full meaning with all its brackets is at quran.com/103:3). Arabic text: King Fahd Complex (Madinah) mushaf.
 Cited by Shaykh al-Uthaymeen in *Sharh Thalathat al-Usul* (Dar al-Thurayya, 4th ed.), p. 25
 
 ## Say it like this (script)
