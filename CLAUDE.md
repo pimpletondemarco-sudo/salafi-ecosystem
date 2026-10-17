@@ -29,7 +29,9 @@ scholars' explanations.
   scholar-website URL.
 - If a source cannot be verified, the content is DROPPED, not guessed.
 - On anything a customer sees (pages, answer keys, guides, listings), cite the REAL book, never
-  "Shamela book N": title, scholar, publisher, edition, and PRINTED page. Known editions:
+  "Shamela book N": title, scholar, publisher, edition, and PRINTED page. Leave the publication
+  year OFF customer-facing citations (owner, 2026-10-17), e.g. "Dar al-Masir, 1st ed., p. 38".
+  The years below stay in the internal source files. Known editions:
   - *Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen, Dar al-Thurayya, 4th ed. 1424 AH / 2004
   - *Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed. 1418 AH / 1997
   Shamela IDs and page links stay in the internal source files so the checker can re-verify.

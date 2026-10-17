@@ -16,21 +16,21 @@ Shaykh al-Islam Muhammad ibn Abdul-Wahhab wrote *Thalathat al-Usul* to teach the
 > فَإِذَا قِيلَ لَكَ: مَا الأُصُولُ الثَّلاثَةُ التِي يَجِبُ عَلَى الإِنْسَانِ مَعْرِفَتُهَا؟ فَقُلْ: مَعْرِفَةُ الْعَبْدِ ربه ودينه ونبيه محمد صلى الله عليه وسلم.
 
 Meaning: "If you are asked: what are the three principles every person must know? Say: that the servant knows his Lord, his religion and his Prophet Muhammad ﷺ."
-Source: *Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz (Dar al-Masir, 1st ed., 1418 AH), p. 38
+Source: *Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz (Dar al-Masir, 1st ed.), p. 38
 
 **2. Why these three? Shaykh Ibn Baz**
 
 > هذه الأصول الثلاثة تجمع الدين كله من ربك؟ وما دينك؟ ومن نبيك؟ وهي التي يسأل عنها العبد في قبره.
 
 Meaning: "These three principles gather the whole religion: Who is your Lord? What is your religion? Who is your Prophet? These are what a person is asked about in the grave."
-Source: *Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz (Dar al-Masir, 1st ed., 1418 AH), p. 38
+Source: *Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz (Dar al-Masir, 1st ed.), p. 38
 
 **3. What "usul" means: Shaykh Muhammad ibn Salih al-Uthaymeen**
 
 > الأصول جمع أصل، وهو ما يبنى عليه غيره، ومن ذلك أصل الجدار وهو أساسه، وأصل الشجرة الذي يتفرع منه الأغصان
 
 Meaning: "'Usul' means foundations: what other things are built on, like the foundation of a wall, or the root of a tree that the branches grow from."
-Source: *Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen (Dar al-Thurayya, 4th ed., 1424 AH), p. 42
+Source: *Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen (Dar al-Thurayya, 4th ed.), p. 42
 (Printed with «يتفرع»; the digital copy has a typing slip «يتفرغ».)
 
 **4. The ayah Shaykh al-Uthaymeen cites: Surah Ibrahim 14:24**
@@ -54,8 +54,8 @@ Meaning: "See you not how Allâh sets forth a parable? A goodly word as a goodly
 | نَبِيِّي | na-BEE-yee | my Prophet ﷺ |
 
 ## If your child asks…
-- **"Why are they called roots?"** Shaykh al-Uthaymeen explained that *usul* means foundations, like the root of a tree that the branches grow from (*Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen (Dar al-Thurayya, 4th ed., 1424 AH), p. 42).
-- **"Why only three?"** Shaykh Ibn Baz said these three gather the whole religion (*Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz (Dar al-Masir, 1st ed., 1418 AH), p. 38).
+- **"Why are they called roots?"** Shaykh al-Uthaymeen explained that *usul* means foundations, like the root of a tree that the branches grow from (*Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen (Dar al-Thurayya, 4th ed.), p. 42).
+- **"Why only three?"** Shaykh Ibn Baz said these three gather the whole religion (*Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz (Dar al-Masir, 1st ed.), p. 38).
 - **Answers to the three questions themselves** come in the next lessons, from the scholars' explanations. Until then: "We will learn each one in the next lessons, in sha Allah."
 
 ## Review game: Root Match
