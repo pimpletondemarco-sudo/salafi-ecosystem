@@ -5,9 +5,12 @@ sources/lesson-03-three-questions.md (verified): the three words and Ibn Baz's l
 "These three principles gather the whole religion" (Dar al-Masir, printed p. 38).
 
 Design research followed (research/design/):
-- tracing-2026-10-17: model word on the RIGHT (Arabic is written right to left), two dotted copies,
-  then a blank box to write alone; letter bodies dotted, harakat and letter dots solid grey;
-  green start dot; writing line where letters sit plus a lighter line for tails; 68px words.
+- tracing-2026-10-17: model word on the RIGHT (Arabic is written right to left), two tracing copies,
+  then a blank box to write alone; harakat solid grey; green start dot; writing line where
+  letters sit plus a lighter line for tails.
+- Owner's example (2026-10-17): bubble letters with a dashed centre line inside, hollow dots.
+  Noto Sans Arabic (OFL): even strokes and clear teeth; a little extra space after letters
+  that don't join, so separate letter groups never touch.
 - worksheet-layout-2026-10-17: colour kept 0.3in inside the paper edge (home printers can't print
   to the edge); shorter header; footer says where the answers are.
 - matching-2026-10-17: Arabic enlarged to 48px, rows spaced further apart.
@@ -18,44 +21,61 @@ Pending owner choices: a 4th matching option, and hiding the tracing meanings (a
 from pathlib import Path
 import sys
 sys.path.insert(0, str(Path(__file__).parent / "tools"))
-from arabic_trace import shape_word
+from arabic_trace import shape_word, centerlines, stretch
 
 HERE = Path(__file__).parent
 FONTS = ('<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700'
-         '&family=Noto+Naskh+Arabic:wght@600;700&family=Baloo+2:wght@700;800&family=Nunito:wght@600;700;800&display=swap">')
+         '&family=Noto+Sans+Arabic:wght@500;600&family=Baloo+2:wght@700;800&family=Nunito:wght@600;700;800&display=swap">')
 
 WORDS = [("رَبِّي", "My Lord"), ("دِينِي", "My Religion"), ("نَبِيِّي", "My Prophet")]
 MATCH_RIGHT = ["My Religion", "My Prophet", "My Lord"]  # shuffled; answers in the answer key
 INK, MUTED, GREEN, LINE, LINE2 = "#2a1d17", "#6b5b51", "#456f3a", "#c9bea6", "#e2dccf"
-SIZE, ROW_H, BASE = 68, 104, 68          # word size, row height, baseline y in the row
+SIZE, ROW_H, BASE = 72, 112, 76          # word size, row height, baseline y in the row
+FACE, WT = "sans", 500                    # Noto Sans Arabic: even strokes, clear teeth for tracing
+BUB, BUB_IN = 13.5, 10                    # bubble outline width, inner (white) width
+
+def _poly(l):
+    return "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in l)
 
 def word(r, x, kind):
-    """Place a shaped word with its right edge at x (Arabic starts on the right)."""
+    """Place a word with its right edge at x (Arabic starts on the right).
+    model: solid letters. trace: bubble outline with a dashed centre line (owner's example),
+    hollow dots, light grey harakat, green start dot at each letter group."""
     left = x - r["width"]
     g = f'<g transform="translate({left:.1f} {BASE})">'
     if kind == "model":
         g += "".join(f'<path d="{d}" fill="{INK}"/>' for d in r["bodies"] + r["dots"] + r["marks"])
-    else:
-        g += "".join(f'<path d="{d}" fill="none" stroke="#6f6553" stroke-width="1.8" '
-                     f'stroke-dasharray="1.6 2.2" stroke-linecap="round" stroke-linejoin="round"/>' for d in r["bodies"])
-        g += "".join(f'<path d="{d}" fill="#b3a892"/>' for d in r["dots"] + r["marks"])
-        sx, sy = r["start"]
-        g += f'<circle cx="{sx:.1f}" cy="{sy:.1f}" r="4.6" fill="{GREEN}"/>'
+        return g + "</g>"
+    ds = [_poly(l) for l in r["lines"]]
+    cap = 'fill="none" stroke-linecap="round" stroke-linejoin="round"'
+    g += "".join(f'<path d="{d}" {cap} stroke="{INK}" stroke-width="{BUB}"/>' for d in ds)
+    g += "".join(f'<path d="{d}" {cap} stroke="#fff" stroke-width="{BUB_IN}"/>' for d in ds)
+    g += "".join(f'<path d="{d}" {cap} stroke="#7d7260" stroke-width="1.4" stroke-dasharray="3.6 2.8"/>' for d in ds)
+    g += "".join(f'<circle cx="{a:.1f}" cy="{b:.1f}" r="{max(rr, 4.2):.1f}" fill="#fff" stroke="{INK}" stroke-width="1.6"/>' for a, b, rr in r["dots"])
+    g += "".join(f'<path d="{d}" fill="#b3a892"/>' for d in r["marks"])
+    g += "".join(f'<circle cx="{a:.1f}" cy="{b:.1f}" r="3.4" fill="{GREEN}"/>' for a, b in r["starts"])
     return g + "</g>"
 
 def trace_row(ar, en, width):
-    r = shape_word(ar, SIZE)
-    label_w = 104
+    label_w = 92
     cells = 4
     cw = (width - label_w) / cells
+    # shrink a long word just enough to leave clear space between copies
+    size = SIZE
+    probe = shape_word(ar, size, weight=WT, gap=0.12, face=FACE)["width"] + BUB
+    if probe > cw - 26:
+        size = SIZE * (cw - 26) / probe
+    r = shape_word(ar, size, weight=WT, gap=0.12, face=FACE)
+    t = centerlines(ar, size, weight=WT, face=FACE, spur=0.1, kashida=0)
     # cells left to right: blank, trace, trace, model (model on the right)
     svg = [f'<svg class="trow" viewBox="0 0 {width} {ROW_H}" width="{width}" height="{ROW_H}">']
     svg.append(f'<line x1="0" x2="{width - label_w - 8}" y1="{BASE}" y2="{BASE}" stroke="{LINE}" stroke-width="2"/>')
     svg.append(f'<line x1="0" x2="{width - label_w - 8}" y1="{BASE + 28}" y2="{BASE + 28}" stroke="{LINE2}" stroke-width="1.5"/>')
     svg.append(f'<rect x="6" y="6" width="{cw - 18:.1f}" height="{ROW_H - 10}" rx="12" fill="none" stroke="#d6cdbb" stroke-width="1.5"/>')
-    for i, kind in [(1, "ghost"), (2, "ghost"), (3, "model")]:
-        right = cw * i + (cw + r["width"]) / 2
-        svg.append(word(r, right, kind))
+    for i, kind in [(1, "trace"), (2, "trace"), (3, "model")]:
+        w_ = t if kind == "trace" else r
+        right = cw * i + (cw + w_["width"]) / 2
+        svg.append(word(w_, right, kind))
     svg.append(f'<text x="{width}" y="{BASE - 2}" text-anchor="end" class="en">{en}</text>')
     svg.append("</svg>")
     return "".join(svg)
@@ -86,8 +106,8 @@ def build(size):
   h2 small i {{ font-style: normal; display: inline-block; width: 10px; height: 10px; border-radius: 50%; background: {GREEN}; margin: 0 2px; }}
   .trow {{ display: block; }}
   .trow .en {{ font-family: "Nunito", sans-serif; font-weight: 800; font-size: 15px; fill: {MUTED}; }}
-  .mrow {{ display: grid; grid-template-columns: 170px 14px 1fr 14px 170px; align-items: center; height: 64px; }}
-  .mw {{ font-family: "Noto Naskh Arabic", serif; font-weight: 700; font-size: 48px; line-height: 1; direction: rtl; text-align: right; padding-right: 18px; }}
+  .mrow {{ display: grid; grid-template-columns: 170px 14px 1fr 14px 170px; align-items: center; height: 60px; }}
+  .mw {{ font-family: "Noto Sans Arabic", sans-serif; font-weight: 600; font-size: 46px; line-height: 1; direction: rtl; text-align: right; padding-right: 18px; }}
   .me {{ font-weight: 800; font-size: 20px; padding-left: 18px; }}
   .dot {{ width: 14px; height: 14px; border-radius: 50%; background: {GREEN}; }}
   .fill {{ font-size: 20px; font-weight: 700; line-height: 1.5; }}
