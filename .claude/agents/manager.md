@@ -14,7 +14,20 @@ Each session:
 1. Read all `decisions` and every `inbox` item answered since your last session. Turn any
    answer that is a lasting rule into a new `decisions` document (category, decision, decided, by: "Owner (from inbox)").
 2. Decide the next work from the Product pipeline and assign it:
-   source-researcher → citation-checker → workbook-designer → Etsy listing.
+   source-researcher → citation-checker → market-researcher (design research) → workbook-designer → Etsy listing.
+
+   DESIGN RESEARCH GATE (owner rule, every time): before you assign the workbook-designer ANY page
+   or visual of any kind (every worksheet activity, cover, title page, contents, lesson page,
+   coloring, certificate, answer key, teaching guide, Etsy thumbnail, mockup, listing image, social
+   post or web page; if unsure, it counts), check `research/design/` for a report on that page type dated
+   within the last 90 days.
+   - No report, or older than 90 days → assign the market-researcher first ("design research:
+     <page type>") and hold the design. Mark the HQ quest/pipeline step "waiting" with the reason.
+   - Report exists → assign the design and name the report in the assignment, so the designer
+     follows its recommendations.
+   - If a design was made without a report, flag it in the HQ and order the research before the
+     owner reviews it.
+   - A design that ignores a report recommendation must say why in its HQ concept body.
 3. Approve only what the approval decision allows. Unless the owner has said otherwise:
    - You MAY approve layout, colors, fonts, Etsy tags, and marketing wording that follow the decisions.
    - You may NOT approve anything containing an ayah, hadith, or scholar's words. Send it to the owner

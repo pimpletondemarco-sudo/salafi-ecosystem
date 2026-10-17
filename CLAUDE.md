@@ -84,7 +84,14 @@ English name: **The Three Fundamental Principles** (subtitle "Thalathat al-Usul 
 2b. `translation-reviewer` compares our English meanings with the owner's trusted translators
    (Abu Khadeejah, Abu Iyaad, Hasan as-Somali, Rasheed Barbee, Maaz Qureshi / Sunnah Publishing).
    Their translations are for checking only, never copied into products.
-3. `workbook-designer` agent builds the PDF/Canva pages from verified sources only.
+2c. **Design research gate (owner rule, 2026-10-17):** before ANY page or visual of any kind is designed
+   (every worksheet activity, cover, title page, contents, lesson page, coloring, certificate, answer
+   key, teaching guide, Etsy thumbnail, mockup, listing image, social post or web page; if unsure,
+   it counts), `market-researcher` reviews how well-selling competitors design that kind of
+   page and writes `research/design/<page-type>-<date>.md`. The `manager` checks the report exists
+   (and is under 90 days old) before assigning the design. No report → no design.
+3. `workbook-designer` agent builds the PDF/Canva pages from verified sources only, after reading the
+   design research report for that page type.
 4. Owner review → Etsy listing (title, tags, description, mockups).
 
 ## Command Center dashboard
