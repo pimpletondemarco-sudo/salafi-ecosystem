@@ -27,14 +27,15 @@ BUB, BUB_IN = 13.5, 10                    # bubble outline width, inner (white) 
 def _poly(l):
     return "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in l)
 
-def word(r, x, kind, BASE=BASE):
+def word(r, x, kind, BASE=BASE, ink=INK, cls=""):
     """Place a word with its right edge at x (Arabic starts on the right).
     model: solid letters. trace: bubble outline with a dashed centre line (owner's example),
     hollow dots, light grey harakat, green start dot at each letter group."""
     left = x - r["width"]
-    g = f'<g transform="translate({left:.1f} {BASE})">'
+    c = f' class="{cls}"' if cls else ""
+    g = f'<g{c} transform="translate({left:.1f} {BASE})">'
     if kind == "model":
-        g += "".join(f'<path d="{d}" fill="{INK}"/>' for d in r["bodies"] + r["dots"] + r["marks"])
+        g += "".join(f'<path d="{d}" fill="{ink}"/>' for d in r["bodies"] + r["dots"] + r["marks"])
         return g + "</g>"
     ds = [_poly(l) for l in r["lines"]]
     cap = 'fill="none" stroke-linecap="round" stroke-linejoin="round"'
@@ -46,7 +47,7 @@ def word(r, x, kind, BASE=BASE):
     g += "".join(f'<circle cx="{a:.1f}" cy="{b:.1f}" r="3.4" fill="{GREEN}"/>' for a, b in r["starts"])
     return g + "</g>"
 
-def trace_row(ar, en, width, SIZE=SIZE, ROW_H=ROW_H, BASE=BASE, label_w=92):
+def trace_row(ar, en, width, SIZE=SIZE, ROW_H=ROW_H, BASE=BASE, label_w=92, key=False):
     cells = 4
     cw = (width - label_w) / cells
     # shrink a long word just enough to leave clear space between copies
@@ -64,16 +65,20 @@ def trace_row(ar, en, width, SIZE=SIZE, ROW_H=ROW_H, BASE=BASE, label_w=92):
     for i, kind in [(1, "trace"), (2, "trace"), (3, "model")]:
         w_ = t if kind == "trace" else r
         right = cw * i + (cw + w_["width"]) / 2
-        svg.append(word(w_, right, kind, BASE))
+        svg.append(word(w_, right, kind, BASE, cls="stu" if key else ""))
+    if key:  # answer key: the word the child writes alone, in green, inside the blank box
+        svg.append(word(r, (cw - 12 + r["width"]) / 2, "model", BASE, ink=GREEN, cls="ans"))
     svg.append(f'<text x="{width}" y="{BASE - 2}" text-anchor="end" class="en">{en}</text>')
     svg.append("</svg>")
     return "".join(svg)
 
-def build(size, spec):
+def build(size, spec, key=False):
+    """key=True: the filled-in answer-key copy of the same page (answer-key research 2026-10-17):
+    same generator and data, student content faded, panels as outlines, answers in bold green."""
     w, h, page = (816, 1056, "8.5in 11in") if size == "letter" else (794, 1123, "210mm 297mm")
     inner = w - 96
     tsize, trow, tbase = spec.get("trace_size", SIZE), spec.get("row_h", ROW_H), spec.get("base", BASE)
-    trace_rows = "".join(trace_row(ar, en, inner, tsize, trow, tbase, spec.get('label_w', 92)) for ar, en in spec["trace"])
+    trace_rows = "".join(trace_row(ar, en, inner, tsize, trow, tbase, spec.get('label_w', 92), key) for ar, en in spec["trace"])
     def h2(n, title, small=""):
         return f'<h2><b>{n}</b>{title}' + (f' <small>{small}</small>' if small else "") + '</h2>'
     def trace_sec(n):
@@ -81,8 +86,18 @@ def build(size, spec):
     def match_sec(n):
         left = "".join(f'<div class="mi"><div class="mw">{ar}</div><span class="dot"></span></div>' for ar in spec["match_left"])
         right = "".join(f'<div class="mi"><span class="dot"></span><div class="me">{en}</div></div>' for en in spec["match_right"])
+        lines = ""
+        if key:  # columns use space-around, so item i is centred at H*(2i+1)/(2n)
+            H, cnt, lw, rw = spec.get('match_h', 176), len(spec["match_left"]), spec.get('match_lw', 190), spec.get('match_rw', 200)
+            pairs = dict(spec["trace"])
+            for i, ar in enumerate(spec["match_left"]):
+                j = spec["match_right"].index(pairs[ar])
+                y1, y2 = H * (2 * i + 1) / (2 * cnt), H * (2 * j + 1) / (2 * cnt)
+                lines += (f'<line x1="{lw - 7}" y1="{y1:.1f}" x2="{inner - rw + 7}" y2="{y2:.1f}" stroke="{GREEN}" stroke-width="5" stroke-linecap="round"/>'
+                          f'<circle cx="{lw - 7}" cy="{y1:.1f}" r="11" fill="{GREEN}"/><circle cx="{inner - rw + 7}" cy="{y2:.1f}" r="11" fill="{GREEN}"/>')
+            lines = f'<svg class="mlines" width="{inner}" height="{H}">{lines}</svg>'
         return (f'<section>{h2(n, "Match", "Draw a line from each word to its meaning.")}'
-                f'<div class="match"><div class="mcol">{left}</div><div class="mcol r">{right}</div></div></section>')
+                f'<div class="match"><div class="mcol">{left}</div><div class="mcol r">{right}</div>{lines}</div></section>')
     def bank_sec(n):
         b = spec["bank"]
         words = "".join(f'<span>{ar}</span>' for ar in b["words"])
@@ -94,12 +109,14 @@ def build(size, spec):
         if a3["kind"] == "fill":
             return (f'<section>{h2(n, "Fill in the missing word", "Circle the right word, then write it on the line.")}'
                     f'<div class="said">{a3["said"]}</div>'
-                    f'<div class="fill">{a3["before"]} <span class="blank"></span>{a3.get("after", ".")}</div>'
-                    f'<div class="choices">' + "".join(f"<span>{c}</span>" for c in a3["choices"]) + '</div></section>')
+                    f'<div class="fill">{a3["before"]} <span class="blank">{a3["answer"] if key else ""}</span>{a3.get("after", ".")}</div>'
+                    f'<div class="choices">' + "".join(f'<span{chk(c)}>{c}</span>' for c in a3["choices"]) + '</div></section>')
         return (f'<section>{h2(n, "Circle the right answer")}'  # circle only, no writing
                 f'<div class="said">{a3["said"]}</div>'
                 f'<div class="fill">{a3["question"]}</div>'
-                f'<div class="choices">' + "".join(f"<span>{c}</span>" for c in a3["choices"]) + '</div></section>')
+                f'<div class="choices">' + "".join(f'<span{chk(c)}>{c}</span>' for c in a3["choices"]) + '</div></section>')
+    def chk(c):
+        return ' class="ok"' if key and c == spec["act3"].get("answer") else ""
     makers = {"trace": trace_sec, "match": match_sec, "bank": bank_sec, "act3": act3_sec}
     sections = "\n    ".join(makers[a](k + 1) for k, a in enumerate(spec.get("acts", ["trace", "match", "act3"])))
     return f'''<!doctype html><html lang="en"><head><meta charset="utf-8">{FONTS}<style>
@@ -145,7 +162,7 @@ def build(size, spec):
   .brand {{ text-align: right; white-space: nowrap; font-size: 12.5px; }}
   .brand div {{ font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 19px; color: {INK}; }}
   .brand i {{ font-style: normal; color: {GREEN}; }}
-</style></head><body><div class="page">
+{KEY_CSS if key else ""}</style></head><body><div class="page{' key' if key else ''}">
   <header class="band">
     <div><div class="k">The Three Fundamental Principles, Lesson {spec["lesson"]}</div><h1>{spec["title"]}</h1></div>
     <div class="ar">الأُصُولُ الثَّلَاثَةُ</div>
@@ -159,6 +176,24 @@ def build(size, spec):
     <div class="brand"><div>Sunnah<i>Saplings</i></div>Answers: Answer Key, Lesson {spec["lesson"]}</div>
   </footer>
 </div></body></html>'''
+
+
+KEY_CSS = f"""
+  .key {{ color: #a39a92; }}
+  .key .band {{ background: none; box-shadow: inset 0 0 0 2px #d6cdbb; }}
+  .key header .ar, .key .brand i {{ color: #a39a92; }}
+  .key header h1, .key .brand div, .key footer b, .key footer, .key header .k, .key h2 small {{ color: #a39a92; }}
+  .key h2 b {{ background: #c4bbb1; }}
+  .key .name span, .key .fill .blank {{ border-color: #c4bbb1; }}
+  .key .stu {{ opacity: .38; }}
+  .key .mw, .key .me {{ color: #a39a92; }}
+  .key .dot {{ background: #c4bbb1; }}
+  .key .match {{ position: relative; }}
+  .key .mlines {{ position: absolute; left: 0; top: 0; }}
+  .key .choices span {{ color: #a39a92; }}
+  .key .fill .blank {{ color: {GREEN}; font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 30px; text-align: center; line-height: 28px; }}
+  .key .choices span.ok {{ color: {GREEN}; border: 5px solid {GREEN}; border-radius: 999px; padding: 0 14px; margin: -4px -4px; }}
+"""
 
 
 def write(spec, stem):

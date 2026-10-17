@@ -1,0 +1,88 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Amiri+Quran&family=Noto+Sans+Arabic:wght@400;500;600&family=Baloo+2:wght@700;800&family=Nunito:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap"><style>
+  @page { size: 210mm 297mm; margin: 0; }
+  html, body { margin: 0; background: #fff; }
+  .page { width: 794px; height: 1123px; box-sizing: border-box; padding: 29px 0; display: flex; flex-direction: column;
+          font-family: "Nunito", "Noto Sans Arabic", sans-serif; color: #2a1d17; overflow: hidden; page-break-after: always; break-after: page; }
+  .band { margin: 0 29px; background: #e5e1d8; border-radius: 14px; }
+  header { padding: 13px 19px 11px; display: flex; align-items: center; justify-content: space-between; }
+  header .k { font-weight: 700; font-size: 14px; color: #6b5b51; }
+  header h1 { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 32px; line-height: 1; margin: 3px 0 0; letter-spacing: -0.01em; }
+  header .ar { font-family: "Amiri", serif; font-weight: 700; direction: rtl; font-size: 32px; color: #456f3a; line-height: 1.3; }
+  main { flex: 1; padding: 18px 48px 14px; display: flex; flex-direction: column; min-height: 0; }
+  footer { padding: 10px 19px 11px; font-size: 12px; line-height: 1.45; color: #4a3a30;
+           display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+  footer b { color: #2a1d17; }
+  .brand { text-align: right; white-space: nowrap; font-size: 12px; }
+  .brand div { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 18px; color: #2a1d17; }
+  .brand i { font-style: normal; color: #456f3a; }
+  h2 { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 21px; line-height: 1.1; margin: 0 0 6px; display: flex; align-items: center; gap: 10px; }
+  h2 b { width: 30px; height: 30px; border-radius: 50%; background: #456f3a; color: #fff; display: grid; place-items: center; font-size: 17px; flex: none; }
+  h2 small { font-family: "Nunito", sans-serif; font-weight: 700; font-size: 13.5px; color: #6b5b51; }
+  p { margin: 0 0 6px; }
+  .ar { font-family: "Noto Sans Arabic", sans-serif; direction: rtl; }
+  .quran { font-family: "Amiri Quran", "Amiri", serif; direction: rtl; }
+  .src { font-size: 12px; color: #6b5b51; line-height: 1.4; }
+  .src i { color: #2a1d17; }
+
+  main { font-size: 13.5px; line-height: 1.4; }
+  .saw { font-family: "Noto Sans Arabic", sans-serif; font-size: 1.15em; line-height: 1; }
+  .arw { font-family: "Noto Sans Arabic", sans-serif; font-weight: 600; font-size: 1.2em; unicode-bidi: isolate; direction: rtl; }
+  .box { background: #e5e1d8; border-radius: 14px; padding: 10px 16px 9px; margin-bottom: 12px; }
+  .box h3, .sec h3 { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 19px; line-height: 1.15; margin: 0 0 5px; }
+  .box dl { display: grid; grid-template-columns: 76px 1fr; gap: 2px 10px; margin: 0; }
+  .box dt { font-weight: 800; }
+  .box dd { margin: 0; }
+  .sec { margin-bottom: 10px; }
+  .sec h3 small { font-family: "Nunito", sans-serif; font-weight: 700; font-size: 13px; color: #6b5b51; margin-left: 6px; }
+  .say { display: grid; grid-template-columns: 38px 1fr; gap: 2px 6px; margin: 0 0 4px; }
+  .say .lb { color: #456f3a; font-weight: 800; }
+  .say .act { grid-column: 2; color: #2a1d17; }
+  .say b { font-weight: 800; }
+  table.words { border-collapse: collapse; width: 100%; }
+  table.words td { padding: 2px 10px 2px 0; vertical-align: middle; }
+  table.words td.ar { font-family: "Noto Sans Arabic", sans-serif; font-weight: 600; font-size: 23px; direction: rtl; text-align: right; line-height: 1.35; white-space: nowrap; width: 1%; padding-right: 16px; }
+  table.words td.sy { font-weight: 800; white-space: nowrap; }
+  table.words td.mn { color: #6b5b51; }
+  .note { font-size: 12.5px; color: #6b5b51; margin-top: 3px; }
+  ol.steps { margin: 0; padding-left: 22px; }
+  ol.steps li { margin-bottom: 3px; }
+  .game { display: flex; gap: 16px; align-items: flex-start; }
+  .gart { flex: none; }
+  .qa p { margin: 0 0 6px; }
+  .qa b { font-weight: 800; }
+  .qa .src i { color: inherit; }
+  .panel { border-radius: 12px; box-shadow: inset 0 0 0 2px #456f3a; padding: 8px 13px 7px; margin-bottom: 8px; break-inside: avoid; }
+  .panel h4 { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 15.5px; margin: 0 0 2px; line-height: 1.2; }
+  .panel .q { font-family: "Noto Sans Arabic", sans-serif; font-weight: 500; font-size: 18px; direction: rtl; text-align: right; line-height: 1.5; margin: 0 0 2px; }
+  .panel .q.quran { font-family: "Amiri Quran", "Amiri", serif; font-weight: 400; font-size: 21px; line-height: 1.75; margin-bottom: 7px; }
+  .panel .m { font-size: 13px; line-height: 1.38; margin: 0 0 2px; }
+  .panel .src { font-size: 11.5px; }
+  .panel .m b { font-weight: 800; }
+  .intro { font-size: 12.5px; color: #6b5b51; margin: -2px 0 6px; }
+
+  .vC .box dl.strip { grid-template-columns: 62px 1fr 74px 1fr; }
+  .vC .step { margin-bottom: 10px; }
+  .vC .intro { display: none; }
+  .vC .panel .q { font-size: 17px; }
+  .vC .panel .q.quran { font-size: 19px; }
+  .vC .step h2 { font-size: 19px; margin-bottom: 4px; }
+  .vC .step h2 b { width: 27px; height: 27px; font-size: 15px; }
+  .vC .step .sec { margin: 0 0 0 37px; }
+  .vC .panel.row2 { display: grid; grid-template-columns: 1.3fr 1fr; gap: 14px; align-items: center; }
+  .vC .panel.row2 .q { margin: 0; }
+  .vC .qa2 .qa { columns: 2; column-gap: 24px; margin-bottom: 8px; }
+  .vC .qa2 .qa h3 { column-span: all; }
+  .vC .qa2 .qa p { margin-bottom: 6px; break-inside: avoid; font-size: 13px; }
+  .vC .panel.row2 { padding-top: 7px; padding-bottom: 6px; }
+  .vB .box dl { grid-template-columns: 1fr; gap: 0; }
+  .vB .box dt { margin-top: 5px; }
+  .vB table.words, .vB table.words tbody, .vB table.words tr { display: block; }
+  .vB table.words tr { margin-bottom: 5px; }
+  .vB table.words td { display: inline; padding: 0; }
+  .vB table.words td.ar { display: block; width: auto; text-align: left; font-size: 24px; line-height: 1.4; padding: 0; }
+  .vB table.words td.sy::after { content: " "; }
+  .vB .game { flex-direction: column; gap: 6px; }
+</style></head><body><div class="page"><header class="band"><div><div class="k">Teaching Guide, Lesson 3: teach it</div><h1>The Three Questions</h1></div><div class="ar">الأُصُولُ الثَّلَاثَةُ</div></header><main class="vB"><div style="display:grid;grid-template-columns:1fr 286px;gap:26px;flex:1"><div><div class="sec"><h3>Background for you<small>2 minutes to read</small></h3><p>Shaykh al-Islam Muhammad ibn Abdul-Wahhab wrote <i>Thalathat al-Usul</i> to teach these foundations. Shaykh Ibn Baz and Shaykh al-Uthaymeen both explained it. In this lesson your child learns the three foundations themselves; later lessons explain each one.</p></div><div class="sec"><h3>Say it like this<small>Read the bold lines aloud, or say them in your own words.</small></h3><div class="say"><span class="lb">Say:</span><span><b>Today we learn three foundations. A foundation is like the roots of a tree. Shaykh al-Uthaymeen said the roots are what the branches grow from.</b></span></div><div class="say"><span class="lb">Say:</span><span><b>Every Muslim must know three things: who is my Lord, what is my religion, and who is my Prophet <span class="saw">ﷺ</span>.</b></span></div><div class="say"><span class="lb">Say:</span><span><b>Shaykh Ibn Baz said these three gather the whole religion.</b></span></div><div class="say"><span></span><span class="act">Point to the coloring page.</span><span class="lb">Say:</span><span><b>Let's colour the three roots: Rabbī, Dīnī, Nabiyyī <span class="saw">ﷺ</span>.</b></span></div></div><div class="sec"><h3>Review game: Root Match<small>5 minutes, paper and pencil only</small></h3><div class="game"><ol class="steps"><li>Write <span class="arw">رَبِّي</span>, <span class="arw">دِينِي</span>, <span class="arw">نَبِيِّي <span class="saw">ﷺ</span></span> on three paper "roots".</li><li>Say the English (my Lord / my religion / my Prophet <span class="saw">ﷺ</span>).</li><li>Your child puts a paper leaf on the matching root.</li></ol><svg class="gart" viewBox="0 0 176 70" width="176" height="70" fill="#fff" stroke="#2a1d17" stroke-width="2" stroke-linejoin="round" stroke-linecap="round">
+  <path d="M4 6h34v40l-17 18-17-18z"/><path d="M48 6h34v40l-17 18-17-18z"/><path d="M92 6h34v40l-17 18-17-18z"/>
+  <path d="M12 22h18M56 22h18M100 22h18" stroke="#b3a892" stroke-width="3"/>
+  <path d="M138 54c0-26 14-42 34-46 2 22-10 42-34 46z" fill="#fff"/><path d="M138 54c8-12 18-26 30-40" fill="none"/></svg></div></div></div><div><div class="box"><h3>Before you start</h3><dl><dt>Goal</dt><dd>By the end, your child can say the three fundamental principles every Muslim must know (knowing their Lord, their religion and their Prophet <span class="saw">ﷺ</span>) and colour the date-palm page.</dd><dt>Time</dt><dd>About 15 to 20 minutes.</dd><dt>You need</dt><dd>The printed worksheet and colouring page, a pencil, crayons, paper and scissors for the game.</dd><dt>Pages</dt><dd>Worksheet "My Three Roots" and the date-palm colouring page. Answers: Answer Key, Lesson 3.</dd></dl></div><div class="sec"><h3>Say the Arabic words</h3><table class="words"><tr><td class="ar">الأُصُولُ الثَّلَاثَةُ</td><td class="sy">al-u-SOOL ath-tha-LAA-tha</td><td class="mn">the three (fundamental) principles</td></tr><tr><td class="ar">رَبِّي</td><td class="sy">RAB-bee</td><td class="mn">my Lord</td></tr><tr><td class="ar">دِينِي</td><td class="sy">DEE-nee</td><td class="mn">my religion</td></tr><tr><td class="ar">نَبِيِّي</td><td class="sy">na-BEE-yee</td><td class="mn">my Prophet <span class="saw">ﷺ</span></td></tr></table><div class="note">Capital letters show the strong part of the word. "ee" as in <i>see</i>, "oo" as in <i>moon</i>, "aa" as in <i>father</i>, "th" as in <i>think</i>.</div></div></div></div></main><footer class="band"><div><b>For parents.</b> You can teach the whole lesson from this page. Page 2 has the scholars' words and answers to questions.</div><div class="brand"><div>Sunnah<i>Saplings</i></div>Teaching Guide, Lesson 3, page 1 of 2</div></footer></div><div class="page"><header class="band"><div><div class="k">Teaching Guide, Lesson 3: go deeper</div><h1>The Three Questions</h1></div><div class="ar">الأُصُولُ الثَّلَاثَةُ</div></header><main class="vB"><h3 style="font-family:'Baloo 2',sans-serif;font-weight:800;font-size:19px;margin:0 0 4px">From the Scholars</h3><p class="intro">The scholars' own words, with the meaning in plain English and the book and printed page.</p><div style="display:grid;grid-template-columns:1fr 1fr;gap:0 14px"><div><div class="panel"><h4>1. The three principles: the words of the original text, as quoted by Shaykh Ibn Baz</h4><div class="q">فَإِذَا قِيلَ لَكَ: مَا الأُصُولُ الثَّلاثَةُ التِي يَجِبُ عَلَى الإِنْسَانِ مَعْرِفَتُهَا؟ فَقُلْ: مَعْرِفَةُ الْعَبْدِ ربه ودينه ونبيه محمد صلى الله عليه وسلم.</div><p class="m"><b>Meaning of Shaykh Muhammad ibn Abdul-Wahhab's words:</b> "If you are asked: what are the three principles every person must know? Say: that the servant knows his Lord, his religion and his Prophet Muhammad <span class="saw">ﷺ</span>."</p><div class="src"><i>Sharh Thalathat al-Usul</i>, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed., p. 38</div></div><div class="panel"><h4>3. What "usul" means: Shaykh Muhammad ibn Salih al-Uthaymeen</h4><div class="q">الأصول جمع أصل، وهو ما يبنى عليه غيره، ومن ذلك أصل الجدار وهو أساسه، وأصل الشجرة الذي يتفرع منه الأغصان</div><p class="m"><b>Meaning of Shaykh al-Uthaymeen's words:</b> "'Usul' means foundations: what other things are built on, like the foundation of a wall, or the root of a tree that the branches grow from."</p><div class="src"><i>Sharh Thalathat al-Usul</i>, Shaykh Muhammad ibn Salih al-Uthaymeen, Dar al-Thurayya, 4th ed., p. 42</div></div></div><div><div class="panel"><h4>2. Why these three? Shaykh Ibn Baz</h4><div class="q">هذه الأصول الثلاثة تجمع الدين كله من ربك؟ وما دينك؟ ومن نبيك؟ وهي التي يسأل عنها العبد في قبره.</div><p class="m"><b>Meaning of Shaykh Ibn Baz's words:</b> "These three principles gather the whole religion: Who is your Lord? What is your religion? Who is your Prophet? These are what a person is asked about in the grave."</p><div class="src"><i>Sharh Thalathat al-Usul</i>, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed., p. 38</div></div><div class="panel"><h4>4. The ayah Shaykh al-Uthaymeen cites: Surah Ibrahim 14:24</h4><div class="q quran">أَلَمۡ تَرَ كَيۡفَ ضَرَبَ ٱللَّهُ مَثَلٗا كَلِمَةٗ طَيِّبَةٗ كَشَجَرَةٖ طَيِّبَةٍ أَصۡلُهَا ثَابِتٞ وَفَرۡعُهَا فِي <span style="white-space:nowrap">ٱلسَّمَآءِ ٢٤</span></div><p class="m"><b>Meaning of the ayah, from <i>The Noble Qur'an</i> (Hilali-Khan):</b> "See you not how Allâh sets forth a parable? A goodly word as a goodly tree, whose root is firmly fixed, and its branches (reach) to the sky (i.e. very high)."</p><div class="src">Surah Ibrahim 14:24. Arabic text: King Fahd Complex (Madinah) mushaf.</div></div></div></div><div class="sec qa"><h3>If your child asks…</h3><p><b>"Why are they called roots?"</b> Shaykh al-Uthaymeen explained that <i>usul</i> means foundations, like the root of a tree that the branches grow from (<i>Sharh Thalathat al-Usul</i>, Shaykh Muhammad ibn Salih al-Uthaymeen, Dar al-Thurayya, 4th ed., p. 42).</p><p><b>"Why only three?"</b> Shaykh Ibn Baz said these three gather the whole religion (<i>Sharh Thalathat al-Usul</i>, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed., p. 38).</p><p><b>Answers to the three questions themselves</b> come in the next lessons, from the scholars' explanations. Until then: "We will learn each one in the next lessons, in sha Allah."</p></div></main><footer class="band"><div><b>For parents.</b> English lines give the meaning of the Arabic, not a word-for-word translation.</div><div class="brand"><div>Sunnah<i>Saplings</i></div>Teaching Guide, Lesson 3, page 2 of 2</div></footer></div></body></html>
