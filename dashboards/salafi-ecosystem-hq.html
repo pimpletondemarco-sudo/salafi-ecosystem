@@ -95,6 +95,9 @@ canvas { display: block; width: 100%; height: auto; cursor: pointer; }
 .concept button[disabled] { opacity: .5; cursor: default; }
 .concept .msg { font-size: 13px; color: var(--muted); min-height: 1em; }
 .concept .msg.err { color: var(--bad); }
+.concept button.del { margin-left: auto; background: transparent; color: var(--muted); font-weight: 500; font-size: 14px; padding: 6px 8px; }
+.concept button.del.sure { background: var(--bad); color: #fff; }
+.concept .replaces { font-size: 13px; color: var(--muted); }
 .concept .verdict { font-size: 14px; padding: 6px 8px; border-radius: 4px; background: var(--bg); overflow-wrap: anywhere; }
 .work { display: grid; gap: 6px; margin-top: 10px; }
 .work h3 { font-family: var(--font-ui); font-weight: 700; font-size: 12px; color: var(--muted); margin: 6px 0 2px; }
@@ -608,24 +611,51 @@ canvas { display: block; width: 100%; height: auto; cursor: pointer; }
       if (v.image && /^\/_blob\/[0-9a-f]{32}$/.test(v.image)) { const img = el('img'); img.src = v.image; img.alt = v.title || 'Concept preview'; card.appendChild(img); }
       if (v.body) card.appendChild(textBlock('Read the full concept', v.body));
       if (v.sources) card.appendChild(textBlock('Sources', v.sources));
+      const reps = Array.isArray(v.replaces) ? v.replaces.filter(r => conceptDocs.some(d => d.id === r)) : [];
+      if (reps.length && st === 'pending') card.appendChild(el('div', 'replaces', 'Accepting this deletes the ' + reps.length + ' older version' + (reps.length > 1 ? 's' : '') + ' it replaces.'));
       if (v.check) { const c = el('div', 'check'); const s = String(v.check_status || '').toLowerCase(); c.className = 'check ' + (s === 'verified' ? 's-done' : s === 'fix' || s === 'checking' ? 's-waiting' : s === 'reject' ? 's-blocked' : ''); c.textContent = 'Citation check: ' + v.check; card.appendChild(c); }
       if (st !== 'pending') {
         card.appendChild(el('div', 'verdict', (st === 'accepted' ? 'You accepted this' : 'You denied this') + (v.note ? ': ' + v.note : '') + (v.decided_at ? ' · ' + fmtDate(v.decided_at) : '')));
         const undo = el('button', null, 'Move back to waiting'); undo.type = 'button';
         undo.addEventListener('click', () => decideConcept(doc.id, card, 'pending', ''));
-        const b = el('div', 'btns'); b.appendChild(undo); card.appendChild(b);
+        const b = el('div', 'btns'); b.append(undo, delButton(doc.id, card)); card.appendChild(b);
       } else {
         const note = el('textarea'); note.id = 'cnote-' + doc.id; note.placeholder = 'Optional note. Required if you deny: say what to change.';
         const acc = el('button', 'acc', 'Accept'); acc.type = 'button';
         const den = el('button', 'den', 'Deny'); den.type = 'button';
         acc.addEventListener('click', () => decideConcept(doc.id, card, 'accepted', note.value.trim()));
         den.addEventListener('click', () => { if (!note.value.trim()) { msg.className = 'msg err'; msg.textContent = 'Write what should change before denying.'; note.focus(); return; } decideConcept(doc.id, card, 'denied', note.value.trim()); });
-        const b = el('div', 'btns'); b.append(acc, den);
+        const b = el('div', 'btns'); b.append(acc, den, delButton(doc.id, card));
         card.append(note, b);
       }
       const msg = el('div', 'msg'); card.appendChild(msg);
       box.appendChild(card);
     });
+  }
+  // Delete a concept and the design files (work items) linked to it.
+  async function removeConcept(id) {
+    const linked = workDocs.filter(w => w.concept_id === id).map(w => w.id);
+    for (const wid of linked) await dbRef.collection('work').doc(wid).delete();
+    await dbRef.collection('concepts').doc(id).delete();
+  }
+  function delButton(id, card) {
+    const del = el('button', 'del', 'Delete'); del.type = 'button';
+    let armed = null;
+    del.addEventListener('click', async () => {
+      if (!armed) {
+        del.classList.add('sure'); del.textContent = 'Tap again to delete';
+        armed = setTimeout(() => { armed = null; del.classList.remove('sure'); del.textContent = 'Delete'; }, 4000);
+        return;
+      }
+      clearTimeout(armed);
+      const msg = card.querySelector('.msg');
+      if (!dbRef) { msg.className = 'msg err'; msg.textContent = 'Not connected to HQ.'; return; }
+      card.querySelectorAll('button').forEach(b => b.disabled = true);
+      msg.className = 'msg'; msg.textContent = 'Deleting…';
+      try { await removeConcept(id); }
+      catch (e) { msg.className = 'msg err'; msg.textContent = 'Could not delete. Only the owner can delete; try again.'; card.querySelectorAll('button').forEach(b => b.disabled = false); }
+    });
+    return del;
   }
   async function decideConcept(id, card, status, note) {
     const msg = card.querySelector('.msg');
@@ -634,6 +664,10 @@ canvas { display: block; width: 100%; height: auto; cursor: pointer; }
     msg.className = 'msg'; msg.textContent = 'Saving…';
     try {
       await dbRef.collection('concepts').doc(id).update({ status, note, decided_at: status === 'pending' ? '' : new Date().toISOString() });
+      // Accepting a new version deletes the older versions it replaces (and their design files).
+      const me = conceptDocs.find(d => d.id === id);
+      const reps = status === 'accepted' && me && Array.isArray(me.data().replaces) ? me.data().replaces : [];
+      for (const r of reps) if (r !== id && conceptDocs.some(d => d.id === r)) await removeConcept(r);
     } catch (e) {
       msg.className = 'msg err'; msg.textContent = 'Could not save. Only the owner can decide; check your connection and try again.';
       card.querySelectorAll('button').forEach(b => b.disabled = false);
