@@ -6,9 +6,9 @@ Source: quran.ai connector (data from quran.com), fetched 2026-10-16.
 
 | Ayah | Arabic (QPC Hafs) | English meaning (Hilali-Khan) | Lesson |
 |---|---|---|---|
-| 103:1 | وَٱلۡعَصۡرِ ١ | By Al-'Asr (the time). | 1 |
+| 103:1 | وَٱلۡعَصۡرِ ١ | By Al-‘Asr (the time). | 1 |
 | 103:2 | إِنَّ ٱلۡإِنسَٰنَ لَفِي خُسۡرٍ ٢ | Verily, man is in loss, | 1 |
-| 103:3 | إِلَّا ٱلَّذِينَ ءَامَنُواْ وَعَمِلُواْ ٱلصَّٰلِحَٰتِ وَتَوَاصَوۡاْ بِٱلۡحَقِّ وَتَوَاصَوۡاْ بِٱلصَّبۡرِ ٣ | Except those who believe (in Islâmic Monotheism) and do righteous good deeds, and recommend one another to the truth [...], and recommend one another to patience (...). Full bracketed text: https://quran.com/103:3?translations=203 | 1 |
+| 103:3 | إِلَّا ٱلَّذِينَ ءَامَنُواْ وَعَمِلُواْ ٱلصَّٰلِحَٰتِ وَتَوَاصَوۡاْ بِٱلۡحَقِّ وَتَوَاصَوۡاْ بِٱلصَّبۡرِ ٣ | Except those who believe (in Islâmic Monotheism) and do righteous good deeds, and recommend one another to the truth [i.e. order one another to perform all kinds of good deeds (Al-Ma‘ruf) which Allâh has ordained, and abstain from all kinds of sins and evil deeds (Al-Munkar which Allâh has forbidden], and recommend one another to patience (for the sufferings, harms, and injuries which one may encounter in Allâh’s Cause during preaching His religion of Islâmic Monotheism or Jihâd). (quran.ai fetch_translation en-al-hilali-khan, 2026-10-17) | 1 |
 | 51:56 | وَمَا خَلَقۡتُ ٱلۡجِنَّ وَٱلۡإِنسَ إِلَّا لِيَعۡبُدُونِ ٥٦ | And I (Allâh) created not the jinn and mankind except that they should worship Me (Alone). | 2 |
 | 51:58 | إِنَّ ٱللَّهَ هُوَ ٱلرَّزَّاقُ ذُو ٱلۡقُوَّةِ ٱلۡمَتِينُ ٥٨ | Verily, Allâh is the All-Provider, Owner of Power, the Most Strong. | 2 |
 | 52:35 | أَمۡ خُلِقُواْ مِنۡ غَيۡرِ شَيۡءٍ أَمۡ هُمُ ٱلۡخَٰلِقُونَ ٣٥ | Were they created by nothing? Or were they themselves the creators? | 2 |

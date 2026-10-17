@@ -79,7 +79,7 @@ Source: *Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen (Dar a
 
 > وَٱلۡعَصۡرِ ١ إِنَّ ٱلۡإِنسَٰنَ لَفِي خُسۡرٍ ٢ إِلَّا ٱلَّذِينَ ءَامَنُواْ وَعَمِلُواْ ٱلصَّٰلِحَٰتِ وَتَوَاصَوۡاْ بِٱلۡحَقِّ وَتَوَاصَوۡاْ بِٱلصَّبۡرِ ٣
 
-Meaning: "By Al-'Asr (the time). Verily, man is in loss, Except those who believe (in Islâmic Monotheism) and do righteous good deeds, and recommend one another to the truth [...], and recommend one another to patience (...)." (*The Noble Qur'an*, Hilali-Khan; the full meaning with all its brackets is at quran.com/103:3). Arabic text: King Fahd Complex (Madinah) mushaf.
+Meaning: "By Al-‘Asr (the time). Verily, man is in loss, Except those who believe (in Islâmic Monotheism) and do righteous good deeds, and recommend one another to the truth [i.e. order one another to perform all kinds of good deeds (Al-Ma‘ruf) which Allâh has ordained, and abstain from all kinds of sins and evil deeds (Al-Munkar which Allâh has forbidden], and recommend one another to patience (for the sufferings, harms, and injuries which one may encounter in Allâh’s Cause during preaching His religion of Islâmic Monotheism or Jihâd)." (*The Noble Qur'an*, Hilali-Khan, 103:1–3). Arabic text: King Fahd Complex (Madinah) mushaf.
 Cited by Shaykh al-Uthaymeen in *Sharh Thalathat al-Usul* (Dar al-Thurayya, 4th ed.), p. 25
 
 ## Say it like this (script)
