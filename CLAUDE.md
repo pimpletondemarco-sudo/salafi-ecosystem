@@ -86,8 +86,8 @@ Owner goal: run 24/7 with as little owner input as possible. Everyone reads `own
    `market-researcher` studies what sells, competitors and prices → `research/`.
 1. `source-researcher` agent gathers content → `products/<id>/sources/*.md` (with citations).
 2. `citation-checker` agent re-verifies every citation against Shamela / the scholar's site.
-2b. `translation-reviewer` compares our English meanings with the owner's trusted translators. MAIN
-   reference: Abu Iyaad (abuiyaad.com); also (Abu Khadeejah, Hasan as-Somali, Rasheed Barbee, Maaz Qureshi / Sunnah Publishing).
+2b. `translation-reviewer` compares our English meanings with ALL the owner's trusted translators,
+   equally (Abu Iyaad, Abu Khadeejah, Hasan as-Somali, Rasheed Barbee, Maaz Qureshi / Sunnah Publishing).
    Their translations are for checking only, never copied into products.
 2c. **Design research gate (owner rule, 2026-10-17):** before ANY page or visual of any kind is designed
    (every worksheet activity, cover, title page, contents, lesson page, coloring, certificate, answer

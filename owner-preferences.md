@@ -32,6 +32,8 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
 - Still open: whether to make the English meanings beside the tracing words small and faint.
 
 ## English
-- Main English reference: Abu Iyaad (abuiyaad.com). Match his terms; his sentences are for checking,
-  not copied into products unless the owner gets his permission. Others on the owner's list are
-  second references. (2026-10-17)
+- English references: ALL the owner's trusted translators, equally, not one main one: Abu Iyaad
+  (abuiyaad.com), Abu Khadeejah (abukhadeejah.com), Hasan as-Somali, Rasheed Barbee, Maaz Qureshi /
+  Sunnah Publishing, and every domain the owner adds for this. Compare our English with each one that
+  covers the passage; where they agree, follow their shared terms. Their sentences are for checking,
+  not copied into products unless the translator gives permission. (2026-10-17, corrected same day)

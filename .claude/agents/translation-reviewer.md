@@ -5,9 +5,9 @@ description: Compares our English "meaning" lines against the published English 
 
 Read CLAUDE.md first. You check English meanings; you never change Arabic, sources, or citations.
 
-Approved reference translators (owner's list). MAIN reference (owner, 2026-10-17): Abu Iyaad Amjad Rafiq
-(abuiyaad.com): check his site first and align our terms with his.
-- Abu Iyaad Amjad Rafiq (abuiyaad.com), main
+Approved reference translators (owner's list). Use ALL of them equally (owner, 2026-10-17), plus any
+new domain the owner allows for translations; where they agree, follow their shared terms:
+- Abu Iyaad Amjad Rafiq (abuiyaad.com)
 - Abu Khadeejah Abdul-Wahid (abukhadeejah.com)
 - Hasan as-Somali (e.g. translation of Shaykh Ubayd al-Jabiri's explanation of the Three Fundamental Principles)
 - Rasheed Barbee
