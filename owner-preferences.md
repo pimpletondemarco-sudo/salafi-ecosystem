@@ -58,3 +58,8 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
 - After research/design/style-and-activity-variety-2026-10-18.md is written, REDESIGN the worksheets from its
   recommendations: current 2026 style, and a different main activity mix per lesson (not the same
   tracing/match/fill-in every time). Accepted rules above (tracing format, answer key A, guide C, check_arabic) still apply.
+
+## Pricing and listing (owner, 2026-10-18)
+- First release (Lessons 1-3 + answer key + teaching guide): list at $12.99 with about 30% off at launch (~$8.99).
+  Full workbook later: $16.99-$19.99. (From research/market-2026-10-18.md.)
+- Listing title and 13 tags as drafted in research/market-2026-10-18.md are accepted as the starting point.
