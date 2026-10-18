@@ -1,0 +1,12 @@
+{
+  "mcpServers": {
+    "etsy": {
+      "command": "bash",
+      "args": ["scripts/etsy-mcp.sh"],
+      "env": {
+        "ETSY_API_KEY": "${ETSY_API_KEY:-}",
+        "ETSY_SHARED_SECRET": "${ETSY_SHARED_SECRET:-}"
+      }
+    }
+  }
+}

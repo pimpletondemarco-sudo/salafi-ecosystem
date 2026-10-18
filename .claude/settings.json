@@ -1,0 +1,25 @@
+{
+  "permissions": {
+    "ask": [
+      "mcp__etsy__authenticate",
+      "mcp__etsy__create_draft_listing",
+      "mcp__etsy__update_listing",
+      "mcp__etsy__update_shop",
+      "mcp__etsy__manage_shop_sections",
+      "mcp__etsy__update_receipt",
+      "mcp__etsy__create_shipment",
+      "mcp__etsy__create_shipping_profile",
+      "mcp__etsy__update_shipping_profile",
+      "mcp__etsy__manage_shipping_destinations",
+      "mcp__etsy__upload_listing_image",
+      "mcp__etsy__upload_listing_video",
+      "mcp__etsy__update_listing_inventory",
+      "mcp__etsy__manage_return_policy"
+    ],
+    "deny": [
+      "mcp__etsy__delete_listing",
+      "mcp__etsy__delete_listing_image"
+    ]
+  },
+  "enabledMcpjsonServers": ["etsy"]
+}
