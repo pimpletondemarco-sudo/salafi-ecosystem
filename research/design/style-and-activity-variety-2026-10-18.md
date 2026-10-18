@@ -17,10 +17,11 @@ separately (`research/market-2026-10-18.md`); this report does not repeat it.
   (1,000+ reviews available; ~500 read). Listing ids and shop ids are given for every point.
   The API gives favourites and views, **not sales**; I use favourites (`num_favorers`) and views as
   the popularity signal and say so. Only read tools were used; our shop (68627681) was not touched.
-- **Could NOT view any listing image.** `i.etsystatic.com` is refused by the session proxy
-  (`connect_rejected`, curl 403) and WebFetch cannot resolve it (ENOTFOUND). So for images I only have
-  what the API returns: number of images, pixel size/aspect ratio, dominant colour (hex, saturation)
-  and the seller's alt text. **I did not see the competitors' page designs** and do not describe them.
+- **Listing images: viewed later the same day.** At first `i.etsystatic.com` was refused by the
+  proxy, so §2a–2c were written from image metadata only. The coordinator then opened the host
+  (2026-10-18). I downloaded 64 images (570 px versions, thumbnail + 1–4 inside images) of 15 listings
+  into a scratchpad folder outside the repo, viewed them, and added **§2e Visual check (real
+  images)**. Where the pictures contradict §2a–2c, §2f says what changed. Images are not in the repo.
 - **Web search** (2026-10-18): returned mostly vendor blogs, freelancer gigs and SEO mirror pages; no
   credible 2026 trend report for kids' printables was found. Used only as weak, labelled evidence.
 - Pinterest, TpT and Amazon pages were not reachable in earlier sessions (see 2026-10-17 reports);
@@ -109,9 +110,108 @@ cream is the look our design principles already flag as the 2025–26 "AI tell".
 - **Looks dated / avoid in 2026:** saturated full-bleed backgrounds; dashed "cut here" style page
   borders used as decoration; outlined (hollow) display titles; generic clipart sun-with-rays and
   cloud; emoji icons; many fonts on one page.
-  → Our **coloring page** has three of these (dashed inner border, hollow outlined title, clipart
-  cloud and sun) and uses a different header system from the worksheets. It is the one page whose
-  style is behind.
+  → Our **coloring page** has a dashed inner border, a hollow outlined title and a clipart cloud
+  and sun, and it uses a different header system from the worksheets. After seeing the real
+  images (§2f item 4): clouds and suns are common, not dated; they are generic. The border, the title
+  and the mismatch with the worksheets are the reasons to restyle it.
+
+### 2e. Visual check (real images, viewed 2026-10-18)
+
+15 listings, 2–5 images each (64 images): 1439945308, 1679381264, 1413347270, 1526040281, 4321057693,
+1340155377, 4576889107, 4347382244, 4347953176, 1412385803, 1154091941, 4550952194, 1332941259,
+1412678027, 4590459674. Descriptions only; nothing is to be copied.
+
+**Thumbnails (first image)**
+- Two families:
+  1. **Photo mockups.** Preschool busy books are shown as a real laminated page in a ring binder on a
+     wooden table, with loose Velcro pieces around it (1439945308, 1679381264, 1413347270, 1154091941).
+  2. **Infographic composites (2025–26 listings).** A rendered cover or page fan, a big headline,
+     a round page-count badge ("122 PAGES", "200+ Pages", "45 PAGES") and 3–5 feature icons or a
+     contents list (4321057693, 4347382244, 4347953176, 4550952194, 4590459674, 4576889107).
+     The newer ones mostly use this style.
+- **Headline text is large**, about 8–15% of the image height (e.g. "99 Names of Allah", "ISLAMIC
+  ACTIVITY BOOK", "Cut and Paste MOSQUE"), and readable at thumbnail size. The exception is
+  4576889107: its page renders are tiny and unreadable at 570 px, and the listing has 1 view.
+- **Strong colour sits in bands and badges on a light ground.** The top general seller (4347382244,
+  4,227 favs) puts a cream background between bold rust-orange headline bands. 4321057693 uses sage
+  and dark-green badges on cream. 4347953176 uses peach with a brown badge. 4576889107 uses
+  dark-green bars with gold circles.
+- Some mockup scenes are rendered rooms (desk, plants, books, globe). 4590459674 says in its listing
+  that it was made with AI. 4550952194 also looks AI-made: glossy painted scenes, crowded badges.
+- **Every image is a dense collage.** None shows a single page plainly.
+
+**Inside pages**
+- **Preschool (ages 2–5):** large, bright, full-colour pictures on every page, one task per page,
+  little text (1439945308, 1679381264, 1413347270).
+- **Ages 6–10:** denser pages, mostly black-and-white line art with a colour title, several boxes
+  per page, small body text (4321057693, 4590459674, 4347953176, 1412385803). 4321057693 uses the
+  same frame on every Name page: Arabic name, a meaning box, a picture to colour, a tracing line.
+  It repeats the frame and changes only the content.
+- **Fonts:**
+  - Chunky rounded display faces like ours (4347382244, 4550952194).
+  - Wide letter-spaced serif capitals on "premium" listings (4347953176, 1526040281, 1412385803).
+    Our design principles avoid this.
+  - A hand-script font (1332941259).
+  - Arabic is mostly an unvowelled or partly vowelled naskh. 1340155377 uses fully vowelled Arabic
+    on its cards.
+- **How pictures are used:** a picture beside each item as a memory aid (a picture per pillar,
+  a picture per Name, a picture per prophet); decorative corner art (lanterns, crescents, stars,
+  clouds); sticker-style icon scatters on covers (1412385803).
+
+**How hands-on pages are shown**
+- **Busy books (ages 2–5):** photographed laminated in a binder, with the loose pieces scattered or
+  half stuck on (1439945308, 1679381264). Some photos show real children's or adults' hands holding
+  pieces (1413347270). Hands in mockups are against our rule.
+- **Cut-and-glue for ages 4+:** shown as a flat page render. The top half is a grey outline to fill,
+  the bottom half is a strip of coloured pieces behind a dashed cut line, and scissors and glue icons
+  sit in the corner (1412678027, a cut-and-glue masjid; no living beings at all). This fits our
+  "Build the roots" page.
+- **Cut-out ovals glued onto a picture page,** photographed as a real print on a towel (1332941259).
+- **Dua and achievement cards** shown as a grid of cut-out cards (4347953176).
+- **No lift-the-flap or fold mini-book appears in any of the 64 images.** That is still a gap.
+
+**Living beings in the images viewed (a selling point for us)**
+
+| Listing | What appears |
+|---|---|
+| 1439945308 Little Muslim Busy Book | Cartoon children with full faces (cover, salah positions, cards) |
+| 1679381264 Little Islamic Busy Book | Children with faces (cover, wudu, salah); an octopus picture |
+| 1413347270 Islamic Learning Binder | Cartoon children with faces (wudu steps); real hands in the photos |
+| 1526040281 Islamic Curriculum Pre-K | Horses, lion, rabbit; clouds with faces |
+| 4347382244 Back to School (general) | Animal shadow-matching, caterpillar with a face, smiling objects |
+| 4347953176 Islamic Activity Book 6–9 | Children with faces on the cover; bee, camel, cat pages |
+| 1412385803 Islamic Activity Book | Children with faces (cover stickers, maze, praying figure) |
+| 1332941259 Prophets matching | Camel, fish tail, birds; drawn hands |
+| 4590459674 Seerah / Prophets packs | Camel, whale |
+| 1340155377 Islamic Basics flashcards | A drawn hand (pointing finger) |
+| 4550952194 Young Muslim Explorer | Scenes too small to judge at 570 px; covers seen show no clear figures |
+| 4321057693, 4576889107, 1412678027, 1154091941 | No people, animals or faces in the images viewed |
+
+10 of the 15 show people, faces, hands or animals. The 4 with none use rainbows and hearts
+(4321057693), geometric icons (4576889107), masjid shapes (1412678027) or objects (1154091941).
+
+### 2f. Earlier conclusions corrected by the pictures
+
+1. **§2a "2025–26 thumbnails are light and low-saturation": only half right.** The ground is light,
+   but the best performers add **strong colour bands, badges and large headlines** (4347382244
+   rust-orange, 4321057693 dark green). A pale thumbnail with no colour block is what the
+   weak-performing 4576889107 does. → Rec 9 changed.
+2. **§2a "keep the colour system": still keep it, but it is no longer distinctive.** Cream + sage
+   or bottle green is now common in this niche (4321057693, 4590459674, 1412385803 green 8-point
+   star on cream, 4576889107 green and gold). Our bone/green will blend in unless the chocolate
+   brown, the date palm with roots and the vowelled Arabic calligraphy lead. → Rec 6 changed.
+3. **§2c "show a flat-lay of cover + 2–3 inner pages": changed.** Use an infographic composite:
+   the cover, a large title, a page-count badge and 3–5 readable feature lines. Our rules forbid
+   AI-rendered rooms and hands. → Rec 9 changed.
+4. **§2d "the coloring page's clipart cloud/sun looks dated": softened.** Clouds, suns and rainbows
+   are on most current competitor colouring pages (4321057693, 1526040281, 1412385803). They are
+   common, not dated. The reason to restyle is now that they are generic and that the page does not
+   match our worksheet system. The dashed border and hollow title still go.
+5. **§1/§2b "no pictures on our worksheets": confirmed.** Every competitor except 4576889107 puts
+   art on every page.
+6. **§3 hands-on: refined.** Velcro busy-binder photos belong to ages 2–5. For ages 6–10,
+   competitors show hands-on work as flat page renders with a pieces strip (1412678027,
+   4347953176). Our lift-the-flap and mini-book ideas are still not offered by anyone seen.
 
 ## 3. Activity types in the market
 
@@ -256,17 +356,27 @@ restyled coloring page.
 5. **Add review pages every 3 lessons and a "My sapling grows" progress chart.** Evidence: review /
    recall pages and progress checklists are sold as features (4321057693 alt text, 2026-10-17);
    group games praised (36857332 bingo review 2026-06-07); 170 listings offer trackers.
-6. **Keep the colour system and fonts.** 2025–26 listings use light, low-saturation thumbnails
-   (§2a); ours matches. Do not move to bright full-bleed or cream + terracotta.
+6. **Keep the colour system and fonts, and make them more distinctive** (changed after §2e/2f).
+   Cream + green is now common in this niche (4321057693, 4590459674, 1412385803, 4576889107).
+   Lead with our own marks: the chocolate ground of the cover, the date palm with three labelled
+   roots, and large fully vowelled Arabic. Do not move to bright full-bleed or cream + terracotta.
 7. **Add a black-and-white check for every hands-on page** and say "prints well in black and
    white" in the listing (requested twice, 21723207, 2026-03-27). Make sure listing mockups show the
    real colours of the file (2★ mismatch review, 21723207, 2025-03-12).
 8. **Change: instructions to 17–18 px** (as in worksheet-layout report); hands-on pages need a
    numbered 1-2-3 "Cut / Fold / Glue" line with words, no hand icons.
-9. **Listing images (later):** 8–10 images; first image landscape 4:3 (2700×2025) flat-lay of cover
-   + 2–3 inner pages on a light neutral ground; one "what's inside" image listing the activity types;
-   one image for the answer key + teaching guide; one for "every page cited". The 2026 sourced
-   competitor's 4 plain images got 1 view (4576889107).
+9. **Listing images (later)** (changed after §2e/2f). Use 8–10 images. The first should be a
+   landscape 4:3 (2700×2025) infographic:
+   - the cover large on a light ground;
+   - a headline readable at thumbnail size (about 10% of the image height);
+   - one strong colour block (our chocolate or green);
+   - a page-count badge;
+   - 3–4 short feature lines ("Answer key + teaching guide", "Every page cited", "No drawings of
+     people or animals").
+   Then one "what's inside" grid, one image per kind of hands-on page shown flat with its pieces
+   strip (as 1412678027 shows its cut-and-glue page), and one image for the key and guide. No
+   AI-rendered rooms and no hands (CLAUDE.md). Never use tiny unreadable page renders like
+   4576889107 (1 view).
 10. **Keep** the source footer, answer key A and guide C. With new activity types, the answer key needs
     a small filled-in copy of page 2 too (sorted columns glued, flaps opened).
 
@@ -308,7 +418,11 @@ counters on that date; no sales data):
   https://www.etsy.com/listing/4446519480/all-access-volume-1 ;
   https://www.etsy.com/listing/1291132532/pillars-of-faith-iman-worksheet
 
-Not reachable (2026-10-18): i.etsystatic.com (proxy connect_rejected / ENOTFOUND) — no image viewed.
+Listing images (i.etsystatic.com, il_570xN versions), downloaded and viewed 2026-10-18 after the host
+was opened (it was blocked earlier in the day); kept in the scratchpad, not in the repo: 1439945308
+(5), 1679381264 (5), 1413347270 (5), 1526040281 (5), 4321057693 (5), 1340155377 (4), 4576889107 (4),
+4347382244 (4), 4347953176 (5), 1412385803 (4), 1154091941 (4), 4550952194 (5), 1332941259 (3),
+1412678027 (2), 4590459674 (4). Image URLs from get_listing_images for each id.
 
 Web search, 2026-10-18 (weak evidence, vendor/blog content):
 - https://www.insightagent.app/guides/etsy-listing-photos-digital-downloads
