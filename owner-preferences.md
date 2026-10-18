@@ -69,3 +69,11 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
 - Agents share work only through the repo (owner-preferences.md, NEXT-SESSION.md, research/, products/) and the
   HQ / Manager Inbox stores. Every run ends by updating NEXT-SESSION.md and pushing, so the next run sees it.
 - Work reaches the main branch through a pull request the owner merges.
+
+## Lesson structure and pictures (owner, 2026-10-18; from style-and-activity-variety-2026-10-18.md)
+- APPROVED: two pages per lesson. A "Learn" page (tracing + one check activity rotating match / fill-in /
+  true-false) and a "Do" page whose main hands-on activity changes every lesson (plan in the report).
+- Pictures on worksheets: ONE small PALM picture only (not dates, lanterns or masjids).
+- Coloring pages MAY include an ayah (owner said yes). Ayah text still only from quran.ai (ar-qpc-hafs /
+  en-al-hilali-khan), checked character by character, and passes check_arabic.py.
+- Each new activity type needs its own design research report before it is designed (CLAUDE.md 2c).
