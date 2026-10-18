@@ -3,7 +3,7 @@
 The manager reads this first, then CLAUDE.md, owner-preferences.md and the Manager Inbox.
 
 ## Etsy connection (tested 2026-10-18)
-- Public tools WORK (keys set; search_listings and find_shops OK). SunnahSaplings = shop_id 68627681,
+- Public tools WORK. Seller sign-in WORKED 2026-10-18 via etsy-signin.mjs (get_me -> shop 68627681; no restart needed). SunnahSaplings = shop_id 68627681,
   0 listings, 0 sales.
 - Seller tools (get_me, drafts, shop edits) need sign-in. The server's own "authenticate" tool cannot work
   in a cloud session (it opens a browser on the container). Use instead:
