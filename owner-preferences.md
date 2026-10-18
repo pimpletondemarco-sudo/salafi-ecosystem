@@ -63,3 +63,9 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
 - First release (Lessons 1-3 + answer key + teaching guide): list at $12.99 with about 30% off at launch (~$8.99).
   Full workbook later: $16.99-$19.99. (From research/market-2026-10-18.md.)
 - Listing title and 13 tags as drafted in research/market-2026-10-18.md are accepted as the starting point.
+
+## Automation (owner, 2026-10-18)
+- The manager runs on its own once a day, every morning US Eastern time (scheduled task "Daily manager run").
+- Agents share work only through the repo (owner-preferences.md, NEXT-SESSION.md, research/, products/) and the
+  HQ / Manager Inbox stores. Every run ends by updating NEXT-SESSION.md and pushing, so the next run sees it.
+- Work reaches the main branch through a pull request the owner merges.
