@@ -15,8 +15,8 @@ The manager reads this first, then CLAUDE.md, owner-preferences.md and the Manag
   server may need a restart (/mcp) to pick the tokens up.
 
 ## Waiting on the owner (in the HQ Concepts panel)
-- Lesson 1 worksheet: pick version A, B or C (l1wsA/B/C).
-- Lesson 2 worksheet: pick version A, B or C (l2wsA/B/C).
+- Lesson 1/2 worksheet picks: ON HOLD (owner 2026-10-18). Redesign after the style/activity-variety report;
+  then post 3 new versions per lesson.
 - Approve the Lesson 1 and Lesson 2 teaching-guide text (guide1, guide2).
 - Approve the vowel marks we added to the lesson words ("Needs your OK" rows in Citation check).
 - Open questions: make the English labels beside tracing words faint? Rename Lesson 3 "My Three Roots"

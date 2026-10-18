@@ -52,3 +52,9 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
   Sunnah Publishing, and every domain the owner adds for this. Compare our English with each one that
   covers the passage; where they agree, follow their shared terms. Their sentences are for checking,
   not copied into products unless the translator gives permission. (2026-10-17, corrected same day)
+
+## Redesign hold (owner, 2026-10-18)
+- Lesson 1 and Lesson 2 worksheet picks (A/B/C) are ON HOLD. Do not build answer keys or guides from them.
+- After research/design/style-and-activity-variety-2026-10-18.md is written, REDESIGN the worksheets from its
+  recommendations: current 2026 style, and a different main activity mix per lesson (not the same
+  tracing/match/fill-in every time). Accepted rules above (tracing format, answer key A, guide C, check_arabic) still apply.
