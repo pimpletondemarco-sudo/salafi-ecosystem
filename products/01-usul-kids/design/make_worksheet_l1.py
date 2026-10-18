@@ -15,9 +15,9 @@ AR = ["الْعِلْمُ", "الْعَمَلُ", "الدَّعْوَةُ", "ا�
 BASE = {
     "lesson": 1, "title": "The Four Matters We Must Learn",
     "trace": list(zip(AR, ["Knowledge", "Action", "Calling", "Patience"])),
-    "trace_size": 60, "row_h": 86, "base": 58,
+    "trace_size": 56, "row_h": 80, "base": 56,
     "match_left": AR, "match_right": ["Patience", "Knowledge", "Calling others to it", "Acting upon it"],
-    "match_h": 196, "match_ar_size": 38, "match_rw": 230,
+    "match_h": 196, "match_ar_size": 32, "match_lh": 1.5, "match_rw": 230,
     "bank": {"words": ["الصَّبْرُ", "الْعِلْمُ", "الدَّعْوَةُ", "الْعَمَلُ"],
              "meanings": ["Knowledge", "Acting upon it", "Calling others to it", "Patience"]},
 }

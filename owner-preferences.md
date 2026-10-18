@@ -20,6 +20,8 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
 - Prefers a coloured front page over a plain one. (2026-10-16)
 
 ## Worksheets (from Lesson 3, accepted v6)
+- NO cut-off or overlapping Arabic or vowel marks, nothing off the page: every page passes
+  tools/check_arabic.py before the owner sees it. (2026-10-18)
 - Tracing: bubble letters with a dashed line down the middle, hollow letter dots, grey harakat, green
   start dot; solid model word on the RIGHT, two tracing copies, a blank box to write it alone. (2026-10-17)
 - Worksheet Arabic font: Noto Sans Arabic (Amiri only for the product name). (2026-10-17)

@@ -30,6 +30,9 @@ Each session:
    - If a design was made without a report, flag it in the HQ and order the research before the
      owner reviews it.
    - A design that ignores a report recommendation must say why in its HQ concept body.
+2b. ARABIC LAYOUT GATE (owner rule, 2026-10-18): before any page reaches the owner, make sure
+   tools/check_arabic.py passed on every Letter and A4 file of it (no cut-off or overlapping Arabic or
+   vowel marks, nothing off the page). If it was not run or failed, send it back to the designer.
 3. Approve only what the approval decision allows. Unless the owner has said otherwise:
    - You MAY approve layout, colors, fonts, Etsy tags, and marketing wording that follow the decisions.
    - You may NOT approve anything containing an ayah, hadith, or scholar's words. Send it to the owner

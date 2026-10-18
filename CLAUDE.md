@@ -54,6 +54,9 @@ scholars' explanations.
 - Ayat are NEVER typed by hand into any design tool: copy them programmatically from the quran.ai
   connector output, and check every character after placing them.
 - Modest, clean, child-friendly style. Arabic text fully voweled (with harakat) for children.
+- No Arabic letter or vowel mark may be cut off or overlap anything, and nothing may run off the page
+  (owner, 2026-10-18). EVERY page passes `python3 products/<id>/design/tools/check_arabic.py <pages>`
+  (US Letter and A4) BEFORE it is posted to the HQ or shown to the owner. A FAIL blocks posting.
 - Print format: US Letter AND A4 versions, high-resolution PDF.
 
 ## Product 1

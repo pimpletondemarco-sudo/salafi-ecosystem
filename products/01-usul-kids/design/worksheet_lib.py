@@ -33,7 +33,7 @@ def word(r, x, kind, BASE=BASE, ink=INK, cls=""):
     hollow dots, light grey harakat, green start dot at each letter group."""
     left = x - r["width"]
     c = f' class="{cls}"' if cls else ""
-    g = f'<g{c} transform="translate({left:.1f} {BASE})">'
+    g = f'<g{c} data-ar="{kind}" transform="translate({left:.1f} {BASE})">'
     if kind == "model":
         g += "".join(f'<path d="{d}" fill="{ink}"/>' for d in r["bodies"] + r["dots"] + r["marks"])
         return g + "</g>"
@@ -47,6 +47,24 @@ def word(r, x, kind, BASE=BASE, ink=INK, cls=""):
     g += "".join(f'<circle cx="{a:.1f}" cy="{b:.1f}" r="3.4" fill="{GREEN}"/>' for a, b in r["starts"])
     return g + "</g>"
 
+def _extent(r):
+    """Top and bottom (y, baseline = 0) of everything drawn for a word: letters, dots, vowel marks,
+    and for tracing copies the bubble outline. Used so rows grow to fit and nothing is cut off."""
+    from fontTools.svgLib.path import parse_path
+    from fontTools.pens.boundsPen import BoundsPen
+    ys = []
+    for d in r.get("bodies", []) + [x for x in r.get("marks", []) if isinstance(x, str)] + \
+             [x for x in r.get("solid_dots", r.get("dots", [])) if isinstance(x, str)]:
+        bp = BoundsPen(None); parse_path(d, bp)
+        if bp.bounds:
+            ys += [bp.bounds[1], bp.bounds[3]]
+    for line in r.get("lines", []):
+        ys += [y - BUB / 2 for _, y in line] + [y + BUB / 2 for _, y in line]
+    for dot in r.get("dots", []):
+        if not isinstance(dot, str):
+            ys += [dot[1] - dot[2] - 2, dot[1] + dot[2] + 2]
+    return (min(ys), max(ys)) if ys else (0, 0)
+
 def trace_row(ar, en, width, SIZE=SIZE, ROW_H=ROW_H, BASE=BASE, label_w=92, key=False):
     cells = 4
     cw = (width - label_w) / cells
@@ -57,8 +75,14 @@ def trace_row(ar, en, width, SIZE=SIZE, ROW_H=ROW_H, BASE=BASE, label_w=92, key=
         size = SIZE * (cw - 26) / probe
     r = shape_word(ar, size, weight=WT, gap=0.12, face=FACE)
     t = centerlines(ar, size, weight=WT, face=FACE, spur=0.1, kashida=0)
+    # owner rule 2026-10-18: no Arabic or vowel mark may be cut off. Grow the row to fit the word.
+    top = min(_extent(r)[0], _extent(t)[0]); bottom = max(_extent(r)[1], _extent(t)[1])
+    if -top + 6 > BASE:
+        grow = int(-top + 6 - BASE) + 1
+        BASE += grow; ROW_H += grow
+    ROW_H = max(ROW_H, int(BASE + max(bottom, 28) + 6))
     # cells left to right: blank, trace, trace, model (model on the right)
-    svg = [f'<svg class="trow" viewBox="0 0 {width} {ROW_H}" width="{width}" height="{ROW_H}">']
+    svg = [f'<svg class="trow" overflow="visible" viewBox="0 0 {width} {ROW_H}" width="{width}" height="{ROW_H}">']
     svg.append(f'<line x1="0" x2="{width - label_w - 8}" y1="{BASE}" y2="{BASE}" stroke="{LINE}" stroke-width="2"/>')
     svg.append(f'<line x1="0" x2="{width - label_w - 8}" y1="{BASE + 28}" y2="{BASE + 28}" stroke="{LINE2}" stroke-width="1.5"/>')
     svg.append(f'<rect x="6" y="6" width="{cw - 18:.1f}" height="{ROW_H - 10}" rx="12" fill="none" stroke="#d6cdbb" stroke-width="1.5"/>')
