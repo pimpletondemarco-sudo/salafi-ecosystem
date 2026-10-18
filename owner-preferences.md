@@ -31,6 +31,17 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
 - White page, colour only in rounded header/footer panels kept 0.3in inside the edge. US Letter + A4.
 - Still open: whether to make the English meanings beside the tracing words small and faint.
 
+## Answer keys (Lesson 3, accepted version A, 2026-10-18)
+- Layout A: a small filled-in copy of the worksheet on the left (answers in green with ticks), the
+  answers listed down the right, one source box across the bottom (Arabic + meaning + book and page).
+  Use this layout for every lesson's answer key.
+
+## Teaching guides (Lesson 3, accepted version C, 2026-10-18)
+- Layout C: page 1 as numbered steps (read, teach, practise the words, play); page 2 with "If your child
+  asks..." in two columns and each "From the Scholars" box with English on the left, Arabic on the right.
+- Owner's reason: when children ask a question answered in a later lesson (e.g. the three questions),
+  the guide says plainly that it will be answered later. Keep doing this in every lesson.
+
 ## English
 - Agreed terms so far (TRANSLATION-REVIEW-2): "matters" (not "things"), "act upon it", "provided for us" (past),
   "without a purpose", "the religion of Islam ... with the proofs". (2026-10-17)
