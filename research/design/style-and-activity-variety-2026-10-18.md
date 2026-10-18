@@ -345,14 +345,16 @@ restyled coloring page.
    spot so a piece never covers text (Velcro complaint, 26116957 review 2025-02-28), and use only
    pieces that are needed (hexagon complaint, 21723207 review 2026-03-27; owner's "no left-over"
    rule). Lift-the-flap is offered by only 5 of 882 Islamic listings → a visible gap.
-3. **Add one small allowed spot illustration per worksheet** (palm, roots, dates, lantern, open book,
-   masjid outline), line-art, low ink, same style throughout. Evidence: buyer praise for
-   illustrations (41577469 review 2026-02-06; 26116957 review 2025-02-15). Licensed or hand-drawn
+3. **Add one small spot illustration per worksheet.** Owner decision, 2026-10-18: **one small palm
+   picture only**, not dates, lanterns or masjids. Use line art, low ink, the same palm on every
+   page. Evidence: buyer praise for illustrations (41577469 review 2026-02-06; 26116957 review
+   2025-02-15); every competitor viewed except 4576889107 has art on each page (§2e). The palm
+   doubles as our brand mark against the cream + green look-alikes (rec 6). Licensed or hand-drawn
    only, never AI-looking (CLAUDE.md).
-4. **Change: restyle the coloring page** into the worksheet system (rounded header panel, Baloo title
-   solid not hollow, no dashed border, no clipart cloud/sun; keep the palm and roots). Owner question
-   to ask: whether an ayah should be printed on a page children colour and may throw away (religious
-   judgement — owner's call; I make no recommendation).
+4. **Change: restyle the coloring page** into the worksheet system: rounded header panel, a solid
+   (not hollow) Baloo title, no dashed border, no generic cloud or sun; keep the palm and roots.
+   The owner has decided (2026-10-18) that coloring pages may include an ayah, taken only from
+   quran.ai and checked character by character.
 5. **Add review pages every 3 lessons and a "My sapling grows" progress chart.** Evidence: review /
    recall pages and progress checklists are sold as features (4321057693 alt text, 2026-10-17);
    group games praised (36857332 bingo review 2026-06-07); 170 listings offer trackers.
