@@ -4,7 +4,7 @@
 //  others = everything except this element (the ink it could collide with)
 // usage: node arabic_snap.mjs page.html outdir letter|a4
 import { createRequire } from 'module';
-const require = createRequire(process.env.PW_DIR || '/tmp/claude-0/-home-user-salafi-ecosystem/67afafd4-b7b3-56b1-8a23-be9fbee95a90/scratchpad/pw/');
+const require = createRequire(process.env.PW_DIR || '/opt/node-tools/');
 const { chromium } = require('playwright');
 import fs from 'fs';
 const [src, out, size = 'letter'] = process.argv.slice(2);
