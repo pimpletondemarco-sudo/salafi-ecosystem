@@ -111,3 +111,7 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
 - Student pages show ONLY the instructions and the activity. No author or source lines on the page (e.g. no
   "Shaykh Muhammad ibn Abdul-Wahhab wrote in Thalathat al-Usul:"). The footer pointer to the Teaching Guide stays;
   the guide and answer key carry the references.
+
+## Lesson 2 picks (owner, 2026-10-19, in the HQ)
+- Lesson 2 Learn: version A (trace two words, then circle-then-write "...without a ____").
+- Lesson 2 Do: version C (four flaps in a 2 x 2 grid, including "Why did Allah create us?" with Shaykh Ibn Baz's answer "To worship Him").
