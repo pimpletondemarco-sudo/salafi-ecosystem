@@ -1,36 +1,32 @@
-# Answer Key: Lesson 2, "Allah Created Us" worksheet
+# Answer Key: Lesson 2, "Allah Created Us"
 
-Status: DRAFT, waiting for owner review of religious content. Covers versions A, B and C; keep only the
-section for the version the owner accepts.
-Page files: design/lesson-02-worksheet-allah-created-us-v{A,B,C}(-a4).html
+Status: DRAFT, waiting for owner review of religious content.
+Rewritten 2026-10-19 for the owner's Lesson 2 picks: Learn version A and Do version C
+(the old one-page worksheet keys, versions A/B/C, are replaced).
+Page files: design/lesson-02-learn-vA(-a4).html (page 1) and design/lesson-02-do-vC(-a4).html (page 2).
+The design script (design/make_answerkey_l2.py) reads this file; keep the line formats.
 
-## 1. Trace the words (all versions)
-No single answer. Check that the child traced each word and its marks (harakat):
+## 1. Trace the words
+No single answer. Check that the child traced each word and its marks (harakat), then wrote it alone in the box:
 - خَلَقَنَا (khalaqanā): He created us
 - رَزَقَنَا (razaqanā): He provided for us
 
-## 2. Match (versions A and C)
-- خَلَقَنَا → He created us
-- رَزَقَنَا → He provided for us
-- لَمْ يَتْرُكْنَا هَمَلًا (lam yatruknā hamalā) → He did not leave us without a purpose
+## 2. Fill in the missing word
+Answer: **purpose**. The child circles "purpose" and writes it on the line: "Allah created us, provided for us, and did not leave us without a purpose."
+In Arabic: لَمْ يَتْرُكْنَا هَمَلًا (lam yatruknā hamalā), meaning "He did not leave us without a purpose".
+Source line: the words of Shaykh Muhammad ibn Abdul-Wahhab in *Thalathat al-Usul*, as quoted by Shaykh Abdul-Aziz Ibn Baz, *Sharh Thalathat al-Usul*, Dar al-Masir, 1st ed., p. 29.
+Arabic: أَنَّ اللهَ خَلَقَنَا وَرَزَقَنَا ولم يتركنا هملاً
+Meaning: Allah created us, provided for us, and did not leave us without a purpose.
 
-## 2. Write the word (version B)
-- He created us → خَلَقَنَا
-- He provided for us → رَزَقَنَا
-- He did not leave us without a purpose → لَمْ يَتْرُكْنَا هَمَلًا
-
-Source line: the words of the book (Thalathat al-Usul) as quoted by Shaykh Abdul-Aziz Ibn Baz,
-*Sharh Thalathat al-Usul*, Dar al-Masir, 1st ed., p. 29.
-
-## 3. Circle the right answer (versions A and B)
-Answer: **To worship Him**. "For nothing" is wrong: the Shaykh says Allah did not create His creation for nothing.
+## 3. Lift the flaps
+Under each flap is its answer:
+- 1. Who created us? → Allah created us. (Arabic: خَلَقَنَا, khalaqanā, "He created us")
+- 2. Who provided for us? → Allah provided for us. (Arabic: رَزَقَنَا, razaqanā, "He provided for us")
+- 3. Did Allah leave us without a purpose? → He did not leave us without a purpose. (Arabic: لَمْ يَتْرُكْنَا هَمَلًا, lam yatruknā hamalā, "He did not leave us without a purpose")
+- 4. Why did Allah create us? → To worship Him. (Arabic: لِيَعْبُدُوهُ, liya'budūhu, "to worship Him")
+Flaps 1 to 3: the words of Shaykh Muhammad ibn Abdul-Wahhab in *Thalathat al-Usul*. Flap 4: Shaykh Ibn Baz, explaining those words.
 Source line: Shaykh Abdul-Aziz Ibn Baz, *Sharh Thalathat al-Usul*, Dar al-Masir, 1st ed., p. 29.
-Arabic: «الله خلق الخلق ليعبدوه فلم يخلقهم هملاً، ولا سداً، ولا عبثاً»
+Arabic: الله خلق الخلق ليعبدوه
+Meaning: Allah created His creation to worship Him.
 
-## 3. Fill in the missing word (version C)
-Answer: the child circles **drink** and writes it on the line: "We cannot live without food and drink."
-Source line: Shaykh Muhammad ibn Salih al-Uthaymeen, *Sharh Thalathat al-Usul*, Dar al-Thurayya, 4th ed., p. 30.
-Arabic: «فلأننا لا نعيش إلا على طعام وشراب، والطعام والشراب خلقه الله عز وجل»
-
-(Internal: Shamela 11255 p. 26; 11257 p. 26. See sources/lesson-02-allah-created-us.md.
-The provision hadith is on hold and not used.)
+(Internal: Shamela 11255 p. 26 = printed p. 29; matn and Ibn Baz's sentence both VERIFIED in sources/VERIFICATION.md (Lesson 2 rows); English per TRANSLATION-REVIEW-2; see sources/lesson-02-allah-created-us.md. Vowel marks on خَلَقَنَا, رَزَقَنَا, لَمْ يَتْرُكْنَا هَمَلًا and لِيَعْبُدُوهُ were added for children (owner OK pending). Not used: the provision hadith (on hold) and al-Uthaymeen's food-and-drink point (Learn version B only, not picked).)

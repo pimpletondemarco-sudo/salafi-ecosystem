@@ -11,13 +11,15 @@ New here:
 - absolute-positioned "stage" helpers for hands-on Do pages (cut-and-glue, lift-the-flap)
 - cut lines: solid 2 pt dark grey (sequence/flap reports R4/F5), a small scissors icon (an object), no hands
 """
-from worksheet_lib import FONTS, INK, MUTED, GREEN, LINE, LINE2, trace_row, parents_note
+from worksheet_lib import FONTS, INK, MUTED, GREEN, LINE, LINE2, trace_row, parents_note, KEY_CSS
 from palm_spot import palm_svg
 
 CUT = "#4a4a4a"          # cut lines: solid, 2 pt
 CUT_W = 2.67              # 2 pt at 96 px/in
 BONE, BONE2, GLUE = "#e5e1d8", "#f3efe6", "#d9d3c4"
 IN = 96                   # px per inch
+CHECK = (f'<svg class="ck" viewBox="0 0 20 20" width="26" height="26"><circle cx="10" cy="10" r="10" fill="{GREEN}"/>'
+         f'<path d="M5.5 10.4l3 3 6-6.6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg>')
 
 
 def dims(size):
@@ -41,34 +43,55 @@ def h2(n, title, small=""):
     return f'<h2><b>{n}</b>{title}' + (f' <small>{small}</small>' if small else "") + '</h2>'
 
 
-def trace_section(n, words, inner, size=62, row_h=92, base=64, label_w=110):
-    rows = "".join(trace_row(ar, en, inner, size, row_h, base, label_w) for ar, en in words)
+def trace_section(n, words, inner, size=62, row_h=92, base=64, label_w=110, key=False):
+    rows = "".join(trace_row(ar, en, inner, size, row_h, base, label_w, key=key) for ar, en in words)
     return (f'<section>{h2(n, "Trace the words", "Start at the <i></i> and go right to left. Then write it alone in the box.")}'
             f'{rows}</section>')
 
 
-def match_section(n, left, right, h=200, lw=210, rw=240, ar_size=34, panel=False):
-    """Match: only the real pairs (owner 2026-10-17), Arabic left, English right, shuffled."""
+def match_section(n, left, right, h=200, lw=210, rw=240, ar_size=34, panel=False, inner=720, pairs=None):
+    """Match: only the real pairs (owner 2026-10-17), Arabic left, English right, shuffled.
+    pairs={arabic: english} draws the answer-key lines in green (columns use space-around, so item i is
+    centred at h*(2i+1)/(2n); the panel adds 6px / 24px padding)."""
+    lines = ""
+    if pairs:
+        px, py = (24, 6) if panel else (0, 0)
+        x1, x2, cnt = px + lw - 7, inner - px - rw + 7, len(left)
+        for i, ar in enumerate(left):
+            j = right.index(pairs[ar])
+            y1, y2 = py + h * (2 * i + 1) / (2 * cnt), py + h * (2 * j + 1) / (2 * cnt)
+            lines += (f'<line x1="{x1}" y1="{y1:.1f}" x2="{x2}" y2="{y2:.1f}" stroke="{GREEN}" stroke-width="5" stroke-linecap="round"/>'
+                      f'<circle cx="{x1}" cy="{y1:.1f}" r="11" fill="{GREEN}"/><circle cx="{x2}" cy="{y2:.1f}" r="11" fill="{GREEN}"/>')
+        lines = f'<svg class="mlines" width="{inner}" height="{h + 2 * py}">{lines}</svg>'
     L = "".join(f'<div class="mi"><div class="mw" style="font-size:{ar_size}px">{ar}</div><span class="dot"></span></div>' for ar in left)
     R = "".join(f'<div class="mi"><span class="dot"></span><div class="me">{en}</div></div>' for en in right)
     return (f'<section>{h2(n, "Match", "Draw a line from each word to its meaning.")}'
             f'<div class="match{" panel" if panel else ""}" style="height:{h}px"><div class="mcol" style="width:{lw}px">{L}</div>'
-            f'<div class="mcol r" style="width:{rw}px">{R}</div></div></section>')
+            f'<div class="mcol r" style="width:{rw}px">{R}</div>{lines}</div></section>')
 
 
-def fill_item(said, before, choices, after=".", ar=None):
-    """Circle the right word, then write it on the line (owner 2026-10-17: two steps only)."""
+def fill_item(said, before, choices, after=".", ar=None, answer=None):
+    """Circle the right word, then write it on the line (owner 2026-10-17: two steps only).
+    said: an optional plain lead-in. Never an author or source line on student pages (owner 2026-10-19).
+    answer: answer-key copy only: the word written on the line and circled among the choices, in green."""
     arb = f'<div class="fill-ar">{ar[0]}<span>{ar[1]}</span></div>' if ar else ""
-    return (f'<div class="fitem">{arb}<div class="said">{said}</div>'
-            f'<div class="fill">{before} <span class="blank"></span>{after}</div>'
-            f'<div class="choices"><em>Circle one:</em>' + "".join(f'<span>{c}</span>' for c in choices) + '</div></div>')
+    said = f'<div class="said">{said}</div>' if said else ""
+    return (f'<div class="fitem">{arb}{said}'
+            f'<div class="fill">{before} <span class="blank">{answer or ""}</span>{after}</div>'
+            f'<div class="choices"><em>Circle one:</em>' + "".join(f'<span{" class=\"ok\"" if c == answer else ""}>{c}</span>' for c in choices)
+            + '</div></div>')
 
 
 def fill_section(n, items):
     return f'<section>{h2(n, "Fill in the missing word", "Circle the right word, then write it on the line.")}{"".join(items)}</section>'
 
 
-def page(size, *, lesson, pno, kind, title, body, source, palm=None, css="", cls="", palm_h=92):
+def page(size, *, lesson, pno, kind, title, body, source, palm=None, css="", cls="", palm_h=92, key=False):
+    """key=True: the filled-in answer-key copy of the same page (student content faded, panels as outlines,
+    answers in green). The footer stays the student footer, so the copy shows the page exactly as printed."""
+    if key:
+        css += KEY_CSS + PAGE_KEY_CSS
+        cls = (cls + " key").strip()
     w, h, pg = dims(size)
     inner = w - 96
     header_palm = palm_svg(66, cls="palm hp") if palm == "header" else ""
@@ -144,3 +167,15 @@ def page(size, *, lesson, pno, kind, title, body, source, palm=None, css="", cls
     <div class="brand"><div>Sunnah<i>Saplings</i></div>Lesson {lesson}, page {pno}. Answers: Answer Key, Lesson {lesson}</div>
   </footer>
 </div></body></html>'''
+
+
+PAGE_KEY_CSS = f"""
+  .key .palm {{ opacity: .38; }}
+  .key .faint .trow .en, .key .trow .en {{ fill: #b9b0a6; }}
+  .key .match.panel {{ background: none; box-shadow: inset 0 0 0 2px #e2dccf; }}
+  .key ol.steps b, .key .num {{ background: #c4bbb1; }}
+  .key ol.steps, .key h2 {{ color: #a39a92; }}
+  .key .stone {{ background: #f1eee8; }}
+  .key .strip {{ opacity: .38; }}
+  .key .sc {{ opacity: .38; }}
+"""

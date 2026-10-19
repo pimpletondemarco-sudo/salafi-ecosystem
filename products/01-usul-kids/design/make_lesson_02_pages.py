@@ -16,35 +16,40 @@ NOT used: the provision hadith (on hold, no hadith number); 56:63-64 (no checked
 Wrong options in the fill-in are either words from the lesson that do not fit the sentence, or the everyday nouns
 already used before (toys, shoes): no made-up statement about Allah is offered as a choice.
 """
-from pages_lib import page, dims, trace_section, fill_item, fill_section, steps_line, h2, scissors, palm_svg, CUT, CUT_W, BONE, IN
+from pages_lib import CHECK, GREEN, page, dims, trace_section, fill_item, fill_section, steps_line, h2, scissors, palm_svg, CUT, CUT_W, BONE, IN
 
 TRACE = [("خَلَقَنَا", "He created us"), ("رَزَقَنَا", "He provided for us")]
 MATN_EN = "Allah created us, provided for us, and did not leave us without a purpose."
-SRC_MATN = (f"Meaning of the book's words: \"{MATN_EN}\"\n"
+SRC_MATN = (f"Meaning of Shaykh Muhammad ibn Abdul-Wahhab's words in Thalathat al-Usul: \"{MATN_EN}\"\n"
             "      <i>Sharh Thalathat al-Usul</i>, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed., p. 29.")
 SRC_FOOD = ("\n      Meaning of Shaykh al-Uthaymeen's words: \"We cannot live without food and drink, and Allah is the One who created our\n"
             "      food and drink.\" <i>Sharh Thalathat al-Usul</i>, Shaykh Muhammad ibn Salih al-Uthaymeen, Dar al-Thurayya, 4th ed., p. 30.")
-SRC_WORSHIP = (f"Meaning of the book's words: \"{MATN_EN[:-1]},\" and of Shaykh Ibn Baz's words: \"Allah created His creation\n"
+SRC_WORSHIP = (f"Meaning of Shaykh Muhammad ibn Abdul-Wahhab's words in Thalathat al-Usul: \"{MATN_EN[:-1]},\" and of Shaykh Ibn Baz's words: \"Allah created His creation\n"
                "      to worship Him.\" <i>Sharh Thalathat al-Usul</i>, Shaykh Ibn Baz, Dar al-Masir, 1st ed., p. 29.")
 
-BOOK = "The book says:"
-ITEM_PURPOSE = fill_item(BOOK, "Allah created us, provided for us, and did not leave us without a", ["created", "purpose", "provided"])
-ITEM_CREATED = fill_item(BOOK, "Allah", ["drink", "purpose", "created"], after=" us, provided for us, and did not leave us without a purpose.")
-ITEM_FOOD = fill_item("Shaykh al-Uthaymeen said:", "We cannot live without food and", ["toys", "drink", "shoes"])
+# (before, choices, after, answer): the answer is drawn only on the answer-key copy (key=True)
+FILL = {"purpose": ("Allah created us, provided for us, and did not leave us without a", ["created", "purpose", "provided"], ".", "purpose"),
+        "created": ("Allah", ["drink", "purpose", "created"], " us, provided for us, and did not leave us without a purpose.", "created"),
+        "food": ("We cannot live without food and", ["toys", "drink", "shoes"], ".", "drink")}
+
+
+def item(k, key=False):
+    before, choices, after, answer = FILL[k]
+    return fill_item("", before, choices, after=after, answer=answer if key else None)
 
 
 # ---------------------------------------------------------------- Learn page
-def learn(size, v):
+def learn(size, v, key=False):
     w, h, _ = dims(size)
     inner = w - 96
     palm = {"A": "header", "B": "name", "C": "bottom"}[v]
-    items = {"A": [ITEM_PURPOSE], "B": [ITEM_PURPOSE, ITEM_FOOD], "C": [ITEM_CREATED]}[v]
-    body = trace_section(1, TRACE, inner, size=70, row_h=112, base=78, label_w=150) + fill_section(2, items)
+    items = [item(k, key) for k in {"A": ["purpose"], "B": ["purpose", "food"], "C": ["created"]}[v]]
+    body = trace_section(1, TRACE, inner, size=70, row_h=112, base=78, label_w=150, key=key) + fill_section(2, items)
     src = SRC_MATN + (SRC_FOOD if v == "B" else "")
     css = (".fill .blank { width: 200px; } .fitem { background: #f3efe6; border-radius: 16px; padding: 18px 26px 22px; }"
            if v == "C" else "")
     return page(size, lesson=2, pno=1, kind="Learn", title="Allah Created Us", body=body, source=src, palm=palm,
-                css=css)
+                css=css, key=key)
 
 
 # ---------------------------------------------------------------- Do page: lift the flap
@@ -61,15 +66,20 @@ def box(x, y, w, h, cls, inner=""):
     return f'<div class="{cls}" style="left:{x:.1f}px;top:{y:.1f}px;width:{w:.1f}px;height:{h:.1f}px">{inner}</div>'
 
 
-def flap_unit(i, q, bx, by, sx, sy, DW, DH, T, orient, ar_size, en_size=15):
-    """Base unit (glue strip + door footprint + answer box) and its flap (tab + door) on the strip."""
+def flap_unit(i, q, bx, by, sx, sy, DW, DH, T, orient, ar_size, en_size=15, key=False):
+    """Base unit (glue strip + door footprint + answer box) and its flap (tab + door) on the strip.
+    key=True (answer-key copy, top tabs only): the tab glued on its strip, the flap lifted open (the strip shows
+    its question) and the answer it uncovers in green with a check."""
     n = i + 1
     qtext, ar, en = q
-    ans = f'<div class="ar aa" style="font-size:{ar_size}px">{ar}</div><div class="ae" style="font-size:{en_size}px">{en}</div>'
+    ans = f'<div class="ae" style="font-size:{en_size}px">{en}</div>'   # English only on Do pages (owner 2026-10-19)
     if orient == "top":
-        g = box(bx, by, DW, T, "gs", f'<span>glue tab {n} here</span>')
+        g = (box(bx, by, DW, T, "gs", f'<span>glue tab {n} here</span>') if not key else
+             box(bx, by, DW, T, "gs open", f'<span>Flap {n}, lifted open</span>'))
+        if key:
+            ans += CHECK
         foot = box(bx, by + T, DW, DH, "fp")
-        a = box(bx + INSET, by + T + INSET, DW - 2 * INSET, DH - 2 * INSET, "ab", f'<i>{n}</i>{ans}')
+        a = box(bx + INSET, by + T + INSET, DW - 2 * INSET, DH - 2 * INSET, "ab ok" if key else "ab", f'<i>{n}</i>{ans}')
         tab = box(sx, sy, DW, T, "tab", '<span>glue the back of this tab</span>')
         door = box(sx, sy + T, DW, DH, "door col" if DW < 2.2 * IN else "door", f'<div class="dq"><b>{n}</b><span>{qtext}</span></div><div class="lift">Lift to see the answer</div>')
         fold = (f'<line x1="{sx}" y1="{sy + T}" x2="{sx + DW}" y2="{sy + T}" class="fold"/>'
@@ -87,7 +97,7 @@ def flap_unit(i, q, bx, by, sx, sy, DW, DH, T, orient, ar_size, en_size=15):
     return g + foot + a + tab + door, fold, outline
 
 
-def do_page(size, v):
+def do_page(size, v, key=False):
     w, h, _ = dims(size)
     inner = w - 96
     T = round(0.45 * IN)
@@ -99,7 +109,7 @@ def do_page(size, v):
         sx0 = (inner - strip_w) / 2
         strip_y = T + DH + 62
         for i, q in enumerate(QS):
-            u = flap_unit(i, q, i * (DW + gap), 0, sx0 + i * DW, strip_y, DW, DH, T, "top", 30 if len(q[1]) > 10 else 36)
+            u = flap_unit(i, q, i * (DW + gap), 0, sx0 + i * DW, strip_y, DW, DH, T, "top", 0, 21)
             parts.append(u[0]); lines.append(u[1]); cuts.append(u[2])
         ph = 88; pw = ph * 140 / 132
         bx_end = 3 * DW + 2 * gap
@@ -112,7 +122,7 @@ def do_page(size, v):
         gap = 14
         sx0 = inner - (DW + T) - 2
         for i, q in enumerate(QS):
-            u = flap_unit(i, q, 0, i * (DH + gap), sx0, i * DH + 14, DW, DH, T, "left", 28 if len(q[1]) > 10 else 36)
+            u = flap_unit(i, q, 0, i * (DH + gap), sx0, i * DH + 14, DW, DH, T, "left", 0, 23)
             parts.append(u[0]); lines.append(u[1]); cuts.append(u[2])
         ph = 88; pw = ph * 140 / 132
         parts.append(f'<div style="left:{sx0 + (DW + T - pw) / 2:.1f}px;top:{3 * DH + 14 + 24:.1f}px">{palm_svg(ph)}</div>')
@@ -130,12 +140,14 @@ def do_page(size, v):
         for i, q in enumerate(QS + [Q4]):
             r, c = divmod(i, 2)
             u = flap_unit(i, q, bx0 + c * (DW + gap), r * (T + DH + gap), sx0 + c * DW, strip_y + r * (T + DH), DW, DH, T, "top",
-                          26 if len(q[1]) > 10 else 30, 14)
+                          0, 20, key=key)
             parts.append(u[0]); lines.append(u[1]); cuts.append(u[2])
         stage_h = strip_y + 2 * (T + DH) + 4
         sc = (sx0 - 16, strip_y)
         fold_label = (sx0 + 2 * DW - 4, strip_y + T - 4)
-    svg = (f'<svg style="left:0;top:0;z-index:1" width="{inner}" height="{stage_h:.0f}">{"".join(lines)}{"".join(cuts)}'
+    if key and v != "C":
+        raise ValueError("answer-key copy is built for the owner's pick, Do version C, only")
+    svg = (f'<svg{' class="flapsvg"' if key else ""} style="left:0;top:0;z-index:1" width="{inner}" height="{stage_h:.0f}">{"".join(lines)}{"".join(cuts)}'
            f'</svg>')
     stage = (f'<div class="stage" style="width:{inner}px;height:{stage_h:.0f}px">{"".join(parts)}{svg}'
              f'{scissors(sc[0], sc[1], 24)}</div>')
@@ -149,7 +161,7 @@ def do_page(size, v):
   .ab {{ background: #fff; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }}
   .ab i {{ position: absolute; left: 7px; top: 3px; font-style: normal; font-weight: 800; font-size: 13px; color: #8a7d6e; }}
   .aa {{ line-height: 1.45; color: #2a1d17; }}
-  .ae {{ font-weight: 700; line-height: 1.25; color: #2a1d17; }}
+  .ae {{ font-weight: 800; line-height: 1.25; color: #2a1d17; padding: 0 10px; text-wrap: balance; }}
   .tab {{ background: #d9d3c4; display: grid; place-items: center; }}
   .door {{ background: {BONE}; display: flex; flex-direction: column; justify-content: center; padding: 14px 18px; gap: 8px; }}
   .dq {{ display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 800; line-height: 1.25; }}
@@ -163,9 +175,17 @@ def do_page(size, v):
   .fold {{ stroke: #6b5b51; stroke-width: 1.33; stroke-dasharray: 5 4; }}
   .fl {{ font-family: "Nunito", sans-serif; font-size: 13px; font-weight: 800; fill: #4a3a30; }}
   .sc {{ z-index: 2; }}'''
+    if key:   # the cut-out strip is used up: faded, like the Lesson 1 piece strip
+        css += f'''
+  .key .tab, .key .door, .key .flapsvg {{ opacity: .38; }}
+  .gs.open {{ background: {BONE}; box-shadow: inset 0 0 0 2px #c4bbb1; }}
+  .gs.open span {{ font-size: 15px; color: #6b5b51; }}
+  .ab.ok {{ box-shadow: inset 0 0 0 4px {GREEN}; }}
+  .ab.ok .ae {{ color: {GREEN}; }}
+  .ab .ck {{ position: absolute; right: -9px; top: -9px; }}'''
     src = SRC_WORSHIP if v == "C" else SRC_MATN
     return page(size, lesson=2, pno=2, kind="Do", title="Lift the Flaps", body=body, source=src, css=css,
-                palm="header" if v == "C" else None)
+                palm="header" if v == "C" else None, key=key)
 
 
 if __name__ == "__main__":

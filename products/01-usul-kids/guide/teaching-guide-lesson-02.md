@@ -88,7 +88,7 @@ Meaning: "Then tell Me about the seed that you sow in the ground. Is it you that
 
 ## If your child asks…
 - **"Did Mummy and Daddy make me?"** No. Shaykh al-Uthaymeen said a person's father and mother did not create him, nor did anyone from the creation; the Creator is Allah alone (*Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen (Dar al-Thurayya, 4th ed.), p. 29).
-- **"Did I just happen by accident?"** No. Shaykh al-Uthaymeen said a person did not come by chance (same book, p. 29).
+- **"Did I just happen by accident?"** No. Shaykh al-Uthaymeen said a person did not come by chance (Shaykh al-Uthaymeen, *Sharh Thalathat al-Usul*, p. 29).
 - **"Why did Allah make us?"** To worship Him. Shaykh Ibn Baz said Allah created His creation to worship Him, and did not create them without a purpose or for nothing (*Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz (Dar al-Masir, 1st ed.), p. 29), and Allah says so in Surat adh-Dhariyat 51:56.
 - **"Where does my food come from?"** Allah created our food and drink, and we cannot live without them (*Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen (Dar al-Thurayya, 4th ed.), p. 30). Allah is the All-Provider (51:58).
 - **Other questions about provision** (for example, how it is written for each person): "We will learn more later, in sha Allah." This guide does not answer them yet.

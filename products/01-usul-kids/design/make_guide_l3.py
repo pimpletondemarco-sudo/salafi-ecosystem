@@ -119,7 +119,7 @@ def parts(g):
                       f'<p class="m"><b>{q["label"]}</b> "{q["meaning"]}"</p><div class="src">{q["source"]}</div></div>')
     p["panels"] = panels
     p["scholars_h"] = ('<h3 style="font-family:\'Baloo 2\',sans-serif;font-weight:800;font-size:19px;margin:0 0 4px">From the Scholars</h3>'
-                       '<p class="intro">The scholars\' own words, with the meaning in plain English and the book and printed page.</p>')
+                       '<p class="intro">The scholars\' own words, with the meaning in plain English, the title of each explanation and its printed page.</p>')
     return p
 
 

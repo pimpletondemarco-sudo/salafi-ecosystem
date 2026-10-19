@@ -7,9 +7,9 @@
 By the end, your child can name the four matters every Muslim must learn (knowledge, acting upon it, calling others to it, and patience with the harm that comes with it) and knows that Shaykh Ibn Baz said young and old must learn them.
 
 ## Background for the parent (2 minutes)
-Shaykh al-Islam Muhammad ibn Abdul-Wahhab wrote *Thalathat al-Usul*. Shaykh Ibn Baz explains that the author used to teach these foundations to students and ordinary people, so that they would study them and memorise them (Ibn Baz, p. 21). Shaykh Ibn Baz and Shaykh al-Uthaymeen both explained the book.
+Shaykh al-Islam Muhammad ibn Abdul-Wahhab wrote *Thalathat al-Usul*. Shaykh Ibn Baz explains that the author used to teach these foundations to students and ordinary people, so that they would study them and memorise them (Ibn Baz, p. 21). Shaykh Ibn Baz and Shaykh al-Uthaymeen both explained *Thalathat al-Usul*.
 
-The book begins with four matters we must learn:
+Shaykh Muhammad ibn Abdul-Wahhab begins *Thalathat al-Usul* with four matters we must learn:
 1. **Knowledge**: knowing Allah, knowing His Prophet ﷺ and knowing the religion of Islam, with the proofs.
 2. **Acting upon it**: doing what we learned.
 3. **Calling others to it**: inviting others to what we learned, with knowledge.
@@ -105,8 +105,8 @@ Cited by Shaykh al-Uthaymeen in *Sharh Thalathat al-Usul* (Dar al-Thurayya, 4th 
 - **"Do kids have to learn this too?"** Yes. Shaykh Ibn Baz said every believer, male and female, young and old, must learn these matters (*Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz (Dar al-Masir, 1st ed.), p. 21).
 - **"What kind of knowledge?"** Knowing Allah, His Prophet ﷺ and the religion of Islam, with the proofs: "Allah said" and "the Messenger said", not by opinion (*Sharh Thalathat al-Usul*, Shaykh Abdul-Aziz Ibn Baz (Dar al-Masir, 1st ed.), p. 22).
 - **"Isn't knowing enough? Why do I have to do it?"** Shaykh al-Uthaymeen said action is the fruit of knowledge (*Sharh Thalathat al-Usul*, Shaykh Muhammad ibn Salih al-Uthaymeen (Dar al-Thurayya, 4th ed.), p. 22).
-- **"Can I tell my friends?"** Yes, calling others is the third matter, and Shaykh al-Uthaymeen said it must be with knowledge (same book, p. 22). So tell them what you have really learned.
-- **"What is patience?"** Shaykh al-Uthaymeen gave three kinds: patience in obeying Allah, patience in staying away from what Allah forbade, and patience with what Allah decrees (same book, p. 25).
+- **"Can I tell my friends?"** Yes, calling others is the third matter, and Shaykh al-Uthaymeen said it must be with knowledge (Shaykh al-Uthaymeen, *Sharh Thalathat al-Usul*, p. 22). So tell them what you have really learned.
+- **"What is patience?"** Shaykh al-Uthaymeen gave three kinds: patience in obeying Allah, patience in staying away from what Allah forbade, and patience with what Allah decrees (Shaykh al-Uthaymeen, *Sharh Thalathat al-Usul*, p. 25).
 
 ## Review game: Four Roots
 Write الْعِلْمُ, الْعَمَلُ, الدَّعْوَةُ and الصَّبْرُ on four paper "roots" under a paper tree. Say the English (knowledge / acting upon it / calling others to it / patience) and your child puts a paper leaf on the matching root. When all four are done, hang a paper fruit on the tree and say together: "Action is the fruit of knowledge."

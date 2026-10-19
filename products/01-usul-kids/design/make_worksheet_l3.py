@@ -12,7 +12,8 @@ SPEC = {
     "trace": [("رَبِّي", "My Lord"), ("دِينِي", "My Religion"), ("نَبِيِّي", "My Prophet")],
     "match_left": ["رَبِّي", "دِينِي", "نَبِيِّي"],
     "match_right": ["My Religion", "My Prophet", "My Lord"],  # shuffled; answers in the answer key
-    "act3": {"kind": "fill", "said": "Shaykh Ibn Baz said:",
+    "act3": {"kind": "fill", "said": "",  # no author line on student pages (owner 2026-10-19)
+            
              "before": "These three principles gather the whole", "choices": ["house", "religion", "garden"]},
     "source": ("Meaning of Shaykh Ibn Baz's words: \"These three principles gather the whole religion.\"\n"
                "      <i>Sharh Thalathat al-Usul</i>, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed., p. 38."),

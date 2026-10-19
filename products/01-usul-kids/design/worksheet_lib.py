@@ -8,7 +8,8 @@ Built from the owner's Lesson 3 feedback (2026-10-17), so every lesson follows i
 - Fill-in: one step pair only, "circle the right word, then write it on the line" (no separate write line)
 - Footer (owner, 2026-10-19): student pages do NOT print the citation. They say
   "For parents: sources and explanation are in the Teaching Guide, Lesson N." (parents_note()).
-  spec["source"] stays in the data: the answer key (key=True) still prints it, and checks against it.
+  spec["source"] stays in the data: the answer key page prints it in its own source box and checks against it.
+  The filled-in key copy (key=True) shows the same parents' footer as the student page (2026-10-19).
 - colour kept 0.3in inside the paper edge; white page for cheap home printing; US Letter and A4
 """
 from pathlib import Path
@@ -140,7 +141,7 @@ def build(size, spec, key=False):
         a3 = spec["act3"]
         if a3["kind"] == "fill":
             return (f'<section>{h2(n, "Fill in the missing word", "Circle the right word, then write it on the line.")}'
-                    f'<div class="said">{a3["said"]}</div>'
+                    + (f'<div class="said">{a3["said"]}</div>' if a3.get("said") else "") +
                     f'<div class="fill">{a3["before"]} <span class="blank">{a3["answer"] if key else ""}</span>{a3.get("after", ".")}</div>'
                     f'<div class="choices">' + "".join(f'<span{chk(c)}>{c}</span>' for c in a3["choices"]) + '</div></section>')
         return (f'<section>{h2(n, "Circle the right answer")}'  # circle only, no writing
@@ -204,7 +205,7 @@ def build(size, spec, key=False):
     {sections}
   </main>
   <footer class="band">
-    <div>{('<b>Source for parents:</b> ' + spec["source"]) if key else parents_note(spec["lesson"])}</div>
+    <div>{parents_note(spec["lesson"])}</div>
     <div class="brand"><div>Sunnah<i>Saplings</i></div>Answers: Answer Key, Lesson {spec["lesson"]}</div>
   </footer>
 </div></body></html>'''

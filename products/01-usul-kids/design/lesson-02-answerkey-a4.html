@@ -1,0 +1,74 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Amiri:wght@700&family=Amiri+Quran&family=Noto+Sans+Arabic:wght@400;500;600&family=Baloo+2:wght@700;800&family=Nunito:ital,wght@0,500;0,600;0,700;0,800;1,600&display=swap"><style>
+  @page { size: 210mm 297mm; margin: 0; }
+  html, body { margin: 0; background: #fff; }
+  .page { width: 794px; height: 1123px; box-sizing: border-box; padding: 29px 0; display: flex; flex-direction: column;
+          font-family: "Nunito", "Noto Sans Arabic", sans-serif; color: #2a1d17; overflow: hidden; page-break-after: always; break-after: page; }
+  .band { margin: 0 29px; background: #e5e1d8; border-radius: 14px; }
+  header { padding: 13px 19px 11px; display: flex; align-items: center; justify-content: space-between; }
+  header .k { font-weight: 700; font-size: 14px; color: #6b5b51; }
+  header h1 { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 32px; line-height: 1; margin: 3px 0 0; letter-spacing: -0.01em; }
+  header .ar { font-family: "Amiri", serif; font-weight: 700; direction: rtl; font-size: 32px; color: #456f3a; line-height: 1.3; }
+  main { flex: 1; padding: 18px 48px 14px; display: flex; flex-direction: column; min-height: 0; }
+  footer { padding: 10px 19px 11px; font-size: 12px; line-height: 1.45; color: #4a3a30;
+           display: flex; justify-content: space-between; align-items: flex-end; gap: 24px; }
+  footer b { color: #2a1d17; }
+  .brand { text-align: right; white-space: nowrap; font-size: 12px; }
+  .brand div { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 18px; color: #2a1d17; }
+  .brand i { font-style: normal; color: #456f3a; }
+  h2 { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 21px; line-height: 1.1; margin: 0 0 6px; display: flex; align-items: center; gap: 10px; }
+  h2 b { width: 30px; height: 30px; border-radius: 50%; background: #456f3a; color: #fff; display: grid; place-items: center; font-size: 17px; flex: none; }
+  h2 small { font-family: "Nunito", sans-serif; font-weight: 700; font-size: 13.5px; color: #6b5b51; }
+  p { margin: 0 0 6px; }
+  .ar { font-family: "Noto Sans Arabic", sans-serif; direction: rtl; }
+  .quran { font-family: "Amiri Quran", "Amiri", serif; direction: rtl; }
+  .src { font-size: 12px; color: #6b5b51; line-height: 1.4; }
+  .src i { color: #2a1d17; }
+
+  .copy { position: relative; flex: none; border-radius: 10px; box-shadow: 0 0 0 2px #d6cdbb; overflow: hidden; background: #fff; }
+  .copy iframe { border: 0; transform-origin: 0 0; position: absolute; left: 0; top: 0; }
+  .cap { font-size: 12.5px; color: #6b5b51; font-weight: 700; margin-top: 6px; }
+  .ans h2 { font-size: 19px; margin-bottom: 4px; }
+  .ans h2 b { width: 26px; height: 26px; font-size: 15px; }
+  .ans .t { font-size: 13.5px; line-height: 1.4; margin: 0 0 6px; }
+  .row { display: flex; align-items: center; gap: 10px; font-size: 15px; font-weight: 700; line-height: 1.15; margin: 0 0 5px; }
+  .row .ar { font-family: "Noto Sans Arabic", sans-serif; font-weight: 600; font-size: 25px; line-height: 1.5; direction: rtl; min-width: 64px; text-align: right; }
+  .row .tr { font-style: italic; font-weight: 600; color: #6b5b51; font-size: 13.5px; }
+  .row .to { color: #6b5b51; font-weight: 800; }
+  .a, .ans p b { color: #456f3a; font-weight: 800; }
+  .ck { flex: none; vertical-align: -3px; }
+  .say { font-size: 15px; line-height: 1.4; font-weight: 700; }
+  .strip { border-radius: 12px; box-shadow: inset 0 0 0 2px #d6cdbb; padding: 10px 14px 9px; font-size: 12.5px; line-height: 1.45; color: #4a3a30; }
+  .strip .q { font-family: "Noto Sans Arabic", sans-serif; direction: rtl; text-align: right; font-size: 20px; font-weight: 500; color: #2a1d17; line-height: 1.6; margin: 2px 0; }
+  .strip b { color: #2a1d17; }
+  .how { margin-top: 18px; font-size: 13.5px; line-height: 1.4; }
+  .how h3 { font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 17px; margin: 0 0 4px; }
+  .how ol { margin: 0; padding-left: 20px; }
+  .how li { margin-bottom: 3px; }
+  .strip .q { white-space: nowrap; }
+  .strip .q.sm { font-size: 16.5px; }
+  .row { gap: 8px; }
+  .row .ar { min-width: 52px; }
+  section.ans { margin-bottom: 14px; }
+
+  .row .n { width: 26px; height: 26px; border-radius: 50%; background: #c4bbb1; color: #fff; display: grid; place-items: center;
+            font-family: "Baloo 2", sans-serif; font-weight: 800; font-size: 15px; flex: none; }
+  .row .stack { display: flex; flex-direction: column; gap: 1px; }
+  .row.fl { align-items: flex-start; margin-bottom: 11px; }
+  .row.fl .n, .row.fl .ck { margin-top: 1px; }
+  .row .qq { font-size: 13.5px; font-weight: 700; color: #6b5b51; line-height: 1.3; }
+  .row .mean { display: flex; flex-direction: column; font-size: 13px; font-weight: 600; color: #6b5b51; line-height: 1.3; }
+  .row .mean .ar { font-size: 20px; min-width: 0; text-align: left; line-height: 1.6; }
+  .row .mean.in { flex-direction: row; align-items: baseline; gap: 8px; }
+  .ans .say { margin: 0 0 6px; }
+  .ans .note { font-size: 13.5px; line-height: 1.4; margin: 8px 0 0; }
+  .strip { margin-top: 14px; }
+  .strip .two { display: flex; gap: 22px; margin: 4px 0 2px; }
+  .strip .two > div { flex: 1; min-width: 0; }
+  .strip .two > div:first-child { flex: 1.3; }
+  .strip .q { margin: 0; }
+  .strip i { white-space: nowrap; }
+  .strip .two .q { text-align: right; }
+  header .ar { white-space: nowrap; }
+  header { gap: 18px; }
+  header h1 { font-size: 29px; }
+</style></head><body><div class="page"><header class="band"><div><div class="k">For parents: answers to Lesson 2, page 1 (Learn)</div><h1>Answer Key: Allah Created Us</h1></div><div class="ar">الأُصُولُ الثَّلَاثَةُ</div></header><main><div style="display:flex;gap:24px;flex:1;min-height:0"><div><div class="copy" style="width:441px;height:623px"><iframe src="lesson-02-answerkey-learn-filled-a4.html" width="794" height="1123" scrolling="no" style="transform:scale(0.555)"></iframe></div><div class="cap">Lesson 2, page 1, filled in.</div></div><div style="flex:1;min-width:0"><section class="ans"><h2><b>1</b>Trace the words</h2><p class="t">No single answer. Check that the child traced each word and its marks (harakat), then wrote it alone in the box (shown in green).</p><div class="row"><span class="ar">خَلَقَنَا</span><span>He created us<br><span class="tr">khalaqanā</span></span></div><div class="row"><span class="ar">رَزَقَنَا</span><span>He provided for us<br><span class="tr">razaqanā</span></span></div></section><section class="ans"><h2><b>2</b>Fill in the missing word</h2><p class="say"><svg class="ck" viewBox="0 0 20 20" width="18" height="18"><circle cx="10" cy="10" r="10" fill="#456f3a"/><path d="M5.5 10.4l3 3 6-6.6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg> <b>purpose</b>. The child circles "purpose" and writes it on the line: "Allah created us, provided for us, and did not leave us without a purpose."</p><div class="row"><span class="stack"><span class="mean in">In Arabic:<span class="ar">لَمْ يَتْرُكْنَا هَمَلًا</span></span><span class="tr">lam yatruknā hamalā: He did not leave us without a purpose</span></span></div></section></div></div><div class="strip"><b>Source for these answers.</b><div class="two"><div><b>Shaykh Muhammad ibn Abdul-Wahhab wrote in <i>Thalathat al-Usul</i>:</b><div class="q">أَنَّ اللهَ خَلَقَنَا وَرَزَقَنَا ولم يتركنا هملاً</div><b>Meaning of his words:</b> Allah created us, provided for us, and did not leave us without a purpose.</div><div><b>Shaykh Ibn Baz explains:</b><div class="q">الله خلق الخلق ليعبدوه</div><b>Meaning of Shaykh Ibn Baz's words:</b> Allah created His creation to worship Him.</div></div>Both from <i>Sharh Thalathat al-Usul</i>, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed., p. 29. Shaykh Ibn Baz quotes the words of <i>Thalathat al-Usul</i> and explains them on that page.</div></main><footer class="band"><div><b>For parents.</b> The small copy shows each answer in green. Tracing has no single answer.</div><div class="brand"><div>Sunnah<i>Saplings</i></div>Answer Key, Lesson 2, page 1</div></footer></div><div class="page"><header class="band"><div><div class="k">For parents: answers to Lesson 2, page 2 (Do)</div><h1>Answer Key: Lift the Flaps</h1></div><div class="ar">الأُصُولُ الثَّلَاثَةُ</div></header><main><div style="display:flex;gap:24px;flex:1;min-height:0"><div><div class="copy" style="width:441px;height:623px"><iframe src="lesson-02-answerkey-do-filled-a4.html" width="794" height="1123" scrolling="no" style="transform:scale(0.555)"></iframe></div><div class="cap">Lesson 2, page 2, filled in.</div></div><div style="flex:1;min-width:0"><section class="ans"><h2><b>1</b>Lift the flaps</h2><p class="t">Under each flap is its answer:</p><div class="row fl"><span class="n">1</span><svg class="ck" viewBox="0 0 20 20" width="18" height="18"><circle cx="10" cy="10" r="10" fill="#456f3a"/><path d="M5.5 10.4l3 3 6-6.6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="stack"><span class="qq">Who created us?</span><span class="a">Allah created us.</span><span class="mean"><span class="ar">خَلَقَنَا</span>"He created us"</span></span></div><div class="row fl"><span class="n">2</span><svg class="ck" viewBox="0 0 20 20" width="18" height="18"><circle cx="10" cy="10" r="10" fill="#456f3a"/><path d="M5.5 10.4l3 3 6-6.6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="stack"><span class="qq">Who provided for us?</span><span class="a">Allah provided for us.</span><span class="mean"><span class="ar">رَزَقَنَا</span>"He provided for us"</span></span></div><div class="row fl"><span class="n">3</span><svg class="ck" viewBox="0 0 20 20" width="18" height="18"><circle cx="10" cy="10" r="10" fill="#456f3a"/><path d="M5.5 10.4l3 3 6-6.6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="stack"><span class="qq">Did Allah leave us without a purpose?</span><span class="a">He did not leave us without a purpose.</span><span class="mean"><span class="ar">لَمْ يَتْرُكْنَا هَمَلًا</span>"He did not leave us without a purpose"</span></span></div><div class="row fl"><span class="n">4</span><svg class="ck" viewBox="0 0 20 20" width="18" height="18"><circle cx="10" cy="10" r="10" fill="#456f3a"/><path d="M5.5 10.4l3 3 6-6.6" fill="none" stroke="#fff" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"/></svg><span class="stack"><span class="qq">Why did Allah create us?</span><span class="a">To worship Him.</span><span class="mean"><span class="ar">لِيَعْبُدُوهُ</span>"to worship Him"</span></span></div><p class="note">The flaps are glued by their tabs; lifting each one shows its answer. The Arabic is for you; the children's flaps are in English.</p></section></div></div><div class="strip"><b>Source for these answers.</b><div class="two"><div><b>Shaykh Muhammad ibn Abdul-Wahhab wrote in <i>Thalathat al-Usul</i>:</b><div class="q">أَنَّ اللهَ خَلَقَنَا وَرَزَقَنَا ولم يتركنا هملاً</div><b>Meaning of his words:</b> Allah created us, provided for us, and did not leave us without a purpose.</div><div><b>Shaykh Ibn Baz explains:</b><div class="q">الله خلق الخلق ليعبدوه</div><b>Meaning of Shaykh Ibn Baz's words:</b> Allah created His creation to worship Him.</div></div>Both from <i>Sharh Thalathat al-Usul</i>, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed., p. 29. Shaykh Ibn Baz quotes the words of <i>Thalathat al-Usul</i> and explains them on that page.</div></main><footer class="band"><div><b>For parents.</b> The small copy shows each flap lifted open and its answer in green.</div><div class="brand"><div>Sunnah<i>Saplings</i></div>Answer Key, Lesson 2, page 2</div></footer></div></body></html>
