@@ -8,7 +8,8 @@ Built from the owner's Lesson 3 feedback (2026-10-17), so every lesson follows i
 - Fill-in: one step pair only, "circle the right word, then write it on the line" (no separate write line)
 - Footer (owner, 2026-10-19): student pages do NOT print the citation. They say
   "For parents: sources and explanation are in the Teaching Guide, Lesson N." (parents_note()).
-  spec["source"] stays in the data: the answer key (key=True) still prints it, and checks against it.
+  spec["source"] stays in the data: the answer key page prints it in its own source box and checks against it.
+  The filled-in key copy (key=True) shows the same parents' footer as the student page (2026-10-19).
 - colour kept 0.3in inside the paper edge; white page for cheap home printing; US Letter and A4
 """
 from pathlib import Path
@@ -204,7 +205,7 @@ def build(size, spec, key=False):
     {sections}
   </main>
   <footer class="band">
-    <div>{('<b>Source for parents:</b> ' + spec["source"]) if key else parents_note(spec["lesson"])}</div>
+    <div>{parents_note(spec["lesson"])}</div>
     <div class="brand"><div>Sunnah<i>Saplings</i></div>Answers: Answer Key, Lesson {spec["lesson"]}</div>
   </footer>
 </div></body></html>'''

@@ -2,6 +2,14 @@
 
 The manager reads this first, then CLAUDE.md, owner-preferences.md and the HQ (Needs you tab: version sets, approvals, questions).
 
+## Update 2026-10-19 (workbook-designer)
+- Lesson 1 answer key (layout A, one version, 2 pages: Learn B + Do B) posted in the HQ as `ak1A` (no group, under Approve).
+  Generator: products/01-usul-kids/design/make_answerkey_l1.py (text from guide/answer-key-lesson-01.md, rewritten for Learn B / Do B);
+  key mode added to pages_lib.page/trace_section/match_section and make_lesson_01_pages.learn/do_page(key=True), reusable for Lesson 2.
+  Files: design/lesson-01-answerkey{,-a4}.html, -letter.pdf / -a4.pdf, -{letter,a4}-p{1,2}.png. All pass check_arabic.
+- Answer-key mini copies (worksheet_lib key=True) now show the Teaching Guide footer; ak3A image updated in place.
+- tools/render_pages.mjs now finds playwright in /opt/node-tools like render_many.mjs.
+
 ## Etsy connection (tested 2026-10-18)
 - Public tools WORK. Seller sign-in WORKED 2026-10-18 via etsy-signin.mjs (get_me -> shop 68627681; no restart needed). SunnahSaplings = shop_id 68627681,
   0 listings, 0 sales.

@@ -1,4 +1,6 @@
-import { chromium } from 'playwright';
+import { createRequire } from 'module';
+const require = createRequire(process.env.PW_DIR || '/opt/node-tools/');
+const { chromium } = require('playwright');
 // usage: render_pages.mjs src.html outstem letter|a4  -> outstem.pdf + outstem-p1.png, -p2.png ... (one PNG per .page)
 // Waits for fonts inside iframes too (answer-key pages embed the filled student page).
 const [src, stem, size = 'letter'] = process.argv.slice(2);
