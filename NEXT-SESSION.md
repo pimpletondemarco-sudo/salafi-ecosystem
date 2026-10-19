@@ -8,6 +8,8 @@ The manager reads this first, then CLAUDE.md, owner-preferences.md and the HQ (N
   key mode added to pages_lib.page/trace_section/match_section and make_lesson_01_pages.learn/do_page(key=True), reusable for Lesson 2.
   Files: design/lesson-01-answerkey{,-a4}.html, -letter.pdf / -a4.pdf, -{letter,a4}-p{1,2}.png. All pass check_arabic.
 - Answer-key mini copies (worksheet_lib key=True) now show the Teaching Guide footer; ak3A image updated in place.
+- Owner 2026-10-19 "keep student pages simple": Do pages English only (L1 Do B pieces, L2 flaps), author lines removed (L2 Learn, L3 worksheet).
+  Still has an author line: lesson-03-coloring-roots(-simple) footer "Shaykh al-Uthaymeen explains: ..." (not changed; manager to decide).
 - tools/render_pages.mjs now finds playwright in /opt/node-tools like render_many.mjs.
 
 ## Etsy connection (tested 2026-10-18)

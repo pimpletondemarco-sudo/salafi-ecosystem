@@ -27,10 +27,9 @@ SRC_FOOD = ("\n      Meaning of Shaykh al-Uthaymeen's words: \"We cannot live wi
 SRC_WORSHIP = (f"Meaning of Shaykh Muhammad ibn Abdul-Wahhab's words in Thalathat al-Usul: \"{MATN_EN[:-1]},\" and of Shaykh Ibn Baz's words: \"Allah created His creation\n"
                "      to worship Him.\" <i>Sharh Thalathat al-Usul</i>, Shaykh Ibn Baz, Dar al-Masir, 1st ed., p. 29.")
 
-BOOK = "Shaykh Muhammad ibn Abdul-Wahhab wrote in Thalathat al-Usul:"
-ITEM_PURPOSE = fill_item(BOOK, "Allah created us, provided for us, and did not leave us without a", ["created", "purpose", "provided"])
-ITEM_CREATED = fill_item(BOOK, "Allah", ["drink", "purpose", "created"], after=" us, provided for us, and did not leave us without a purpose.")
-ITEM_FOOD = fill_item("Shaykh al-Uthaymeen said:", "We cannot live without food and", ["toys", "drink", "shoes"])
+ITEM_PURPOSE = fill_item("", "Allah created us, provided for us, and did not leave us without a", ["created", "purpose", "provided"])
+ITEM_CREATED = fill_item("", "Allah", ["drink", "purpose", "created"], after=" us, provided for us, and did not leave us without a purpose.")
+ITEM_FOOD = fill_item("", "We cannot live without food and", ["toys", "drink", "shoes"])
 
 
 # ---------------------------------------------------------------- Learn page
@@ -65,7 +64,7 @@ def flap_unit(i, q, bx, by, sx, sy, DW, DH, T, orient, ar_size, en_size=15):
     """Base unit (glue strip + door footprint + answer box) and its flap (tab + door) on the strip."""
     n = i + 1
     qtext, ar, en = q
-    ans = f'<div class="ar aa" style="font-size:{ar_size}px">{ar}</div><div class="ae" style="font-size:{en_size}px">{en}</div>'
+    ans = f'<div class="ae" style="font-size:{en_size}px">{en}</div>'   # English only on Do pages (owner 2026-10-19)
     if orient == "top":
         g = box(bx, by, DW, T, "gs", f'<span>glue tab {n} here</span>')
         foot = box(bx, by + T, DW, DH, "fp")
@@ -99,7 +98,7 @@ def do_page(size, v):
         sx0 = (inner - strip_w) / 2
         strip_y = T + DH + 62
         for i, q in enumerate(QS):
-            u = flap_unit(i, q, i * (DW + gap), 0, sx0 + i * DW, strip_y, DW, DH, T, "top", 30 if len(q[1]) > 10 else 36)
+            u = flap_unit(i, q, i * (DW + gap), 0, sx0 + i * DW, strip_y, DW, DH, T, "top", 0, 21)
             parts.append(u[0]); lines.append(u[1]); cuts.append(u[2])
         ph = 88; pw = ph * 140 / 132
         bx_end = 3 * DW + 2 * gap
@@ -112,7 +111,7 @@ def do_page(size, v):
         gap = 14
         sx0 = inner - (DW + T) - 2
         for i, q in enumerate(QS):
-            u = flap_unit(i, q, 0, i * (DH + gap), sx0, i * DH + 14, DW, DH, T, "left", 28 if len(q[1]) > 10 else 36)
+            u = flap_unit(i, q, 0, i * (DH + gap), sx0, i * DH + 14, DW, DH, T, "left", 0, 23)
             parts.append(u[0]); lines.append(u[1]); cuts.append(u[2])
         ph = 88; pw = ph * 140 / 132
         parts.append(f'<div style="left:{sx0 + (DW + T - pw) / 2:.1f}px;top:{3 * DH + 14 + 24:.1f}px">{palm_svg(ph)}</div>')
@@ -130,7 +129,7 @@ def do_page(size, v):
         for i, q in enumerate(QS + [Q4]):
             r, c = divmod(i, 2)
             u = flap_unit(i, q, bx0 + c * (DW + gap), r * (T + DH + gap), sx0 + c * DW, strip_y + r * (T + DH), DW, DH, T, "top",
-                          26 if len(q[1]) > 10 else 30, 14)
+                          0, 20)
             parts.append(u[0]); lines.append(u[1]); cuts.append(u[2])
         stage_h = strip_y + 2 * (T + DH) + 4
         sc = (sx0 - 16, strip_y)
@@ -149,7 +148,7 @@ def do_page(size, v):
   .ab {{ background: #fff; border-radius: 10px; display: flex; flex-direction: column; align-items: center; justify-content: center; text-align: center; }}
   .ab i {{ position: absolute; left: 7px; top: 3px; font-style: normal; font-weight: 800; font-size: 13px; color: #8a7d6e; }}
   .aa {{ line-height: 1.45; color: #2a1d17; }}
-  .ae {{ font-weight: 700; line-height: 1.25; color: #2a1d17; }}
+  .ae {{ font-weight: 800; line-height: 1.25; color: #2a1d17; padding: 0 10px; text-wrap: balance; }}
   .tab {{ background: #d9d3c4; display: grid; place-items: center; }}
   .door {{ background: {BONE}; display: flex; flex-direction: column; justify-content: center; padding: 14px 18px; gap: 8px; }}
   .dq {{ display: flex; align-items: center; gap: 12px; font-size: 18px; font-weight: 800; line-height: 1.25; }}

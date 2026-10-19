@@ -141,7 +141,7 @@ def build(size, spec, key=False):
         a3 = spec["act3"]
         if a3["kind"] == "fill":
             return (f'<section>{h2(n, "Fill in the missing word", "Circle the right word, then write it on the line.")}'
-                    f'<div class="said">{a3["said"]}</div>'
+                    + (f'<div class="said">{a3["said"]}</div>' if a3.get("said") else "") +
                     f'<div class="fill">{a3["before"]} <span class="blank">{a3["answer"] if key else ""}</span>{a3.get("after", ".")}</div>'
                     f'<div class="choices">' + "".join(f'<span{chk(c)}>{c}</span>' for c in a3["choices"]) + '</div></section>')
         return (f'<section>{h2(n, "Circle the right answer")}'  # circle only, no writing

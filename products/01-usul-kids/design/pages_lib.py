@@ -71,9 +71,11 @@ def match_section(n, left, right, h=200, lw=210, rw=240, ar_size=34, panel=False
 
 
 def fill_item(said, before, choices, after=".", ar=None):
-    """Circle the right word, then write it on the line (owner 2026-10-17: two steps only)."""
+    """Circle the right word, then write it on the line (owner 2026-10-17: two steps only).
+    said: an optional plain lead-in. Never an author or source line on student pages (owner 2026-10-19)."""
     arb = f'<div class="fill-ar">{ar[0]}<span>{ar[1]}</span></div>' if ar else ""
-    return (f'<div class="fitem">{arb}<div class="said">{said}</div>'
+    said = f'<div class="said">{said}</div>' if said else ""
+    return (f'<div class="fitem">{arb}{said}'
             f'<div class="fill">{before} <span class="blank"></span>{after}</div>'
             f'<div class="choices"><em>Circle one:</em>' + "".join(f'<span>{c}</span>' for c in choices) + '</div></div>')
 

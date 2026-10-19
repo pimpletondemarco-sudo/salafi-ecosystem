@@ -2,7 +2,7 @@
 
 Two pages (owner-approved): page 1 "Learn" = tracing strip + MATCH check; page 2 "Do" = cut and glue the four
 matters into four numbered boxes ("box", never "stone", owner 2026-10-18) in the book's order (research/design/sequence-cut-and-glue-2026-10-18.md).
-3 versions of each page (A/B/C), US Letter + A4.
+3 versions of each page (A/B/C), US Letter + A4. Do page pieces: English only, no Arabic (owner 2026-10-19).
 
 Content ONLY from sources/lesson-01-four-matters.md (VERIFIED in VERIFICATION.md):
 - the four matters, in order, as headed in al-Uthaymeen's Sharh Thalathat al-Usul (Dar al-Thurayya, 4th ed.):
@@ -45,7 +45,7 @@ SAFE = 0.15 * IN                                # glue zone 0.15 in larger than 
 def glue_zone(x, y, gw, gh, k=None):
     """k = index of the matter glued here (answer key): the piece drawn in place, in green, with a check mark."""
     inside = '<span>Glue piece here</span>' if k is None else (
-        f'<div class="kp"><div class="ar pa">{AR[k]}</div><div class="pe">{EN[k]}</div></div>{CHECK}')
+        f'<div class="kp"><div class="pe">{EN[k]}</div></div>{CHECK}')
     return (f'<div class="gz{"" if k is None else " ok"}" style="left:{x:.1f}px;top:{y:.1f}px;width:{gw:.1f}px;height:{gh:.1f}px">{inside}</div>')
 
 
@@ -57,7 +57,7 @@ def strip(cx, top, pw, ph):
     """Four pieces side by side sharing edges: one long cut, then three short cuts (R4)."""
     total = 4 * pw
     x0 = cx - total / 2
-    cells = "".join(f'<div class="pc" style="width:{pw}px;height:{ph}px"><div class="ar pa">{AR[k]}</div><div class="pe">{EN[k]}</div></div>'
+    cells = "".join(f'<div class="pc" style="width:{pw}px;height:{ph}px"><div class="pe">{EN[k]}</div></div>'
                     for k in SHUFFLE)
     return (f'<div class="strip" style="left:{x0:.1f}px;top:{top:.1f}px;width:{total + CUT_W:.1f}px">{cells}</div>'
             + scissors(x0 - 18, top + CUT_W / 2, 24, 0))
@@ -153,7 +153,7 @@ def do_page(size, v, key=False):
          padding: 15px; text-align: center; }}
   .pc + .pc {{ border-left: {CUT_W}px solid {CUT}; }}
   .pa {{ font-size: 32px; line-height: 1.55; }}
-  .pe {{ font-size: 15px; font-weight: 800; line-height: 1.25; color: #2a1d17; }}
+  .pe {{ font-family: "Baloo 2", sans-serif; font-size: 23px; font-weight: 800; line-height: 1.15; color: #2a1d17; text-wrap: balance; }}
   .sc {{ z-index: 2; }}'''
     if key:
         css += f'''
