@@ -28,7 +28,7 @@ BASE = {
 }
 WHY = {"kind": "circle", "said": "Shaykh Ibn Baz said:", "question": "Why did Allah create us?",
        "choices": ["To worship Him", "For nothing"]}
-WHY_SRC = ("Meaning of the book's words \"Allah created us, provided for us, and did not leave us without a purpose,\"\n"
+WHY_SRC = ("Meaning of Shaykh Muhammad ibn Abdul-Wahhab's words in Thalathat al-Usul \"Allah created us, provided for us, and did not leave us without a purpose,\"\n"
            "      and of Shaykh Ibn Baz's words \"Allah created His creation to worship Him. He did not create them without a purpose or for nothing.\"\n"
            "      <i>Sharh Thalathat al-Usul</i>, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed., p. 29.")
 FOOD = {"kind": "fill", "said": "Shaykh al-Uthaymeen said:", "before": "We cannot live without food and",

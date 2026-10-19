@@ -19,7 +19,7 @@ EN = ["Knowledge", "Acting upon it", "Calling others to it", "Patience"]
 MATCH_RIGHT = ["Patience", "Knowledge", "Calling others to it", "Acting upon it"]   # shuffled, no straight-across pair
 SHUFFLE = [2, 0, 3, 1]       # pieces on the strip: 3, 1, 4, 2 (never 1-2-3-4; no piece under its own stone)
 
-SOURCE = ("The four matters in the book's order, as headed in Shaykh al-Uthaymeen's explanation: knowledge, acting upon it,\n"
+SOURCE = ("The four matters in the order of Thalathat al-Usul, as headed in Shaykh al-Uthaymeen's explanation: knowledge, acting upon it,\n"
           "      calling others to it, and patience (being patient when we are hurt or troubled because of it).\n"
           "      <i>Sharh Thalathat al-Usul</i>, Shaykh Muhammad ibn Salih al-Uthaymeen, Dar al-Thurayya, 4th ed., pp. 19&ndash;24.")
 STEPS = ["Cut out the 4 pieces.", "Put them in order.", "Glue each piece in its numbered box."]

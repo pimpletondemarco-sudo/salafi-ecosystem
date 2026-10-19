@@ -19,7 +19,7 @@ No single answer. Check that the child traced each word and its marks (harakat):
 - He provided for us → رَزَقَنَا
 - He did not leave us without a purpose → لَمْ يَتْرُكْنَا هَمَلًا
 
-Source line: the words of the book (Thalathat al-Usul) as quoted by Shaykh Abdul-Aziz Ibn Baz,
+Source line: the words of Shaykh Muhammad ibn Abdul-Wahhab in *Thalathat al-Usul*, as quoted by Shaykh Abdul-Aziz Ibn Baz,
 *Sharh Thalathat al-Usul*, Dar al-Masir, 1st ed., p. 29.
 
 ## 3. Circle the right answer (versions A and B)

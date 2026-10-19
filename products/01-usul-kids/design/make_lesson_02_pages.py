@@ -20,14 +20,14 @@ from pages_lib import page, dims, trace_section, fill_item, fill_section, steps_
 
 TRACE = [("خَلَقَنَا", "He created us"), ("رَزَقَنَا", "He provided for us")]
 MATN_EN = "Allah created us, provided for us, and did not leave us without a purpose."
-SRC_MATN = (f"Meaning of the book's words: \"{MATN_EN}\"\n"
+SRC_MATN = (f"Meaning of Shaykh Muhammad ibn Abdul-Wahhab's words in Thalathat al-Usul: \"{MATN_EN}\"\n"
             "      <i>Sharh Thalathat al-Usul</i>, Shaykh Abdul-Aziz Ibn Baz, Dar al-Masir, 1st ed., p. 29.")
 SRC_FOOD = ("\n      Meaning of Shaykh al-Uthaymeen's words: \"We cannot live without food and drink, and Allah is the One who created our\n"
             "      food and drink.\" <i>Sharh Thalathat al-Usul</i>, Shaykh Muhammad ibn Salih al-Uthaymeen, Dar al-Thurayya, 4th ed., p. 30.")
-SRC_WORSHIP = (f"Meaning of the book's words: \"{MATN_EN[:-1]},\" and of Shaykh Ibn Baz's words: \"Allah created His creation\n"
+SRC_WORSHIP = (f"Meaning of Shaykh Muhammad ibn Abdul-Wahhab's words in Thalathat al-Usul: \"{MATN_EN[:-1]},\" and of Shaykh Ibn Baz's words: \"Allah created His creation\n"
                "      to worship Him.\" <i>Sharh Thalathat al-Usul</i>, Shaykh Ibn Baz, Dar al-Masir, 1st ed., p. 29.")
 
-BOOK = "The book says:"
+BOOK = "Shaykh Muhammad ibn Abdul-Wahhab wrote in Thalathat al-Usul:"
 ITEM_PURPOSE = fill_item(BOOK, "Allah created us, provided for us, and did not leave us without a", ["created", "purpose", "provided"])
 ITEM_CREATED = fill_item(BOOK, "Allah", ["drink", "purpose", "created"], after=" us, provided for us, and did not leave us without a purpose.")
 ITEM_FOOD = fill_item("Shaykh al-Uthaymeen said:", "We cannot live without food and", ["toys", "drink", "shoes"])
