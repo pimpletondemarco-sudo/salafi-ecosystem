@@ -104,3 +104,10 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
 - Lesson 1 Learn: version B (palm beside Name/Date, small faint English labels beside the tracing words).
 - Lesson 1 Do: version B (steps climbing to the palm, cut-and-glue into numbered boxes).
 - The general question "faint labels for every lesson?" is still open in the HQ; do not assume it from this pick.
+
+## Student pages: keep them simple (owner, 2026-10-19)
+- Hands-on "Do" pages (cut-and-glue, lift-the-flap): NO Arabic on the pieces or flaps. English only; reading
+  Arabic there is too advanced for the children. Arabic stays on the Learn pages (tracing).
+- Student pages show ONLY the instructions and the activity. No author or source lines on the page (e.g. no
+  "Shaykh Muhammad ibn Abdul-Wahhab wrote in Thalathat al-Usul:"). The footer pointer to the Teaching Guide stays;
+  the guide and answer key carry the references.
