@@ -20,6 +20,7 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
 - Prefers a coloured front page over a plain one. (2026-10-16)
 
 ## Worksheets (from Lesson 3, accepted v6)
+- Cut-and-glue and flap pages: every fold line is labelled 'fold'; glue areas say 'Glue piece here' and instructions use 'piece' and 'box', never 'stone'. (owner, 2026-10-18)
 - NO cut-off or overlapping Arabic or vowel marks, nothing off the page: every page passes
   tools/check_arabic.py before the owner sees it. (2026-10-18)
 - Tracing: bubble letters with a dashed line down the middle, hollow letter dots, grey harakat, green
@@ -52,3 +53,28 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
   Sunnah Publishing, and every domain the owner adds for this. Compare our English with each one that
   covers the passage; where they agree, follow their shared terms. Their sentences are for checking,
   not copied into products unless the translator gives permission. (2026-10-17, corrected same day)
+
+## Redesign hold (owner, 2026-10-18)
+- Lesson 1 and Lesson 2 worksheet picks (A/B/C) are ON HOLD. Do not build answer keys or guides from them.
+- After research/design/style-and-activity-variety-2026-10-18.md is written, REDESIGN the worksheets from its
+  recommendations: current 2026 style, and a different main activity mix per lesson (not the same
+  tracing/match/fill-in every time). Accepted rules above (tracing format, answer key A, guide C, check_arabic) still apply.
+
+## Pricing and listing (owner, 2026-10-18)
+- First release (Lessons 1-3 + answer key + teaching guide): list at $12.99 with about 30% off at launch (~$8.99).
+  Full workbook later: $16.99-$19.99. (From research/market-2026-10-18.md.)
+- Listing title and 13 tags as drafted in research/market-2026-10-18.md are accepted as the starting point.
+
+## Automation (owner, 2026-10-18)
+- The manager runs on its own once a day, every morning US Eastern time (scheduled task "Daily manager run").
+- Agents share work only through the repo (owner-preferences.md, NEXT-SESSION.md, research/, products/) and the
+  HQ / Manager Inbox stores. Every run ends by updating NEXT-SESSION.md and pushing, so the next run sees it.
+- Work reaches the main branch through a pull request the owner merges.
+
+## Lesson structure and pictures (owner, 2026-10-18; from style-and-activity-variety-2026-10-18.md)
+- APPROVED: two pages per lesson. A "Learn" page (tracing + one check activity rotating match / fill-in /
+  true-false) and a "Do" page whose main hands-on activity changes every lesson (plan in the report).
+- Pictures on worksheets: ONE small PALM picture only (not dates, lanterns or masjids).
+- Coloring pages MAY include an ayah (owner said yes). Ayah text still only from quran.ai (ar-qpc-hafs /
+  en-al-hilali-khan), checked character by character, and passes check_arabic.py.
+- Each new activity type needs its own design research report before it is designed (CLAUDE.md 2c).
