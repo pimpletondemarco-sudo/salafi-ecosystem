@@ -99,3 +99,8 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
 - On every page, answer key, guide and listing, NEVER write "the book says" or "the book's words". A reader may
   think it means the Quran. Always name the author and work, e.g. "Shaykh Muhammad ibn Abdul-Wahhab wrote in
   Thalathat al-Usul:" or "Shaykh Ibn Baz explains in his Sharh Thalathat al-Usul:". "Quran" is only ever used for the Quran.
+
+## Lesson 1 picks (owner, 2026-10-19, in the HQ)
+- Lesson 1 Learn: version B (palm beside Name/Date, small faint English labels beside the tracing words).
+- Lesson 1 Do: version B (steps climbing to the palm, cut-and-glue into numbered boxes).
+- The general question "faint labels for every lesson?" is still open in the HQ; do not assume it from this pick.
