@@ -6,8 +6,9 @@ Built from the owner's Lesson 3 feedback (2026-10-17), so every lesson follows i
 - Noto Sans Arabic for worksheet Arabic; Amiri only for the product name in the header
 - Match: only the real pairs, no extra left-over option (owner: it looked like an error)
 - Fill-in: one step pair only, "circle the right word, then write it on the line" (no separate write line)
-- Footer: "Meaning of Shaykh X's words: ..." (no bracketed "(meaning)"); real book, publisher,
-  edition and printed page, NO publication year
+- Footer (owner, 2026-10-19): student pages do NOT print the citation. They say
+  "For parents: sources and explanation are in the Teaching Guide, Lesson N." (parents_note()).
+  spec["source"] stays in the data: the answer key (key=True) still prints it, and checks against it.
 - colour kept 0.3in inside the paper edge; white page for cheap home printing; US Letter and A4
 """
 from pathlib import Path
@@ -23,6 +24,13 @@ INK, MUTED, GREEN, LINE, LINE2 = "#2a1d17", "#6b5b51", "#456f3a", "#c9bea6", "#e
 SIZE, ROW_H, BASE = 72, 112, 76          # defaults: word size, row height, baseline y in the row
 FACE, WT = "sans", 500                    # Noto Sans Arabic: even strokes, clear teeth for tracing
 BUB, BUB_IN = 13.5, 10                    # bubble outline width, inner (white) width
+
+def parents_note(lesson):
+    """Student-page footer text (owner rule 2026-10-19). Sources live in the Teaching Guide and Answer Key."""
+    # Two balanced lines that sit level with the SunnahSaplings mark and its line; "Lesson N" never splits.
+    return (f'<b>For parents:</b><br><span style="white-space:nowrap">sources and explanation are in the '
+            f'Teaching Guide, Lesson&nbsp;{lesson}.</span>')
+
 
 def _poly(l):
     return "M" + " L".join(f"{x:.1f} {y:.1f}" for x, y in l)
@@ -196,7 +204,7 @@ def build(size, spec, key=False):
     {sections}
   </main>
   <footer class="band">
-    <div><b>Source for parents:</b> {spec["source"]}</div>
+    <div>{('<b>Source for parents:</b> ' + spec["source"]) if key else parents_note(spec["lesson"])}</div>
     <div class="brand"><div>Sunnah<i>Saplings</i></div>Answers: Answer Key, Lesson {spec["lesson"]}</div>
   </footer>
 </div></body></html>'''
