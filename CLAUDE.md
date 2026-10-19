@@ -83,9 +83,9 @@ English name: **The Three Fundamental Principles** (subtitle "Thalathat al-Usul 
 Owner goal: run 24/7 with as little owner input as possible. Everyone reads `owner-preferences.md`
 (everything the owner has already decided) before making anything, and adds to it after each decision.
 
-0. `manager` runs first each session: reads the owner's answers and standing decisions in the
-   Manager Inbox (https://claude.ai/artifact/VNuDQRmwG98fFFieuzoF5G), assigns work, and asks the
-   owner when unsure. It may approve layouts; religious content always goes to the owner.
+0. `manager` runs first each session: reads the owner's answers and picks in the HQ
+   (https://claude.ai/artifact/BCd54vTVJYCLqBpP1zTp1D, the owner's one home page; questions go in its `inbox`
+   collection), assigns work, and asks the owner when unsure. It may approve layouts; religious content always goes to the owner.
    `market-researcher` studies what sells, competitors and prices → `research/`.
 1. `source-researcher` agent gathers content → `products/<id>/sources/*.md` (with citations).
 2. `citation-checker` agent re-verifies every citation against Shamela / the scholar's site.

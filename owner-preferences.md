@@ -87,3 +87,10 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
   meaning (en-al-hilali-khan) and surah:ayah; each hadith with collection, number and the grading from an approved
   scholar or the Shamela footnote. Only proofs the scholar himself cites in that passage, verified by citation-checker.
 - Answer keys keep their source box (CLAUDE.md requires a source line for each religious answer).
+
+## One home page (owner, 2026-10-19)
+- The owner works from ONE page: the HQ (https://claude.ai/artifact/BCd54vTVJYCLqBpP1zTp1D). Tab "Needs you" shows
+  version sets side by side (pick one), approvals, and questions. All agent questions go in the HQ `inbox`
+  collection. The old Manager Inbox is history only.
+- Every new HQ concept must have: `title` "<Set name>, version X: <short what>", `group` for version sets,
+  `version_label` "Version X of N", `image` (/_blob/ id) for pages, `order`, and an `update_note` when changed.
