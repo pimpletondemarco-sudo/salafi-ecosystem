@@ -42,3 +42,50 @@ Books: 11255 = «شرح ثلاثة الأصول لابن باز» (author field:
 3. **Lesson 2, matn simple meaning.** Replace "Every Muslim boy and girl" with "Every Muslim, male and female,".
 4. **Lesson 2, hadith of the angel writing provision.** This is on hold (REJECT) until the al-Bukhari and Muslim hadith numbers are found and opened on Shamela. The footnote on 11257 p.26 names only the books, not the numbers.
 5. **Designer notes (no status change):** print 103:1–3 and the other ayat from a standard mushaf, not from the transcriptions. Do not print the source typos «يتفرغ» (L3) or «التوصي»/«أتصف» (L1). The 56:63–64 activity still needs a checked English meaning.
+
+---
+
+## Proofs for the guide boxes: re-check of proofs-lessons-01-03.md (citation-checker · 2026-10-19)
+
+**Method.** I opened in this session: Shamela 11255 pp. 15, 16, 17, 26, 27, 28, 36 and 11257 pp. 12, 15, 16, 18, 19, 20, 21, 22, 25, 26, 27, 28, 29, 43 (`get_book_page`), with `get_book_details` for both books. 11255 = *Sharh Thalathat al-Usul*, Ibn Baz, Dar al-Masir, 1st ed. 1418 AH / 1997. 11257 = *Sharh Thalathat al-Usul*, al-Uthaymeen, Dar al-Thurayya li-n-Nashr, 4th ed. 1424 AH / 2004. Both have pagination that matches print, and every printed page in the file is correct. Both scholars are on the approved list.
+Ayat: I read the grounding rules first, then fetched all 61 ayat from quran.ai (`ar-qpc-hafs` and `en-al-hilali-khan`). A script compared all 134 Arabic and English lines in the file with that output: **0 mismatches** (English compared after trimming leading spaces). The reference URLs also match.
+Hadith: I opened al-Bukhari (Shamela 1681) nos. 6929, 4854, 4023 and 6594, and Muslim (Shamela 1727) nos. 1792 and 2643 (`get_hadith_by_number`, all "verified, page_marker", Abd al-Baqi numbering). For grading, each is in al-Bukhari and/or Muslim, as the approved scholar's own footnote attributes it.
+
+**Result: 46 PASS · 2 FIX · 0 DROP** (48 proof items). The four statements with no proofs were also checked: Ibn Baz p.15 and p.36, and al-Uthaymeen p.15 and p.20 really cite no ayah or hadith.
+
+| Lesson | Item | Status (VERIFIED / FIX / REJECT) | Notes |
+|---|---|---|---|
+| 1 | Ibn Baz 11255 p.16 (pr. 22): 51:56, 2:21 | VERIFIED | Both are in the same footnote, with footnote refs «سورة الذاريات, آية ٥٦» and «سورة البقرة, آية ٢١». |
+| 1 | al-Uthaymeen 11257 p.12 (pr. 19): 51:20–21 | VERIFIED | In footnote (٣) on knowing Allah through His signs. |
+| 1 | al-Uthaymeen 11257 p.16 (pr. 22): 12:108, 16:125, 29:46 | VERIFIED | 12:108 comes directly after the statement («لقوله تعالى»). 16:125 and 29:46 give the levels of calling, in the same footnote. |
+| 1 | al-Uthaymeen 11257 p.18 (pr. 24): 6:34, 51:52, 25:31, 76:23–24 | VERIFIED | All are in his explanation of «الصبر على الأذى فيه», and the partial-quote points are as the file says. |
+| 1 | Hadith: «اللهم أغفر لقومي…» (11257 p.19, pr. 25; footnote printed on p.21) = al-Bukhari 6929 / Muslim 1792 | **FIX** | The numbers and chapters match his footnote. In both Sahihs, the Prophet ﷺ **narrates about one of the prophets** («يَحْكِي نَبِيًّا مِنَ الْأَنْبِيَاءِ»), and the words are «رَبِّ اغْفِرْ لِقَوْمِي فَإِنَّهُمْ لَا يَعْلَمُونَ». Muslim lacks «فأدموه». **Printable:** the al-Bukhari 6929 wording as given in the file, cited "al-Bukhari 6929; Muslim 1792", with a meaning that says the Prophet ﷺ told about a prophet. Do not print the book's sentence as the hadith, and do not say it happened to the Prophet ﷺ himself. Muslim's chapter heading is "Ghazwat Uhud". |
+| 1 | al-Uthaymeen 11257 p.21 (pr. 25): 103:1–3 | VERIFIED | The matn's proof as he explains it. The Shamela matn reads «والدليل على قوله تعالى», a transcription slip that is not printed anywhere. |
+| 1 | al-Uthaymeen 11257 p.22 (pr. 26): 3:110 | VERIFIED | Quoted up to «بِٱللَّهِۗ». |
+| 2 | Ibn Baz 11255 p.26 (pr. 29): 51:56, 2:21, 17:23, 4:36, 39:2, 98:5 | VERIFIED | Six footnotes (١–٦) as stated. |
+| 2 | Ibn Baz 11255 pp.27–28 (pr. 30–31): 28:15, 31:13, 6:88, 4:116, 39:65 | VERIFIED | Footnotes as stated, and 39:65 runs over onto p.28. These are about shirk. See the suitability flags. |
+| 2 | al-Uthaymeen 11257 p.25 (pr. 29): 6:2, 7:11, 55:14, 39:62, 37:96, 51:56, 52:35, 7:54 | VERIFIED | |
+| 2 | al-Uthaymeen 11257 p.25: book «الحجر ١٥» → **15:26** | VERIFIED (correction confirmed) | quran.ai 15:15 is a different ayah, and the quoted words are 15:26. |
+| 2 | al-Uthaymeen 11257 p.25: book «الروم ٢٩» → **30:20** | VERIFIED (correction confirmed) | quran.ai 30:29 is a different ayah, and the quoted words are 30:20. |
+| 2 | al-Uthaymeen 11257 p.26 (pr. 30): 52:35–37 | VERIFIED | Book ref «[سورة الطور، الآية: ٣٥-٣٧]». |
+| 2 | Hadith: Jubayr «كاد قلبي أن يطير وذلك أول ما وقر الإيمان في قلبي» = al-Bukhari 4854 | **FIX** | 4854 (Tafsir, Surat at-Tur) ends at «كَادَ قَلْبِي أَنْ يَطِيرَ». The extra words are **not** in it, but they **are** in Sahih al-Bukhari **4023** (Kitab al-Maghazi, 1681/6030, vol. 5 p. 86). **Printable:** «كَادَ قَلْبِي أَنْ يَطِيرَ» (al-Bukhari 4854). If the second part is printed too, add "al-Bukhari 4023". On Shamela, 4023 shows «أوَّلَُ» with a doubled vowel, so the owner must approve the vowel. |
+| 2 | al-Uthaymeen 11257 p.26: 51:58, 34:24, 10:31 | VERIFIED | |
+| 2 | Hadith: angel writing provision = al-Bukhari 6594 + Muslim 2643 | VERIFIED | Both are in Kitab al-Qadar, as his footnote names. Muslim 2643 has «ويؤمر بأربع كلمات: بكتب رزقه، وأجله، وعمله، وشقي أو سعيد». Bukhari 6594 has the shorter «بِأَرْبَعٍ: بِرِزْقِهِ وَأَجَلِهِ، وَشَقِيٌّ أَوْ سَعِيدٌ». Print the Muslim wording and cite "al-Bukhari 6594 and Muslim 2643 (wording of Muslim)". **This closes Fix 4 above.** |
+| 2 | al-Uthaymeen 11257 pp.26–27 (pr. 30–31): 56:63–70 | VERIFIED | He quotes all of 63–70, and the reference is printed on p.27. |
+| 2 | al-Uthaymeen 11257 p.27 (pr. 31): 23:115–116, 75:36–40 | VERIFIED | The book spells the surah name «المؤمنين», but the surah is al-Mu'minun. |
+| 2 | Ibn Baz 11255 p.28 (pr. 31): 73:15–16 | VERIFIED | The matn's proof, explained phrase by phrase. |
+| 2 | al-Uthaymeen 11257 p.27 (pr. 31): 35:24 | VERIFIED | |
+| 2 | al-Uthaymeen 11257 pp.27–28: book «النساء ٦٣-١٦٥» → **4:163–165** | VERIFIED (correction confirmed) | The quote starts «إِنَّا أَوْحَيْنَا إِلَيْكَ» and ends «عَزِيزاً حَكِيماً», which is 4:163–165. |
+| 2 | al-Uthaymeen 11257 pp.28–29 (pr. 32–33): 73:15–16 | VERIFIED | p.29 prints «الزمل», a slip for المزمل. |
+| 2 | Statement 2.5 citation line (al-Uthaymeen «ولا يمكن أن نعبد الله…») | FIX (minor, not counted as a proof item) | The quoted sentence is entirely on **printed p. 32** (Shamela 11257/28), so cite p. 32, not pp. 31–32. |
+| 3 | al-Uthaymeen 11257 p.43 (pr. 42): 14:24 | VERIFIED | The Bukhari footnote on that page belongs to a later page, as the researcher said. |
+
+**Suitability flags for a children's guide (recommendations only; the owner decides):**
+1. **28:15:** the ayah describes Musa striking a man dead. Leave it out. (Researcher flag: agreed.)
+2. **Ibn Baz's shirk footnote** (11255 pp.27–28: 28:15, 31:13, 6:88, 4:116, 39:65): it is about calling on the dead, the absent and the jinn as major shirk, which goes beyond Lesson 2's point. Leave it out of the Lesson 2 box. 31:13 (Luqman advising his son) could suit a later tawhid lesson. (Researcher flag: agreed.)
+3. **75:37–39** (nutfah, clot, two sexes; the Hilali-Khan meaning says "sexual discharge"): use only 75:36.
+4. **Hadith 6594 / 2643:** quote only the provision sentence. The full hadith covers the stages in the womb and people ending with the deeds of the people of the Fire.
+5. **Hadith 6929:** a prophet struck until he bled. The theme is mild and fine for the parent, but the wording must follow the Sahih (see FIX).
+6. **30:20 Hilali-Khan bracket** ("…his offspring from the semen…"): fine for the adult reader, but the parent should not read it aloud to young children.
+7. **al-Uthaymeen p.27 reason passage:** do not extend the quote past «عبث محض». The next sentence speaks of shedding the blood of those who oppose the Messengers.
+8. **Partial ayat:** when the guide prints only the part a scholar quotes, cut the Arabic from the quran.ai text and cut the Hilali-Khan meaning at the same point, or print the full meaning. Never mix a part of the Arabic with the full English unmarked.

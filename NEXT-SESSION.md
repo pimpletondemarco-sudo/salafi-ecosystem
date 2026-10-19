@@ -1,6 +1,6 @@
 # Handover for the next session (written 2026-10-18)
 
-The manager reads this first, then CLAUDE.md, owner-preferences.md and the Manager Inbox.
+The manager reads this first, then CLAUDE.md, owner-preferences.md and the HQ (Needs you tab: version sets, approvals, questions).
 
 ## Etsy connection (tested 2026-10-18)
 - Public tools WORK. Seller sign-in WORKED 2026-10-18 via etsy-signin.mjs (get_me -> shop 68627681; no restart needed). SunnahSaplings = shop_id 68627681,

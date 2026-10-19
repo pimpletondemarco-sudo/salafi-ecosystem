@@ -3,14 +3,15 @@
 Shared shell for the redesigned Lesson 1 and Lesson 2 pages. Same look as the accepted Lesson 3 worksheet v6
 (worksheet_lib.py): white page, rounded bone header/footer panels kept 0.3 in inside the paper edge,
 Baloo 2 / Nunito / Noto Sans Arabic (Amiri only for the product name), green numbered circles,
-"Source for parents" footer, accepted tracing format (worksheet_lib.trace_row).
+"For parents: ... Teaching Guide, Lesson N" footer (owner 2026-10-19; `source` is kept as an internal
+record only, not printed), accepted tracing format (worksheet_lib.trace_row).
 New here:
 - the ONE small palm picture (palm_spot.py) in one of three places (palm report §4):
   "header" (inside the header panel, left), "name" (top right beside Name/Date), "bottom" (bottom right, above footer)
 - absolute-positioned "stage" helpers for hands-on Do pages (cut-and-glue, lift-the-flap)
 - cut lines: solid 2 pt dark grey (sequence/flap reports R4/F5), a small scissors icon (an object), no hands
 """
-from worksheet_lib import FONTS, INK, MUTED, GREEN, LINE, LINE2, trace_row
+from worksheet_lib import FONTS, INK, MUTED, GREEN, LINE, LINE2, trace_row, parents_note
 from palm_spot import palm_svg
 
 CUT = "#4a4a4a"          # cut lines: solid, 2 pt
@@ -139,7 +140,7 @@ def page(size, *, lesson, pno, kind, title, body, source, palm=None, css="", cls
     {body}
   </main>{bottom_palm}
   <footer class="band">
-    <div><b>Source for parents:</b> {source}</div>
+    <div class="pn">{parents_note(lesson)}</div>
     <div class="brand"><div>Sunnah<i>Saplings</i></div>Lesson {lesson}, page {pno}. Answers: Answer Key, Lesson {lesson}</div>
   </footer>
 </div></body></html>'''

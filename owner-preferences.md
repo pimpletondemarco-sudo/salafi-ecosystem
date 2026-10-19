@@ -78,3 +78,19 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
 - Coloring pages MAY include an ayah (owner said yes). Ayah text still only from quran.ai (ar-qpc-hafs /
   en-al-hilali-khan), checked character by character, and passes check_arabic.py.
 - Each new activity type needs its own design research report before it is designed (CLAUDE.md 2c).
+
+## Sources on pages (owner, 2026-10-19)
+- Worksheets (student pages) do NOT carry the full citation at the bottom. The footer points to the guide:
+  "For parents: sources and explanation are in the Teaching Guide, Lesson N."
+- Teaching guide "From the Scholars" boxes give the scholar's statement TOGETHER WITH the proofs he brings for it
+  from the Quran and the Sunnah: each ayah in King Fahd mushaf Arabic (quran.ai ar-qpc-hafs) with the Hilali-Khan
+  meaning (en-al-hilali-khan) and surah:ayah; each hadith with collection, number and the grading from an approved
+  scholar or the Shamela footnote. Only proofs the scholar himself cites in that passage, verified by citation-checker.
+- Answer keys keep their source box (CLAUDE.md requires a source line for each religious answer).
+
+## One home page (owner, 2026-10-19)
+- The owner works from ONE page: the HQ (https://claude.ai/artifact/BCd54vTVJYCLqBpP1zTp1D). Tab "Needs you" shows
+  version sets side by side (pick one), approvals, and questions. All agent questions go in the HQ `inbox`
+  collection. The old Manager Inbox is history only.
+- Every new HQ concept must have: `title` "<Set name>, version X: <short what>", `group` for version sets,
+  `version_label` "Version X of N", `image` (/_blob/ id) for pages, `order`, and an `update_note` when changed.
