@@ -94,3 +94,8 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
   collection. The old Manager Inbox is history only.
 - Every new HQ concept must have: `title` "<Set name>, version X: <short what>", `group` for version sets,
   `version_label` "Version X of N", `image` (/_blob/ id) for pages, `order`, and an `update_note` when changed.
+
+## Never write "the book" (owner, 2026-10-19)
+- On every page, answer key, guide and listing, NEVER write "the book says" or "the book's words". A reader may
+  think it means the Quran. Always name the author and work, e.g. "Shaykh Muhammad ibn Abdul-Wahhab wrote in
+  Thalathat al-Usul:" or "Shaykh Ibn Baz explains in his Sharh Thalathat al-Usul:". "Quran" is only ever used for the Quran.
