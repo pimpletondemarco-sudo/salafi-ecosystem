@@ -1,7 +1,7 @@
 """Lesson 1 "The Four Matters We Must Learn", redesign 2026-10-18 (replaces l1wsA/B/C, which are on hold).
 
 Two pages (owner-approved): page 1 "Learn" = tracing strip + MATCH check; page 2 "Do" = cut and glue the four
-matters onto four numbered stepping stones in the book's order (research/design/sequence-cut-and-glue-2026-10-18.md).
+matters into four numbered boxes ("box", never "stone", owner 2026-10-18) in the book's order (research/design/sequence-cut-and-glue-2026-10-18.md).
 3 versions of each page (A/B/C), US Letter + A4.
 
 Content ONLY from sources/lesson-01-four-matters.md (VERIFIED in VERIFICATION.md):
@@ -22,7 +22,7 @@ SHUFFLE = [2, 0, 3, 1]       # pieces on the strip: 3, 1, 4, 2 (never 1-2-3-4; n
 SOURCE = ("The four matters in the book's order, as headed in Shaykh al-Uthaymeen's explanation: knowledge, acting upon it,\n"
           "      calling others to it, and patience (being patient when we are hurt or troubled because of it).\n"
           "      <i>Sharh Thalathat al-Usul</i>, Shaykh Muhammad ibn Salih al-Uthaymeen, Dar al-Thurayya, 4th ed., pp. 19&ndash;24.")
-STEPS = ["Cut out the 4 pieces.", "Put them in order.", "Glue each one on its stone."]
+STEPS = ["Cut out the 4 pieces.", "Put them in order.", "Glue each piece in its numbered box."]
 
 
 # ---------------------------------------------------------------- Learn page
@@ -42,7 +42,7 @@ SAFE = 0.15 * IN                                # glue zone 0.15 in larger than 
 
 
 def glue_zone(x, y, gw, gh):
-    return (f'<div class="gz" style="left:{x:.1f}px;top:{y:.1f}px;width:{gw:.1f}px;height:{gh:.1f}px"><span>glue</span></div>')
+    return (f'<div class="gz" style="left:{x:.1f}px;top:{y:.1f}px;width:{gw:.1f}px;height:{gh:.1f}px"><span>Glue piece here</span></div>')
 
 
 def num(n, cx, cy):
@@ -143,7 +143,7 @@ def do_page(size, v):
   .stone {{ background: {BONE}; border-radius: 20px; }}
   .stone.step {{ border-radius: 14px 14px 4px 4px; background: #ebe7de; }}
   .gz {{ background: #fbfaf6; border-radius: 12px; display: grid; place-items: center; }}
-  .gz span {{ font-size: 15px; font-weight: 700; color: #c4bbae; }}
+  .gz span {{ font-size: 15px; font-weight: 700; color: #b3a99b; }}
   .strip {{ display: flex; border: {CUT_W}px solid {CUT}; background: #fff; }}
   .pc {{ box-sizing: border-box; flex: none; display: flex; flex-direction: column; align-items: center; justify-content: center;
          padding: 15px; text-align: center; }}

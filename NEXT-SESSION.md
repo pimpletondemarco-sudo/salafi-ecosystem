@@ -16,12 +16,13 @@ The manager reads this first, then CLAUDE.md, owner-preferences.md and the Manag
 
 ## Waiting on the owner (in the HQ Concepts panel)
 - Lesson 1/2 REDESIGN posted 2026-10-18 (workbook-designer): 4 sets of 3 versions in Concepts, pick one of each:
-  l1-learn (l1learnA/B/C: trace + Match), l1-do (l1doA/B/C: cut-and-glue the four matters on stepping stones),
+  l1-learn (l1learnA/B/C: trace + Match), l1-do (l1doA/B/C: cut-and-glue the four matters into numbered boxes),
   l2-learn (l2learnA/B/C: trace + circle-then-write fill-in), l2-do (l2doA/B/C: lift-the-flap questions).
   Versions differ in layout and palm placement (header / beside Name / bottom). l1learnB also shows the faint
   English tracing labels (the open question below). All 24 files (Letter + A4) pass check_arabic.py.
   Files: products/01-usul-kids/design/lesson-0{1,2}-{learn,do}-v{A,B,C}[-a4].{html,png,pdf} (Letter PDF = -letter.pdf);
   generators make_lesson_01_pages.py / make_lesson_02_pages.py, shared pages_lib.py, palm_spot.py (assets/palm-spot*.svg).
+  Do pages updated per owner 2026-10-18: "fold" on every tab; "Glue piece here" / "Glue each piece in its numbered box."
   The old l1wsA/B/C and l2wsA/B/C are marked "Replaced by the redesign" (kept, not deleted; ordered last).
   Needs the owner's OK besides the picks: vowel marks on لِيَعْبُدُوهُ (l2doC only) and on the lesson words as before.
   Palm with one date cluster (assets/palm-spot-dates.svg) is available if the owner wants dates on the palm.
@@ -33,7 +34,7 @@ The manager reads this first, then CLAUDE.md, owner-preferences.md and the Manag
 ## Next work once the owner picks
 - Answer key (layout A) and teaching guide pages (layout C) for Lessons 1 and 2, from make_answerkey_l3.py /
   make_guide_l3.py, matching the chosen Learn and Do versions (the key needs a filled copy of BOTH pages: stones
-  glued, flaps drawn open). Run tools/check_arabic.py on every page first.
+  glued in their boxes, flaps drawn open). Run tools/check_arabic.py on every page first.
 - Rendering in a fresh container: `pip install --break-system-packages fonttools uharfbuzz skia-pathops scikit-image`,
   then `node tools/render_many.mjs <abs paths>` and `python3 tools/check_arabic.py ...`
   (both default to playwright in /opt/node-tools/node_modules; PW_DIR is optional).

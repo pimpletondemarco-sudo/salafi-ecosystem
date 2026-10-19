@@ -72,7 +72,8 @@ def flap_unit(i, q, bx, by, sx, sy, DW, DH, T, orient, ar_size, en_size=15):
         a = box(bx + INSET, by + T + INSET, DW - 2 * INSET, DH - 2 * INSET, "ab", f'<i>{n}</i>{ans}')
         tab = box(sx, sy, DW, T, "tab", '<span>glue the back of this tab</span>')
         door = box(sx, sy + T, DW, DH, "door col" if DW < 2.2 * IN else "door", f'<div class="dq"><b>{n}</b><span>{qtext}</span></div><div class="lift">Lift to see the answer</div>')
-        fold = f'<line x1="{sx}" y1="{sy + T}" x2="{sx + DW}" y2="{sy + T}" class="fold"/>'
+        fold = (f'<line x1="{sx}" y1="{sy + T}" x2="{sx + DW}" y2="{sy + T}" class="fold"/>'
+                f'<text x="{sx + DW - 8}" y="{sy + T + 17}" class="fl" text-anchor="end">fold</text>')
         outline = f'<rect x="{sx}" y="{sy}" width="{DW}" height="{DH + T}" class="cut"/>'
     else:  # tab on the left, door opens like a book
         g = box(bx, by, T, DH, "gs v", f'<span>glue tab {n}</span>')
@@ -80,7 +81,8 @@ def flap_unit(i, q, bx, by, sx, sy, DW, DH, T, orient, ar_size, en_size=15):
         a = box(bx + T + INSET, by + INSET, DW - 2 * INSET, DH - 2 * INSET, "ab", f'<i>{n}</i>{ans}')
         tab = box(sx, sy, T, DH, "tab v", '<span>glue the back</span>')
         door = box(sx + T, sy, DW, DH, "door", f'<div class="dq"><b>{n}</b><span>{qtext}</span></div><div class="lift">Lift to see the answer</div>')
-        fold = f'<line x1="{sx + T}" y1="{sy}" x2="{sx + T}" y2="{sy + DH}" class="fold"/>'
+        fold = (f'<line x1="{sx + T}" y1="{sy}" x2="{sx + T}" y2="{sy + DH}" class="fold"/>'
+                f'<text x="{sx + T + 7}" y="{sy + DH - 10}" class="fl" transform="rotate(-90 {sx + T + 7} {sy + DH - 10})" dominant-baseline="hanging">fold</text>')
         outline = f'<rect x="{sx}" y="{sy}" width="{DW + T}" height="{DH}" class="cut"/>'
     return g + foot + a + tab + door, fold, outline
 
@@ -134,7 +136,7 @@ def do_page(size, v):
         sc = (sx0 - 16, strip_y)
         fold_label = (sx0 + 2 * DW - 4, strip_y + T - 4)
     svg = (f'<svg style="left:0;top:0;z-index:1" width="{inner}" height="{stage_h:.0f}">{"".join(lines)}{"".join(cuts)}'
-           f'<text x="{fold_label[0]:.1f}" y="{fold_label[1]:.1f}" class="fl" text-anchor="{"start" if v == "B" else "end"}">fold</text></svg>')
+           f'</svg>')
     stage = (f'<div class="stage" style="width:{inner}px;height:{stage_h:.0f}px">{"".join(parts)}{svg}'
              f'{scissors(sc[0], sc[1], 24)}</div>')
     body = f'<section>{h2(1, "Make the flaps, then lift them")}{steps_line(STEPS)}</section>{stage}'
@@ -159,7 +161,7 @@ def do_page(size, v):
   .door.col .lift {{ padding-left: 0; }}
   .cut {{ fill: none; stroke: {CUT}; stroke-width: {CUT_W}; }}
   .fold {{ stroke: #6b5b51; stroke-width: 1.33; stroke-dasharray: 5 4; }}
-  .fl {{ font-family: "Nunito", sans-serif; font-size: 11px; font-weight: 700; fill: #6b5b51; }}
+  .fl {{ font-family: "Nunito", sans-serif; font-size: 13px; font-weight: 800; fill: #4a3a30; }}
   .sc {{ z-index: 2; }}'''
     src = SRC_WORSHIP if v == "C" else SRC_MATN
     return page(size, lesson=2, pno=2, kind="Do", title="Lift the Flaps", body=body, source=src, css=css,
