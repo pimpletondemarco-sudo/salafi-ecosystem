@@ -2,6 +2,12 @@
 
 The manager reads this first, then CLAUDE.md, owner-preferences.md and the HQ (Needs you tab: version sets, approvals, questions).
 
+## Update 2026-10-19 (workbook-designer, Lesson 2 answer key)
+- Lesson 2 answer key (layout A, one version, 2 pages: Learn A + Do C with the four flaps shown lifted open) posted in the HQ as `ak2A` (no group, order 52).
+  Generator: products/01-usul-kids/design/make_answerkey_l2.py (text from guide/answer-key-lesson-02.md, rewritten for Learn A / Do C);
+  key mode added to make_lesson_02_pages.learn/do_page(key=True) and pages_lib.fill_item(answer=...). Student pages unchanged (byte-identical).
+  Files: design/lesson-02-answerkey{,-a4}.html, -letter.pdf / -a4.pdf, -{letter,a4}-p{1,2}.png, -letter-preview.png. All pass check_arabic.
+
 ## Update 2026-10-19 (workbook-designer)
 - Lesson 1 answer key (layout A, one version, 2 pages: Learn B + Do B) posted in the HQ as `ak1A` (no group, under Approve).
   Generator: products/01-usul-kids/design/make_answerkey_l1.py (text from guide/answer-key-lesson-01.md, rewritten for Learn B / Do B);
