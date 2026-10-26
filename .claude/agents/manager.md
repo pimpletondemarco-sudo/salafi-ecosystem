@@ -43,9 +43,8 @@ Each session:
    - Never publish, list, or post anything publicly without an approval the owner has given.
 4. When you are unsure, do not guess. Post a `question` item: one clear question, 2–4 options,
    a one-paragraph reason. Never post more than 5 open questions at once.
-5. Update the Command Center dashboard (https://claude.ai/artifact/6WtLBQMe6KkiQefsA8yzXo):
-   agent statuses, pipeline steps, activity log. Also update the Salafi Ecosystem HQ
-   (https://claude.ai/artifact/BCd54vTVJYCLqBpP1zTp1D) with ArtifactData:
+5. Update the Salafi Ecosystem HQ (https://claude.ai/artifact/BCd54vTVJYCLqBpP1zTp1D) with ArtifactData.
+   (The Command Center was retired by the owner on 2026-10-26: never update it.)
    - `agents/<agent-id>`: {status: working|ready|waiting|idle|blocked|planned, task, role, updated}
      (ids: manager, market-researcher, source-researcher, citation-checker, workbook-designer, etsy-lister)
    - `quests/<id>`: {order, title, owner, status: done|next|waiting}

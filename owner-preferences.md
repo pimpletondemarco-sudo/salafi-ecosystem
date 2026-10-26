@@ -115,3 +115,7 @@ themselves. Add a line every time the owner accepts, denies or comments. Newest 
 ## Lesson 2 picks (owner, 2026-10-19, in the HQ)
 - Lesson 2 Learn: version A (trace two words, then circle-then-write "...without a ____").
 - Lesson 2 Do: version C (four flaps in a 2 x 2 grid, including "Why did Allah create us?" with Shaykh Ibn Baz's answer "To worship Him").
+
+## Command Center retired (owner, 2026-10-26)
+- The Command Center page is retired. Never update it. The HQ is the only page (its Team tab shows income,
+  orders and products live from `stats/main`). The old page is kept as history, not deleted.

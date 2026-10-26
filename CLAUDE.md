@@ -103,11 +103,10 @@ Owner goal: run 24/7 with as little owner input as possible. Everyone reads `own
    one set in the HQ; the owner accepts one and the other two are deleted.
 4. Owner review → Etsy listing (title, tags, description, mockups).
 
-## Command Center dashboard
+## Command Center dashboard (retired)
 
-https://claude.ai/artifact/6WtLBQMe6KkiQefsA8yzXo — after every work session, update its
-agents, pipeline, income and activity files (upload new JSON asset, then update the dataset's
-`url`, `name`, `updated`).
+Retired by the owner on 2026-10-26. Do NOT update it. The HQ is the one page for everything,
+including the numbers (its Team tab reads `stats/main`). The old page stays only as history.
 
 ## Salafi Ecosystem HQ (animated office)
 
