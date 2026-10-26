@@ -7,5 +7,6 @@ AI agent team for a halal Etsy printables business (Salafi homeschool workbooks 
 - `research/` — market reports
 - `products/` — one folder per product (sources, verification, output PDFs)
 
-Command Center: https://claude.ai/artifact/6WtLBQMe6KkiQefsA8yzXo
-Manager Inbox: https://claude.ai/artifact/VNuDQRmwG98fFFieuzoF5G
+HQ (the owner's one home page): https://claude.ai/artifact/BCd54vTVJYCLqBpP1zTp1D
+Retired, history only: Command Center (https://claude.ai/artifact/6WtLBQMe6KkiQefsA8yzXo),
+Manager Inbox (https://claude.ai/artifact/VNuDQRmwG98fFFieuzoF5G)

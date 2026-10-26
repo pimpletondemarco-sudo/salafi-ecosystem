@@ -54,4 +54,4 @@ The manager reads this first, then CLAUDE.md, owner-preferences.md and the HQ (N
 - Rendering in a fresh container: `pip install --break-system-packages fonttools uharfbuzz skia-pathops scikit-image`,
   then `node tools/render_many.mjs <abs paths>` and `python3 tools/check_arabic.py ...`
   (both default to playwright in /opt/node-tools/node_modules; PW_DIR is optional).
-- Command Center dashboard was last updated 2026-10-16/17; refresh it.
+- Command Center retired (owner, 2026-10-26). Do not update it; the HQ is the only page.
